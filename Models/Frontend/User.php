@@ -56,7 +56,7 @@ class User {
     public function setDescription($description) {
         
         if (is_string($description)) {
-            $this->_description;
+            $this->_description = $description;
         }
     }
     
