@@ -20,8 +20,7 @@ class UserManager extends Model{
         //var_dump($users);
         return $users; // On renvoie un tableau de plusieurs objets 
     }
-    
-   
+  
 }
 
 
