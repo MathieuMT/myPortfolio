@@ -90,7 +90,7 @@
     </div>
 </nav>
 
-
+<script src="Content/JS/btnNavbar.js"></script>
 
 
 
