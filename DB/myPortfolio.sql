@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Ven 26 Avril 2019 à 15:34
+-- Généré le :  Jeu 16 Mai 2019 à 20:23
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.1
 
@@ -31,6 +31,26 @@ CREATE TABLE `categories` (
   `name` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `certificates`
+--
+
+CREATE TABLE `certificates` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `catergory_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `certificates`
+--
+
+INSERT INTO `certificates` (`id`, `name`, `slug`, `catergory_id`) VALUES
+(1, '1er certificat', '', 0);
 
 -- --------------------------------------------------------
 
@@ -66,6 +86,13 @@ CREATE TABLE `works` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Contenu de la table `works`
+--
+
+INSERT INTO `works` (`id`, `name`, `slug`, `category_id`) VALUES
+(1, 'HTML', '', 0);
+
+--
 -- Index pour les tables exportées
 --
 
@@ -74,6 +101,13 @@ CREATE TABLE `works` (
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `certificates`
+--
+ALTER TABLE `certificates`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `catergory_id` (`catergory_id`);
 
 --
 -- Index pour la table `users`
@@ -98,6 +132,11 @@ ALTER TABLE `works`
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT pour la table `certificates`
+--
+ALTER TABLE `certificates`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
@@ -106,7 +145,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `works`
 --
 ALTER TABLE `works`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

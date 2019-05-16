@@ -29,5 +29,5 @@ foreach ($aboutWork as $eachWork): ?>
     <hr />
 <?php endforeach; ?>
 
-
+<hr class="hr"/>
 

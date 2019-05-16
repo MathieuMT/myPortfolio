@@ -31,3 +31,80 @@ foreach ($aboutCertificate as $eachCertificate): ?>
 
 
 
+
+
+
+<hr class="hr"/>
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <?php for($j = 1; $j <= 3; $j++): ?>
+    <div class="row justify-content">
+        <?php for($i = 1; $i <= 4; $i++): ?>
+        <article class="col-xs-3 certificate">
+            
+            <img src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><br />
+            
+            <strong>Mon certificat <?= $j . '-' . $i ?></strong><br />
+            <em>HTML</em>
+            
+            <div class="certificate_detail">
+            
+                 
+                 
+                
+                <div class="row">
+                  
+                    <div class="col-4">
+
+                    <img class="img-content" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                    </div>
+
+                    <div class="col-8">
+
+                        <h2>Mon Certificat <?= $j . '-' . $i ?></h2>
+                        <p><em>HTML</em></p>
+                        <p>Paphius quin etiam et Cornelius senatores, ambo venenorum artibus pravis se polluisse confessi, eodem pronuntiante Maximino sunt interfecti. pari sorte etiam procurator monetae extinctus est. Sericum enim et Asbolium supra dictos, quoniam cum hortaretur passim nominare, quos vellent, adiecta religione firmarat, nullum igni vel ferro se puniri iussurum, plumbi validis ictibus interemit. et post hoe flammis Campensem aruspicem dedit, in negotio eius nullo sacramento constrictus.</p>
+
+                    </div>
+                    
+                </div>
+
+               <hr class="hr"/>
+                
+            </div>
+            
+        </article>
+        
+        <?php endfor; ?>
+        
+    </div>
+    <hr class="hr"/>
+    <div class="row row-detail">
+        
+        
+        
+        
+        
+        
+    </div>
+    
+    <?php endfor; ?>
+    
+    
+    
+    
+</div>
+
+
+
+
+<script src="Content/JS/certificate.js"></script>
