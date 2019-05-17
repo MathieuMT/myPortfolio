@@ -2,13 +2,23 @@
 
 
 
-
 <h1 class="text-center titlePage"><?= $this->title = 'Portfolio - Mes certificats' ?></h1>
 <br/>
 <br/>
 <br/>
+
+
+<!--
+
+
 <?php
 /* $aboutWork est la variable provenant de WorkManager.php qui envoie en tableau d'objets "works" donc pour chaque objet, on fait une boucle renvoyant les données de chaque objet "Work"  ( dans la méthode "getWorkDescription()" d' "WorkManager.php" qui insatncie l'entité "Work" en objet )*/
+    
+    
+    
+/////////////////////////////////////////////////////////////////////////////////////
+
+/*
 
 echo 'tableau d\'objets où chaque objet contient un tableau de données de la BDD :';
 var_dump($aboutCertificate); 
@@ -27,9 +37,16 @@ foreach ($aboutCertificate as $eachCertificate): ?>
     </article>
 </fieldset>
     <hr />
+
+
+
+
 <?php endforeach; ?>
 
-
+*/
+///////////////////////////////////////////////////////////////////////////////////////
+?>
+-->
 
 
 
@@ -48,7 +65,7 @@ foreach ($aboutCertificate as $eachCertificate): ?>
     <?php for($j = 1; $j <= 3; $j++): ?>
     <div class="row justify-content">
         <?php for($i = 1; $i <= 4; $i++): ?>
-        <article class="col-xs-3 certificate">
+        <article class="col-xs-3 certificate" id="certificate-<?= $j . '-' . $i ?>">
             
             <img src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><br />
             
@@ -107,4 +124,8 @@ foreach ($aboutCertificate as $eachCertificate): ?>
 
 
 
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="Content/JS/certificate.js"></script>
