@@ -5,6 +5,9 @@ body {
     background-color: rgba(0,0,102,1);
 }
 
+/*
+* JUMBOTRON
+**/
 .jumbotron {
     margin-top: 0;
     margin-bottom: 0;
@@ -17,6 +20,10 @@ body {
 }
 */
 
+
+/*
+* NAVBAR
+**/
 .navbar {
     position: sticky;
    /* min-height: 51px; */
@@ -77,11 +84,10 @@ body {
     background-color: rgba(245,245,220,0.6);
 }
 
+
 /*
 * DROPDOWN MENU
 **/
-
-
 
 .dropdown-menu {
     background-color: rgba(255,35,255,0.6);
@@ -191,7 +197,7 @@ body {
 
 
 /*
-* 2ème NAVBAR 
+* 2ème NAVBAR BUTTON
 **/
 
 /* Icon 1 */
@@ -283,6 +289,10 @@ transform: rotate(-135deg);
     background-color: rgba(248,13,32,0.6);
 }
 
+h2 {
+    margin-top: 0;
+}
+
 /*
 img {
     width: 100%;
@@ -304,6 +314,8 @@ img {
 }
 
 .img-content {
+    height: 346px;
+    overflow-y: hidden;
     margin-bottom: 20px;
 }
 
@@ -318,4 +330,32 @@ img {
     display: none;
 }
 */
+
+
+/*
+* worksView.php
+**/
+
+
+em {
+    opacity: 0.6;
+}
+
+.work {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.work_detail {
+    display: none;
+}
+
+.work_slideshow {
+    height: 346px;
+    overflow-y: hidden;
+}
+
+
+
 

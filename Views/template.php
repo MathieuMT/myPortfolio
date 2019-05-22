@@ -31,6 +31,8 @@
         <!-- style.css -->
         <link rel="stylesheet" href="Content/CSS/style.css" />
         
+        <link rel="stylesheet" href="Content/CSS/nivo-slider.css" />
+        
         <title><?= $title ?></title><!-- Specifique element -->
     </head>
     <body>
@@ -55,7 +57,7 @@
                
                
                <div class="col-lg-12">
-                   
+                
                    
                    
                     <div id="content">
@@ -64,7 +66,7 @@
                             <br />
                             <br />
                     </div><!-- #content -->
-
+        
                </div>
                
            </div>
@@ -72,16 +74,21 @@
            
        </div>
             
-          
+       
             
               
                 
         
         
                    
-        <!-- Javascript -->
+        <!-- JAVASCRIPT -->
         <script src="Content/JS/btnNavbar.js"></script> 
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script src="Content/JS/work.js"></script>
+        
+        <script src="Content/JS/jquery.nivo.slider.pack.js"></script>
         
         <!-- CDN Bootstrap v4.3.1 -->
         

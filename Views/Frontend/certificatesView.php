@@ -81,15 +81,15 @@ foreach ($aboutCertificate as $eachCertificate): ?>
                   
                     <div class="col-4">
 
-                    <img class="img-content" src="https://picsum.photos/id/237/200/300" alt="" />
+                    <img class="img-content stagger4" src="https://picsum.photos/id/237/200/300" alt="" />
 
                     </div>
 
                     <div class="col-8">
 
-                        <h2>Mon Certificat <?= $j . '-' . $i ?></h2>
-                        <p><em>HTML</em></p>
-                        <p>Paphius quin etiam et Cornelius senatores, ambo venenorum artibus pravis se polluisse confessi, eodem pronuntiante Maximino sunt interfecti. pari sorte etiam procurator monetae extinctus est. Sericum enim et Asbolium supra dictos, quoniam cum hortaretur passim nominare, quos vellent, adiecta religione firmarat, nullum igni vel ferro se puniri iussurum, plumbi validis ictibus interemit. et post hoe flammis Campensem aruspicem dedit, in negotio eius nullo sacramento constrictus.</p>
+                        <h2 class="stagger1">Mon Certificat <?= $j . '-' . $i ?></h2>
+                        <p class="stagger2"><em>HTML</em></p>
+                        <p class="stagger3">Paphius quin etiam et Cornelius senatores, ambo venenorum artibus pravis se polluisse confessi, eodem pronuntiante Maximino sunt interfecti. pari sorte etiam procurator monetae extinctus est. Sericum enim et Asbolium supra dictos, quoniam cum hortaretur passim nominare, quos vellent, adiecta religione firmarat, nullum igni vel ferro se puniri iussurum, plumbi validis ictibus interemit. et post hoe flammis Campensem aruspicem dedit, in negotio eius nullo sacramento constrictus.</p>
 
                     </div>
                     
@@ -126,6 +126,6 @@ foreach ($aboutCertificate as $eachCertificate): ?>
 
 
 
-
+<!-- JAVASCRIPT -->
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="Content/JS/certificate.js"></script>
