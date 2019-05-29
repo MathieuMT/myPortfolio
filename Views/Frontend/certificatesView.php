@@ -164,5 +164,3 @@ foreach ($aboutCertificate as $eachCertificate): ?>
 
 
 <!-- JAVASCRIPT -->
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="Content/JS/certificate.js"></script>
