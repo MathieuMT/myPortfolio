@@ -39,12 +39,12 @@ foreach ($aboutWork as $eachWork): ?>
 <br />
 <div class="container">
 
- <!-- Numéro des colonnes -->
+ <!-- Numéro des lignes -->
 <?php for($j = 1; $j <=3; $j++): ?> 
 
-    <div class="row justify-content">
+    <div class="row justify-content mobile">
        
-       <!-- Numéro des lignes -->
+       <!-- Numéro des colonnes -->
        <?php for($i = 1; $i <= 4; $i++): ?>
        
         <hr class="hr"/>
@@ -68,7 +68,7 @@ foreach ($aboutWork as $eachWork): ?>
         
         
           
-                   <div class="col-4">
+                   <div class="col-md-4">
 
                        <div class="work_slideshow stagger4">
                            
@@ -83,7 +83,7 @@ foreach ($aboutWork as $eachWork): ?>
                    </div>
                     
                     
-                   <div class="col-8">
+                   <div class="col-md-8">
 
                        <h2 class="stagger1">Mon Projet <?= $j . '-' . $i ?></h2>
                        <p class="stagger2"><em>Projet OC</em></p>
@@ -100,8 +100,66 @@ foreach ($aboutWork as $eachWork): ?>
             </div>
             
             
+            <div class="work_detail_mobile">
+                
+                <div class="row">
+        
+        
+                    <div class="col-md-4"></div>
+                    
+                   <div class="col-md-4">
+
+                       <div class="work_slideshow stagger4">
+                           
+                           
+                           <img src="https://picsum.photos/200" alt="" />
+                           <img src="https://picsum.photos/id/237/200/300" alt="" />
+                           <img src="https://picsum.photos/200/300/?blur" alt="" />
+                           
+                           
+                       </div>
+
+                   </div>
+                   
+                    <div class="col-md-4"></div>
+                    
+                </div>
+                    
+                <div class="row"> 
+                   
+                           
+                                           
+                   <div class="col-md-12">
+
+                       <h2 class="stagger1">Mon Projet <?= $j . '-' . $i ?></h2>
+                       <p class="stagger2"><em>Projet OC</em></p>
+                       <p class="stagger3">Primi igitur omnium statuuntur Epigonus et Eusebius ob nominum gentilitatem oppressi. praediximus enim Montium sub ipso vivendi termino his vocabulis appellatos fabricarum culpasse tribunos ut adminicula futurae molitioni pollicitos.<br /><br /><a>Lien Github</a></p>
+
+                   </div>
+
+       
+           
+               </div>
+                
+                <hr class="hr"/>
+                
+            </div>
+            
+            <div class="row row-detail-mobile">
+            
+            
+            
+            </div><!-------- div.row-detail-mobile ------>
             
         </article>
+        
+        <br />
+        
+        <!--<div class="row row-detail-mobile">
+            
+            
+            
+        </div>--><!-------- div.row-detail-mobile ------>
         
         <?php endfor; ?>
         
@@ -117,7 +175,7 @@ foreach ($aboutWork as $eachWork): ?>
        
        
          
-    </div>
+    </div><!-- div.row-detail -->
     
      
     

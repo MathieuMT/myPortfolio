@@ -314,13 +314,15 @@ img {
 }
 
 .img-content {
+    cursor: pointer;
     height: 346px;
     overflow-y: hidden;
     margin-bottom: 20px;
 }
 
-.certificate_detail {
+.certificate_detail, .certificate_detail_mobile  {
     display: none;
+    background-color: rgba(233,236,239,0.6);  
 }
 
 
@@ -342,13 +344,14 @@ em {
 }
 
 .work {
-    cursor: pointer;
+    /*cursor: pointer;*/
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.work_detail {
+.work_detail, .work_detail_mobile {
     display: none;
+    background-color: rgba(233,236,239,0.6);
 }
 
 .work_slideshow {
