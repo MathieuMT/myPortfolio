@@ -91,7 +91,7 @@ $(document).ready(function() {
             
                 // Animation (avec 4 éléments):
                 for(var i = 1; i <= 4; i++) {
-                    $('.stagger' + i, $work_detail_mobile).css({opacity:0,marginLeft:-20}).delay(300 + 200 * i).animate({opacity:1, marginLeft:0});
+                    $('.stagger' + i, $certificate_detail_mobile).css({opacity:0,marginLeft:-20}).delay(300 + 200 * i).animate({opacity:1, marginLeft:0});
                 }
             
                 $active = $certificate_detail_mobile;
@@ -107,7 +107,7 @@ $(document).ready(function() {
             
                 // Animation (avec 4 éléments):
                 for(var i = 1; i <= 4; i++) {
-                    $('.stagger' + i, $work_detail).css({opacity:0,marginLeft:-20}).delay(300 + 200 * i).animate({opacity:1, marginLeft:0});
+                    $('.stagger' + i, $certificate_detail).css({opacity:0,marginLeft:-20}).delay(300 + 200 * i).animate({opacity:1, marginLeft:0});
                 }
             
                 $active = $certificate_detail;

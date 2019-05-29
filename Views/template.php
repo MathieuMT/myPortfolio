@@ -92,7 +92,14 @@
         <script src="Content/JS/btnNavbar.js"></script> 
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+        
+        
+        <!-- essai -->
+        <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+        <script src="Content/JS/certificate.js"></script>
+        <!---->
+        
+        
         <script src="Content/JS/work.js"></script>
         
         <script src="Content/JS/jquery.nivo.slider.pack.js"></script>
