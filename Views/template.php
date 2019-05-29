@@ -14,7 +14,7 @@
         <!-- CDN Bootstrap v4.3.1 -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        
+      
         
         <!-- Bootstrap v4.3.1 .min.css -->
         <!--
@@ -35,10 +35,12 @@
         
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         
-        <!-- style.css -->
-        <link rel="stylesheet" href="Content/CSS/style.css" />
+        
         
         <link rel="stylesheet" href="Content/CSS/nivo-slider.css" />
+        
+        <!-- style.css -->
+        <link rel="stylesheet" href="Content/CSS/style.css" />
         
         <title><?= $title ?></title><!-- Specifique element -->
     </head>

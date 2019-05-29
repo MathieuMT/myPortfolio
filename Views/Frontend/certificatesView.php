@@ -104,7 +104,7 @@ foreach ($aboutCertificate as $eachCertificate): ?>
                  
                      <div class="col-md-4"></div>
                   
-                    <div class="col-md-4">
+                    <div class="col-md-4 img-project">
 
                     <img class="img-content stagger4" src="https://picsum.photos/id/237/200/300" alt="" />
 
