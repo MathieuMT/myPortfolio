@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 
 
-
+/*
 $(document).ready(function() {
     
     var $active = false;
@@ -118,14 +118,13 @@ $(document).ready(function() {
         
         
         // Fonction qui cache l'élément actif:
-        var hideActive = function() {
+        var hideEl = function() {
             
             var $el = $active;
             $el.slideUp(500, function() {
                 $el.remove();
             });
         };
-        
         
       
         // Traitement des éxecutions:
@@ -135,9 +134,10 @@ $(document).ready(function() {
         
         if($active) {
             
-            hideActive();
+            hideEl();
+            
         }
-      
+        
         showElement();
 
         window.location.hash = $certificate.attr('id');
@@ -168,5 +168,5 @@ var scrollTo = function(cible) {
     
 }
 
-
+*/
 

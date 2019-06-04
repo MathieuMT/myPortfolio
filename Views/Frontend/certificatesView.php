@@ -61,103 +61,1164 @@ foreach ($aboutCertificate as $eachCertificate): ?>
 
 
 
-<div class="container">
-    <?php for($j = 1; $j <= 3; $j++): ?>
-    <div class="row justify-content">
-        <?php for($i = 1; $i <= 4; $i++): ?>
-        <article class="col-xs-3 certificate" id="certificate-<?= $j . '-' . $i ?>">
-            
-            <img src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><br />
-            
-            <strong>Mon certificat <?= $j . '-' . $i ?></strong><br />
-            <em>HTML</em>
-            
-            <div class="certificate_detail">
-            
-                <div class="row">
-                  
-                    <div class="col-4">
+  
+   <h1 class="card-header text-center animated fadeInLeft">Certificats</h1><br />
+   
+    <div class="certificates">
+       
+       <div class="container">
+       
+       
+        <!-- accordion 1 for lg screen -->
+        
+        <div class="accordion" id="accordionLg">
 
-                    <img class="img-content stagger4" src="https://picsum.photos/id/237/200/300" alt="" />
+           <div class="row">
 
+                <div class="card col-4">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is HTML?</div></button>									
+                        </h2>
                     </div>
 
-                    <div class="col-8">
-
-                        <h2 class="stagger1">Mon Certificat <?= $j . '-' . $i ?></h2>
-                        <p class="stagger2"><em>HTML</em></p>
-                        <p class="stagger3">Paphius quin etiam et Cornelius senatores, ambo venenorum artibus pravis se polluisse confessi, eodem pronuntiante Maximino sunt interfecti. pari sorte etiam procurator monetae extinctus est. Sericum enim et Asbolium supra dictos, quoniam cum hortaretur passim nominare, quos vellent, adiecta religione firmarat, nullum igni vel ferro se puniri iussurum, plumbi validis ictibus interemit. et post hoe flammis Campensem aruspicem dedit, in negotio eius nullo sacramento constrictus.</p>
-
+                </div>
+                <div class="card col-4">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is Bootstrap?</div></button>
+                        </h2>
                     </div>
-                    
+
+                </div>
+                <div class="card col-4">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is CSS?</div></button>                     
+                        </h2>
+                    </div>
+
                 </div>
 
-               <hr class="hr"/>
+            </div>
+
+            <div class="row">
+                 <div id="collapseOne" class="collapse col-12" aria-labelledby="headingOne" data-parent="#accordionLg">
+                    <div class="card-body">
+
+                        <div class="certificate_detail">
+                            <div class="row">
+                                
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>HTML</em></p>
+                                    <img class="card-img img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                               
+                                
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                                
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                  <div id="collapseTwo" class="collapse col-12" aria-labelledby="headingTwo" data-parent="#accordionLg">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>BOOTSTRAP</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                               
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                                
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            
+            <div class="row">
+                <div id="collapseThree" class="collapse col-12" aria-labelledby="headingThree" data-parent="#accordionLg">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>CSS</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                               
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                                
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+           <div class="row">
+
+                <div class="card col-4">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseFour"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is HTML?</div></button>									
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="card col-4">
+                    <div class="card-header" id="headingFive">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is Bootstrap?</div></button>
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="card col-4">
+                    <div class="card-header" id="headingSix">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is CSS?</div></button>                     
+                        </h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div id="collapseFour" class="collapse col-12" aria-labelledby="headingFour" data-parent="#accordionLg">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>HTML</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                    <div id="collapseFive" class="collapse col-12" aria-labelledby="headingFive" data-parent="#accordionLg">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>BOOTSTRAP</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div> 
+                    </div>
+                </div>
+
+
+            </div>
+            
+            <div class="row">
+                <div id="collapseSix" class="collapse col-12" aria-labelledby="headingSix" data-parent="#accordionLg">
+                    <div class="card-body">  
+                        <div class="certificate_detail">
+                            <div class="row">
+                                
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>CSS</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                               
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            
+            <div class="row">
+
+                <div class="card col-4">
+                    <div class="card-header" id="headingSeven">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is HTML?</div></button>									
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="card col-4">
+                    <div class="card-header" id="headingHeight">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseHeight"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is Bootstrap?</div></button>
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="card col-4">
+                    <div class="card-header" id="headingNine">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is CSS?</div></button>                     
+                        </h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                 <div id="collapseSeven" class="collapse col-12" aria-labelledby="headingSeven" data-parent="#accordionLg">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>HTML</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                               
+                            <div class="row">
+                                <div class="card-muted col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div id="collapseHeight" class="collapse col-12" aria-labelledby="headingHeight" data-parent="#accordionLg">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>BOOTSTRAP</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div id="collapseNine" class="collapse col-12" aria-labelledby="headingNine" data-parent="#accordionLg">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>CSS</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div> 
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div><!-- end #accordion1 -->
+        
+    
+        <!--
+        <br />
+        <br />
+        <br />
+        <br />
+        <hr />
+        <br />
+        <br />
+        <br />
+        <br />
+        -->
+        
+        
+        
+        
+        <!-- accordion 2 for md screen -->
+        
+        <div class="accordion" id="accordionMd">
+
+           <div class="row">
+
+                <div class="card col-6">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is HTML?</div></button>									
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="card col-6">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is Bootstrap?</div></button>
+                        </h2>
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+            <div class="row">
+                 <div id="collapseOne" class="collapse col-12" aria-labelledby="headingOne" data-parent="#accordionMd">
+                    <div class="card-body">
+
+                        <div class="certificate_detail">
+                            <div class="row">
+                                
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>HTML</em></p>
+                                    <img class="card-img img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                               
+                                
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                                
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                  <div id="collapseTwo" class="collapse col-12" aria-labelledby="headingTwo" data-parent="#accordionMd">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>BOOTSTRAP</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                               
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                                
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            
+           <div class="row">
+                
+                <div class="card col-6">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is CSS?</div></button>                     
+                        </h2>
+                    </div>
+
+                </div>
+
+                <div class="card col-6">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseFour"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is HTML?</div></button>									
+                        </h2>
+                    </div>
+
+                </div>
+                
+
+            </div>
+            
+            <div class="row">
+                <div id="collapseThree" class="collapse col-12" aria-labelledby="headingThree" data-parent="#accordionMd">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>CSS</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                               
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                                
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            
+            <div class="row">
+                <div id="collapseFour" class="collapse col-12" aria-labelledby="headingFour" data-parent="#accordionMd">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>HTML</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+
+
+            
+            
+            <div class="row">
+                
+                <div class="card col-6">
+                    <div class="card-header" id="headingFive">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is Bootstrap?</div></button>
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="card col-6">
+                    <div class="card-header" id="headingSix">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is CSS?</div></button>                     
+                        </h2>
+                    </div>
+
+                </div>
+                
                 
             </div>
             
             
-            
-            <div class="certificate_detail_mobile">
-            
-                <div class="row">
-                 
-                     <div class="col-md-4"></div>
-                  
-                    <div class="col-md-4 img-project">
+            <div class="row">
+                    <div id="collapseFive" class="collapse col-12" aria-labelledby="headingFive" data-parent="#accordionMd">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>BOOTSTRAP</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
 
-                    <img class="img-content stagger4" src="https://picsum.photos/id/237/200/300" alt="" />
-
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div> 
                     </div>
-                    
-                    <div class="col-md-4"></div>
-                    
-                </div> 
-                  
-                <div class="row">
-
-                    <div class="col-md-12">
-
-                        <h2 class="stagger1">Mon Certificat <?= $j . '-' . $i ?></h2>
-                        <p class="stagger2"><em>HTML</em></p>
-                        <p class="stagger3">Paphius quin etiam et Cornelius senatores, ambo venenorum artibus pravis se polluisse confessi, eodem pronuntiante Maximino sunt interfecti. pari sorte etiam procurator monetae extinctus est. Sericum enim et Asbolium supra dictos, quoniam cum hortaretur passim nominare, quos vellent, adiecta religione firmarat, nullum igni vel ferro se puniri iussurum, plumbi validis ictibus interemit. et post hoe flammis Campensem aruspicem dedit, in negotio eius nullo sacramento constrictus.</p>
-
-                    </div>
-                    
                 </div>
 
-               <hr class="hr"/>
-                
+
+            </div>
+
+            <div class="row">
+                <div id="collapseSix" class="collapse col-12" aria-labelledby="headingSix" data-parent="#accordionMd">
+                    <div class="card-body">  
+                        <div class="certificate_detail">
+                            <div class="row">
+                                
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>CSS</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                               
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
             
-            <div class="row row-detail-mobile">
             
             
-            
-            </div><!-------- div.row-detail-mobile ------>
-            
-        </article>
-        
-        <?php endfor; ?>
-        
-    </div>
-    <hr class="hr"/>
-    <div class="row row-detail">
-        
-        
-        
-        
-        
-        
-    </div>
-    
-    <?php endfor; ?>
-    
-    
-    
-    
-</div>
+            <div class="row">
 
+                <div class="card col-6">
+                    <div class="card-header" id="headingSeven">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is HTML?</div></button>									
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="card col-6">
+                    <div class="card-header" id="headingHeight">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseHeight"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is Bootstrap?</div></button>
+                        </h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                 <div id="collapseSeven" class="collapse col-12" aria-labelledby="headingSeven" data-parent="#accordionMd">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>HTML</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                               
+                            <div class="row">
+                                <div class="card-muted col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div id="collapseHeight" class="collapse col-12" aria-labelledby="headingHeight" data-parent="#accordionMd">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>BOOTSTRAP</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+       
+            <div class="row">
+                <div class="card col-6">
+                        <div class="card-header" id="headingNine">
+                            <h2 class="mb-0 text-center">
+                                <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is CSS?</div></button>                     
+                            </h2>
+                        </div>
+
+                </div>
+            </div>
+            
+            <div class="row">
+                <div id="collapseNine" class="collapse col-12" aria-labelledby="headingNine" data-parent="#accordionMd">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>CSS</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div> 
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div><!-- end #accordion2 -->
+        
+        
+        
+        
+        
+        
+        <!--
+        <br />
+        <br />
+        <br />
+        <br />
+        <hr />
+        <br />
+        <br />
+        <br />
+        <br />
+        -->
+    
+        
+        <!-- accordion 3 for md screen -->
+        <div class="accordion" id="accordionSm">
+
+           <div class="row">
+
+                <div class="card col-md-4">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is HTML?</div></button>				
+                        </h2>
+                    </div>
+                </div>
+            
+                <div id="collapseOne" class="collapse col-12" aria-labelledby="headingOne" data-parent="#accordionSm">
+                    <div class="card-body">
+
+                        <div class="certificate_detail">
+                            <div class="row">
+                                
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>HTML</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                               
+                                
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                                
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+            <div class="row">
+                <div class="card col-md-4">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is Bootstrap?</div></button>
+                        </h2>
+                    </div>
+                </div>
+            
+                <div id="collapseTwo" class="collapse col-12" aria-labelledby="headingTwo" data-parent="#accordionSm">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>BOOTSTRAP</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                               
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                                
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card col-md-4">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is CSS?</div></button>                     
+                        </h2>
+                    </div>
+
+                </div>
+            
+                <div id="collapseThree" class="collapse col-12" aria-labelledby="headingThree" data-parent="#accordionSm">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>CSS</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                               
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                                
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="row">
+
+                <div class="card col-md-4">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseFour"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is HTML?</div></button>
+                        </h2>
+                    </div>
+                </div>
+            
+                <div id="collapseFour" class="collapse col-12" aria-labelledby="headingFour" data-parent="#accordionSm">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>HTML</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">   
+                <div class="card col-md-4">
+                    <div class="card-header" id="headingFive">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is Bootstrap?</div></button>
+                        </h2>
+                    </div>
+                </div>
+            
+                <div id="collapseFive" class="collapse col-12" aria-labelledby="headingFive" data-parent="#accordionSm">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>BOOTSTRAP</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">  
+                <div class="card col-md-4">
+                    <div class="card-header" id="headingSix">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is CSS?</div></button>                     
+                        </h2>
+                    </div>
+
+                </div>
+
+            
+                <div id="collapseSix" class="collapse col-12" aria-labelledby="headingSix" data-parent="#accordionSm">
+                    <div class="card-body">  
+                        <div class="certificate_detail">
+                            <div class="row">
+                                
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>CSS</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                               
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row">
+
+                <div class="card col-md-4">
+                    <div class="card-header" id="headingSeven">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is HTML?</div></button>
+                        </h2>
+                    </div>
+                </div>
+            
+                <div id="collapseSeven" class="collapse col-12" aria-labelledby="headingSeven" data-parent="#accordionSm">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>HTML</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                               
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+            <div class="row"> 
+                <div class="card col-md-4">
+                    <div class="card-header" id="headingHeight">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseHeight"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is Bootstrap?</div></button>
+                        </h2>
+                    </div>
+                </div>
+            
+                <div id="collapseHeight" class="collapse col-12" aria-labelledby="headingHeight" data-parent="#accordionSm">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>BOOTSTRAP</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="card-body col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card col-md-4">
+                    <div class="card-header" id="headingNine">
+                        <h2 class="mb-0 text-center">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"><img class="card-img-top" src="https://picsum.photos/id/870/200/300?grayscale&blur=<?= $i ?>" alt="" /><div class="card-img-overlay text-center d-flex flex-column justify-content-center">What is CSS?</div></button>          
+                        </h2>
+                    </div>
+                </div>
+            
+                <div id="collapseNine" class="collapse col-12" aria-labelledby="headingNine" data-parent="#accordionSm">
+                    <div class="card-body">
+                        <div class="certificate_detail">
+                            <div class="row">
+                               
+                                <div class="card-header col-md-12 text-center">
+                                    <h2 class="stagger1 animated fadeInLeft">Mon Certificat </h2>
+                                    <p class="stagger2 animated fadeInLeft text-muted"><em>CSS</em></p>
+                                    <img class="card-img-top img-content stagger3 animated fadeInLeft" src="https://picsum.photos/id/237/200/300" alt="" />
+
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    
+                                    
+                                    <p class="stagger4 animated fadeInLeft text-justify">CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                                </div>
+                            </div>
+                           <hr class="hr"/>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+
+        </div><!-- end #accordion2 -->
+        
+       </div><!-- .container --> 
+        
+    </div><!-- end .certificates -->
+       
 
 
 

@@ -23,6 +23,26 @@
         <link rel="stylesheet" href="Content/Lib/bootstrap-4.3.1/dist/css/bootstrap.min.css" />
         -->
         
+        
+        
+        <!-- Pages certificates: accordion -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+        <!-- CDN ANIMATE.CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        
+        
+        
         <!--FontAwesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         
@@ -59,7 +79,7 @@
         ?>
                 
                
-        
+        <!--
         <div class="container">
 
            <div class="row">
@@ -67,7 +87,7 @@
                
                <div class="col-lg-12">
                 
-                   
+          -->         
                    
                     <div id="content">
                             <?= $content ?> <!-- Specific element -->
@@ -75,7 +95,7 @@
                             <br />
                             <br />
                     </div><!-- #content -->
-        
+        <!--
                </div>
                
            </div>
@@ -84,7 +104,7 @@
        </div>
             
        
-            
+        -->    
               
                 
         
@@ -98,7 +118,7 @@
         
         <!-- essai -->
         <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
-        <script src="Content/JS/certificate.js"></script>
+        <!-- <script src="Content/JS/certificate.js"></script> -->
         <!---->
         
         

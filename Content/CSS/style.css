@@ -285,6 +285,82 @@ transform: rotate(-135deg);
 * certificateView.php
 **/
 
+
+/* accordion */
+
+.certificates{
+    margin: 20px;
+}
+
+.stagger1 {
+  animation-delay: 0.3s;  
+}
+
+.stagger2 {
+  animation-delay: 0.5s;  
+}
+
+.stagger3 {
+  animation-delay: 0.7s;  
+}
+
+.stagger4 {
+  animation-delay: 0.9s;  
+}
+
+#accordionLg {
+    display: none;
+}
+
+#accordionMd {
+    display: none;
+}
+
+#accordionSm {
+    display: block;
+}
+
+
+@media screen and (min-width: 576px) {
+    
+    
+    #accordionLg {
+        display: none;
+    }    
+    
+    #accordionMd {
+        display: block;
+    }
+    
+    #accordionSm {
+        display: none;
+    }
+    
+    
+}
+
+@media screen and (min-width: 768px) {
+    
+    
+    #accordionLg {
+        display: block;
+    }    
+    
+    #accordionMd {
+        display: none;
+    }
+    
+    #accordionSm {
+        display: none;
+    }
+    
+}
+
+
+
+
+
+
 .hr {
     background-color: rgba(248,13,32,0.6);
 }
@@ -300,6 +376,7 @@ img {
 }
 */
 
+/*
 .certificate {
     cursor: pointer;
 }
@@ -328,6 +405,8 @@ img {
 .img-project {
     text-align: center;
 }
+*/
+
 
 /*
 .row-detail {
@@ -336,17 +415,31 @@ img {
 */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 * worksView.php
 **/
 
-
+/*
 em {
     opacity: 0.6;
 }
 
 .work {
-    /*cursor: pointer;*/
+    
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -360,7 +453,217 @@ em {
     height: 346px;
     overflow-y: hidden;
 }
+*/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************************************************/
+.works{
+    margin: 20px;
+}
+
+
+/**********/
+/* images */
+/*
+img {  
+  
+  min-height: 50px;
+}
+
+img:before {  
+  content: " ";
+  display: block;
+
+  position: absolute;
+  top: -10px;
+  left: 0;
+  height: calc(100% + 10px);
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  border: 2px dotted rgb(200, 200, 200);
+  border-radius: 5px;
+}
+
+img:after {  
+  content: ;
+  display: block;
+  font-size: 16px;
+  font-style: normal;
+  font-family: FontAwesome;
+  color: rgb(100, 100, 100);
+
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+*/
+
+
+
+/**********/
+
+
+
+
+
+/*********/
+
+/* Carousel
+
+----------------------------------- */
+
+
+.carousel {
+    background-color: #000;
+}
+
+.carousel.carousel-fade .carousel-item {
+
+    display: block;
+
+    opacity: 0;
+
+    transition: opacity ease-out 1.7s;
+
+    left: 0;
+
+    top: 0;
+
+    position: absolute;
+
+}
+
+.carousel.carousel-fade .carousel-item.active {
+
+    opacity: 1 !important;
+
+}
+
+.carousel.carousel-fade .carousel-item:first-child {
+
+    top: auto;
+
+    position: relative;
+
+    transition: opacity ease-out 1.7s;
+
+}
+
+.carousel.carousel-fade .carousel-item:second-child {
+
+    top: auto;
+
+    position: relative;
+
+    transition: opacity ease-out 1.7s;
+
+}
+
+.carousel-item .img-fluid {
+
+    margin: 0 auto;
+
+}
+
+.carousel img {
+
+    opacity: 0.5;
+
+    filter: alpha(opacity=50);
+
+}
+
+
+/********/
+/*
+.carousel-fade .carousel-inner .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+}
+
+
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+*/
+
+.stagger1 {
+  animation-delay: 0.3s;  
+}
+
+.stagger2 {
+  animation-delay: 0.5s;  
+}
+
+.stagger3 {
+  animation-delay: 0.7s;  
+}
+
+.stagger4 {
+  animation-delay: 0.9s;  
+}
+
+#accordionLg {
+    display: none;
+}
+
+#accordionMd {
+    display: none;
+}
+
+#accordionSm {
+    display: block;
+}
+
+
+@media screen and (min-width: 576px) {
+    
+    
+    #accordionLg {
+        display: none;
+    }    
+    
+    #accordionMd {
+        display: block;
+    }
+    
+    #accordionSm {
+        display: none;
+    }
+    
+    
+}
+
+@media screen and (min-width: 768px) {
+    
+    
+    #accordionLg {
+        display: block;
+    }    
+    
+    #accordionMd {
+        display: none;
+    }
+    
+    #accordionSm {
+        display: none;
+    }
+    
+}
+/*****************************************************/
 
