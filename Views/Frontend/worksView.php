@@ -40,7 +40,7 @@ foreach ($aboutWork as $eachWork): ?>
 
 
   
-   <h1 class="card-header text-center animated fadeInLeft">Réalisations</h1><br />
+   <h2 class="card-header text-center animated fadeInLeft">Réalisations</h2><br />
    
     <div class="works">
        
@@ -3184,7 +3184,6 @@ foreach ($aboutWork as $eachWork): ?>
 <!--
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
-
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 

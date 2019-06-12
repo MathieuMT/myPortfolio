@@ -1,4 +1,11 @@
-/* accélère le chargement des images des diaporamas */
+
+    
+   
+
+
+jQuery(document).ready(function($) {
+       
+        /* accélère le chargement des images des diaporamas */
 
 function loadImages() {
     var imgs = document.getElementsByTagName('img');
@@ -12,11 +19,6 @@ function loadImages() {
 if (window.addEventListener) { window.addEventListener("load", loadImages, false); }
 else if (window.attachEvent) { window.attachEvent("onload", loadImages); }
     
-   
-
-
-jQuery(document).ready(function($) {
-       
         $('.carousel').carousel({
          interval: 2000,
          cycle: true

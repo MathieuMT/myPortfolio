@@ -277,6 +277,12 @@ transform: rotate(-135deg);
 }
 
 
+/*Suppression de l'encadré bleu au clic du btn de navigation de la navbar en moyenne résolution */
+.navbar-toggler:not(:disabled):not(.disabled) {
+    outline-style: none;
+}
+
+
 
 
 
@@ -284,79 +290,90 @@ transform: rotate(-135deg);
 /*
 * certificateView.php
 **/
+/*
+* gallerie des certificats
+*/
 
-
-/* accordion */
-
-.certificates{
-    margin: 20px;
+.gallery-block {
+    padding-bottom: 60px;
+    padding-top: 60px;
 }
 
-.stagger1 {
-  animation-delay: 0.3s;  
+/*
+.gallery-block .heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+*/
+
+h2 {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
 }
 
-.stagger2 {
-  animation-delay: 0.5s;  
+.gallery-block.cards-gallery h6 {
+    font-size: 17px;
+    font-weight: bold;
 }
 
-.stagger3 {
-  animation-delay: 0.7s;  
+.gallery-block.cards-gallery .card {
+    transition: 0.4s easy;
 }
 
-.stagger4 {
-  animation-delay: 0.9s;  
+.gallery-block.cards-gallery .card img {
+    box-shadow: 0px 2px 10px rgba(248,13,32,0.25);
 }
 
-#accordionLg {
+.gallery-block.cards-gallery .card-body {
+    text-align: center;
+}
+
+.gallery-block.cards-gallery .card-body p{
+    font-size: 15px;
+}
+
+.gallery-block.cards-gallery a {
+    color: #212529;
+}
+
+.gallery-block.cards-gallery a:hover {
+    text-decoration: none;
+}
+
+.gallery-block.cards-gallery .card {
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 10px rgba(255,255,255,0.35);
+}
+
+.galleryOne {
     display: none;
 }
-
-#accordionMd {
-    display: none;
-}
-
-#accordionSm {
+.galleryTwo {
     display: block;
-}
+}  
 
-
-@media screen and (min-width: 576px) {
+@media (min-width: 992px) {
     
     
-    #accordionLg {
-        display: none;
-    }    
-    
-    #accordionMd {
+   .galleryOne {
         display: block;
     }
     
-    #accordionSm {
-        display: none;
+    .galleryTwo {
+        display:none;
     }
+   
     
     
 }
 
-@media screen and (min-width: 768px) {
-    
-    
-    #accordionLg {
-        display: block;
-    }    
-    
-    #accordionMd {
-        display: none;
+@media (min-width:576px) {
+    .gallery-block .transform-on-hover:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0px 10px 10px rgba(255,255,255,0.35);rgba(255,255,255,0.25);!important;
     }
-    
-    #accordionSm {
-        display: none;
-    }
-    
 }
-
-
 
 
 
@@ -368,52 +385,6 @@ transform: rotate(-135deg);
 h2 {
     margin-top: 0;
 }
-
-/*
-img {
-    width: 100%;
-    height: auto;
-}
-*/
-
-/*
-.certificate {
-    cursor: pointer;
-}
-
-.justify-content {
-    justify-content: space-between;
-}
-
-.certificate {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.img-content {
-    cursor: pointer;
-    height: 346px;
-    overflow-y: hidden;
-    margin-bottom: 20px;
-}
-
-.certificate_detail, .certificate_detail_mobile  {
-    display: none;
-    background-color: rgba(233,236,239,0.6);  
-}
-
-.img-project {
-    text-align: center;
-}
-*/
-
-
-/*
-.row-detail {
-    display: none;
-}
-*/
-
 
 
 
@@ -532,6 +503,8 @@ img:after {
     background-color: #000;
 }
 
+
+
 .carousel.carousel-fade .carousel-item {
 
     display: block;
@@ -582,7 +555,7 @@ img:after {
 
 .carousel img {
 
-    opacity: 0.5;
+    opacity: 1;
 
     filter: alpha(opacity=50);
 
@@ -602,3 +575,21 @@ img:after {
 }
 */
 
+
+
+
+
+
+
+
+
+
+/*
+*page PrivateFormsView.php
+**/
+
+/*
+.alert {
+    display: none;
+}
+*/

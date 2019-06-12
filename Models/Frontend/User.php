@@ -6,7 +6,7 @@ require_once 'Views/ViewFrontEnd.php';
 
 
 class User {
-    private $_id,$_username,/*$_password,*/$_description;
+    private $_id,$_username,$_pass,$_description;
     
     
     public function __construct(array $data){
@@ -25,7 +25,7 @@ class User {
     // Getters:
     public function id() { return $this->_id; }
     public function username() { return $this->_username;}
-   //public function password() { return $this->_password;}
+    public function pass() { return $this->_pass;}
     public function description() { return $this->_description;}
     
     // Setters:
@@ -44,14 +44,14 @@ class User {
         }
     }
     
-    /*
-    public function setPassword($password) {
+    
+    public function setPass($pass) {
         
-        if(is_string($password)) {
-            $this->_password = $password;
+        if(is_string($pass)) {
+            $this->_pass = $pass;
         }
     }
-    */
+   
     
     public function setDescription($description) {
         
