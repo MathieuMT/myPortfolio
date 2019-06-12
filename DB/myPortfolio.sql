@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Jeu 16 Mai 2019 à 20:23
+-- Généré le :  Mer 12 Juin 2019 à 16:04
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.1
 
@@ -61,6 +61,7 @@ INSERT INTO `certificates` (`id`, `name`, `slug`, `catergory_id`) VALUES
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
+  `pass` text NOT NULL,
   `description` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -68,9 +69,9 @@ CREATE TABLE `users` (
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `description`) VALUES
-(1, 'MathieuMT', 'Developpeur WEB'),
-(2, 'Bat', 'Chef cuisto');
+INSERT INTO `users` (`id`, `username`, `pass`, `description`) VALUES
+(1, 'MathieuMT', '', 'Developpeur WEB'),
+(2, 'Bat', '', 'Chef cuisto');
 
 -- --------------------------------------------------------
 
