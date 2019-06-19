@@ -1,7 +1,7 @@
-<?php $this->title = 'About'; ?>
+<?php $this->title = 'À Mon Propos'; ?>
 
 
-<h1 class="text-center titlePage"><?= $this->title = 'About \'Me\'' ?></h1>
+<h1 class="text-center titlePage"><?= $this->title = 'À Mon Propos' ?></h1>
 <br/>
 <br/>
 <br/>

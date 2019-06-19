@@ -8,7 +8,7 @@
 <br/>
 
 
-<!--
+
 
 
 <?php
@@ -16,12 +16,11 @@
     
     
     
-/////////////////////////////////////////////////////////////////////////////////////
 
-/*
 
 echo 'tableau d\'objets où chaque objet contient un tableau de données de la BDD :';
-var_dump($aboutCertificate); 
+var_dump($aboutCertificate);
+
 echo '<hr>';
 foreach ($aboutCertificate as $eachCertificate): ?>
 
@@ -31,7 +30,7 @@ foreach ($aboutCertificate as $eachCertificate): ?>
 <fieldset>
     <article>
        
-            id: <?= $eachCertificate->id(); ?><br />name:<?= $eachCertificate->name(); ?><br />slug: <?php var_dump($eachCertificate->slug()); ?><br />categorie_id: <?php var_dump($eachCertificate->categiryid()); ?>
+            id: <?= $eachCertificate->id(); ?><br />name:<?= $eachCertificate->name(); ?><br />slug: <?php var_dump($eachCertificate->slug()); ?><br />categorie_id: <?php var_dump($eachCertificate->categiryid()); ?><br />certificatImg:<?= $eachCertificate->certificatImg(); ?>
             
         
     </article>
@@ -43,7 +42,7 @@ foreach ($aboutCertificate as $eachCertificate): ?>
 
 <?php endforeach; ?>
 
-*/
+
 ///////////////////////////////////////////////////////////////////////////////////////
 ?>
 -->

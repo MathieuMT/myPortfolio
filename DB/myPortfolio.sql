@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Mer 12 Juin 2019 à 16:04
+-- Généré le :  Dim 16 Juin 2019 à 17:20
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.1
 
@@ -41,16 +41,12 @@ CREATE TABLE `categories` (
 CREATE TABLE `certificates` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `certificatImg` text NOT NULL,
+  `certificatTitle` varchar(255) NOT NULL,
+  `certificatDescription` text NOT NULL,
   `slug` varchar(255) NOT NULL,
   `catergory_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `certificates`
---
-
-INSERT INTO `certificates` (`id`, `name`, `slug`, `catergory_id`) VALUES
-(1, '1er certificat', '', 0);
 
 -- --------------------------------------------------------
 
@@ -62,7 +58,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `pass` text NOT NULL,
-  `description` longtext NOT NULL
+  `description` longtext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -70,8 +66,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `pass`, `description`) VALUES
-(1, 'MathieuMT', '', 'Developpeur WEB'),
-(2, 'Bat', '', 'Chef cuisto');
+(1, 'MathieuMT', '$2y$10$0vU3BHAgFG3SJV3q9HrIKun5WjChzYit6BnjJdtyQxkwCX5RwSGwO', 'Developpeur WEB'),
+(2, 'Bat', '', 'Chef cuisto'),
+(3, 'Bob', '$2y$10$JOZcgPnuH5vH9Oc9OF2jbuykDdA3VKpAJBbwhNrj8lPJYMHIgaiAe', NULL),
+(4, 'Seb', '$2y$10$OHAVsQnwTCRzdxWc0EHEL..ufOt9bJv3uYgjFhMKfhdwZ0Br8dELe', NULL),
+(5, 'Tim', '$2y$10$GJfqe/n.vsjNQaqm77yemuAdTb0.jLQh3mfleEDH89/utr4gwkjn.', NULL),
+(6, 'Olivier', '$2y$10$cBVZkdA5b4DWPquvcWk3Z.nSOV3EDehK54uqi3QSIUBE6OSxR1872', NULL),
+(7, 'Bibop', '$2y$10$hVQ/smKm60FAWiaTmWhY7OwrNgBQEABWIl8VGPzeUAr8sdPEIE8Ee', NULL),
+(8, 'Tom', '$2y$10$0vU3BHAgFG3SJV3q9HrIKun5WjChzYit6BnjJdtyQxkwCX5RwSGwO', NULL),
+(9, 'Leo', '$2y$10$eLhekjNaqxzl/9aMwsibcO7lP3S8qfEvR/eMKyo7Qx06yIlIjpPQS', NULL);
 
 -- --------------------------------------------------------
 
@@ -136,12 +139,12 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT pour la table `certificates`
 --
 ALTER TABLE `certificates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `works`
 --

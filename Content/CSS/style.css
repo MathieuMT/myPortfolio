@@ -101,7 +101,6 @@ body {
     margin: 0;
     padding: 0;
     background-color:rgba(248,13,32,0.6);
-    
     color:  rgba(0,0,139,0.6);
     text-shadow: 1px 1px 1px rgba(245,245,220,0.6);
 }
@@ -157,10 +156,14 @@ body {
 
 
 /*
-*MEDIA QUERY
+*MEDIA QUERY NAVBAR
 **/
 
 @media screen and (min-width: 576px){
+    
+    /*
+    * NAVBAR
+    **/
     
     .nav-link {
         border: none;
@@ -173,14 +176,20 @@ body {
         border: none;
     }
     
+    .nav-item .nav-link {
+       padding: 15px;    
+    }
+    
     .dropdown-item {
         margin-top: 6px;
+        padding: 6px;
         border-radius: 50%;
         background-color: rgba(245,245,220,0.6);
     }
     
     .dropdown-item:hover {
         margin-top: 6px;
+        padding: 6px;
     }
     
     .dropdown-divider {
@@ -588,6 +597,45 @@ img:after {
 *page PrivateFormsView.php
 **/
 
+/* DROPZONE */
+
+#dropZone {
+	border: 3px dashed #0088cc;
+	padding: 50px;
+	width: 500px;
+	margin-top: 20px;
+}
+
+#files {
+	border: 1px dotted #0088cc;
+	padding: 20px;
+	width: 200px;
+	display: none;
+}
+
+#error {
+   color: red;
+}
+
+
+
+
+/*
+#dropZone {
+    border: 3px dashed rgba(248,13,32,0.6);
+    padding: 50px;
+}
+
+#files {
+    border: 1px dotted rgba(233,236,239,0.6);
+    padding: 20px;
+    display: none;
+}
+
+#error {
+    color: red;
+}
+*/
 /*
 .alert {
     display: none;

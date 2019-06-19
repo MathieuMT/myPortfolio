@@ -19,7 +19,7 @@ class WorkController {
     
     
      //Show list of all blog posts
-    public function aboutWork() {
+    public function aboutWorks() {
         $aboutWork = $this->_work->getWorkDescription();
         $view = new ViewFrontEnd('worksView');
         $view->generate(array('aboutWork' => $aboutWork));

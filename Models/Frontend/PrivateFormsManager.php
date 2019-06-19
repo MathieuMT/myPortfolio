@@ -8,9 +8,9 @@ class PrivateFormsManager extends Model {
     //  Add a new user:
     public function newUserRegistered($usernameRegistered, $hashPassRegistered) {
         
-        $sql = 'INSERT INTO users(username, pass) VALUES(:username, :pass,)';
+        $sql = 'INSERT INTO users(username, pass) VALUES(:username, :pass)';
         
-        $newUserRegistered = $this->executeQuery($sql, array('username' => $usernameRegistered, 'pass' => $hashPassRegistered));
+        $newUserRegistered = $this->executeRequest($sql, array('username' => $usernameRegistered, 'pass' => $hashPassRegistered));
         
         if ($newUserRegistered) {
             return true;
@@ -24,7 +24,7 @@ class PrivateFormsManager extends Model {
         
         $sql = 'SELECT * FROM users WHERE username = :username';
         
-        $req = $this->executeQuery($sql, array('username' => $usernameRegistered));
+        $req = $this->executeRequest($sql, array('username' => $usernameRegistered));
         $result = $req->fetch();
         
         if ($result) {
@@ -33,5 +33,19 @@ class PrivateFormsManager extends Model {
             return false;
         }
     }
+    
+    
+    
+    public function connectedUser($usernameConnected) {
+        
+        // Good Username in db:
+            $sql = 'SELECT * FROM users WHERE username = :username';
+
+            $result = $this->executeRequest($sql, array('username'=>$usernameConnected));
+
+            return $result->fetch();
+        
+    }
+    
     
 }

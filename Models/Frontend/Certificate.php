@@ -6,7 +6,7 @@ require_once 'Views/ViewFrontEnd.php';
 
 
 class Certificate {
-    private $_id,$_name,$_slug, $_category_id;
+    private $_id,$_name,$_certificatImg,$_slug, $_category_id;
     
     
     public function __construct(array $data){
@@ -25,6 +25,7 @@ class Certificate {
     // Getters:
     public function id() { return $this->_id; }
     public function name() { return $this->_name;}
+    public function certificatImg() { return $this->_certificatImg;}
     public function slug() { return $this->_slug;}
     public function categiryid() { return $this->_category_id;}
     
@@ -41,6 +42,13 @@ class Certificate {
         
         if(is_string($name)) {
             $this->_name = $name;
+        }
+    }
+    
+    public function setCertificatImg($certificatImg) {
+        
+        if(is_string($certificatImg)) {
+            $this->_certificatImg = $certificatImg;
         }
     }
     

@@ -7,8 +7,14 @@ class PrivateFormsController {
     
     
     private $manager;
-    private $error;
-    private $success;
+    private $success1;
+    private $success2;
+    private $error1;
+    private $error2;
+    private $error3;
+    private $error4;
+    private $error5;
+    
     
     public function __construct() {
         $this->manager = new PrivateFormsManager();
@@ -20,10 +26,14 @@ class PrivateFormsController {
         $view->generate([]);
     }
     
+    
+    
+    /* FORMULAIRE D'INSCRIPTION */
+    
     // Ajouter un nouvel utilisateur:
     public function newUserRegistration($usernameRegistered, $passRegistered, $checkPassRegistered) {
         
-      
+        
         
         /* Avoid injecting user code into the fields of the form (against the XSS flaw): */
         $usernameRegistered = htmlspecialchars($usernameRegistered);
@@ -40,13 +50,14 @@ class PrivateFormsController {
             $newUserRegistered = $this->manager->newUserRegistered($usernameRegistered, $hashPassRegistered);
             
             if ($newUserRegistered) {
-                $this->success['registration'] = 'Votre inscription est bien enregistrée !';
+                $this->success1['registration'] = 'Votre inscription est bien enregistrée !';
             }
         }
-        
+      
         $view = new ViewBackEnd('privateFormsView');
-        $view->generate(['error' => $this->error, 'success' => $this->success]); 
-        
+        $view->generate(['error1' => $this->error1, 'error2' => $this->error2, 'error3' => $this->error3, 'success1' => $this->success1]); 
+       
+       /* header('Location: index.php');*/
     }
     
     
@@ -55,9 +66,9 @@ class PrivateFormsController {
         
         $usernameRegistered = $this->verifyUsernameRegistered($usernameRegistered);
         $checkPassRegistered = $this->verifyPassRegistered($passRegistered, $checkPassRegistered);
-        $checkFieldRegistered = $this->verifyFieldEmptyRegistered($usernameRegistered, $passRegistered, $checkPassRegistered);
         
-        if ($usernameRegistered && $checkPassRegistered && $checkFieldRegistered) {
+        
+        if ($usernameRegistered && $checkPassRegistered) {
             return true;
         }else {
             return false;
@@ -75,7 +86,7 @@ class PrivateFormsController {
         $lengthUsernameRegistered = strlen($usernameRegistered);
         if (($lengthUsernameRegistered < 3) || ($lengthUsernameRegistered > 25)) {
             
-            $this->error['usernameRegistered'] = "Votre pseudo doit comprendre entre 3 et 25 caractères !";
+            $this->error1['usernameRegistered'] = "Votre pseudo doit comprendre entre 3 et 25 caractères !";
             
             $check = false;  
         }
@@ -83,7 +94,7 @@ class PrivateFormsController {
         // Check existing nickname:
         $existingUsernameRegistered = $this->manager->checkUsernameRegistered($usernameRegistered);
         if ($existingUsernameRegistered) {
-            $this->error['usernameRegistered'] = "Votre pseudo est déjà utilisé !";
+            $this->error2['usernameRegistered'] = "Votre pseudo est déjà utilisé !";
             
              $check = false;
         }
@@ -97,26 +108,67 @@ class PrivateFormsController {
                 
         // Check identicals passwords
         if ($passRegistered !== $checkPassRegistered) {
-            $this->error['passRegistered'] = "Vos mots de passe ne correspondent pas !";
-            $check = false;
-        }
-        return $check;
-    }
-    
-    // Check the field of the form of the registrered user is not empty:
-    private function verifyFieldEmptyRegistered($usernameRegistered, $passRegistered, $checkPassRegistered) {
-        
-        $check = true;
-        
-        // Check fields aren't empty
-        if (empty($usernameRegistered) || empty($passRegistered) || empty($checkPassRegistered)) {
-            $this->error['fieldRegistration'] = 'Tous les champs doivent être remplis!';
-            
+            $this->error3['passRegistered'] = "Vos mots de passe ne correspondent pas !";
             $check = false;
         }
         return $check;
     }
     
     
+    
+    /* FORMULAIRE DE CONNEXION */
+    
+    public function loginUser($usernameConnected, $passConnected) {
+        
+        /* Avoid injecting user code into the fields of the form (against the XSS flaw): */        
+        $usernameConnected = htmlspecialchars($usernameConnected);
+        $passConnected = htmlspecialchars($passConnected);
+        
+        
+        
+        $userRegistered = $this->manager->connectedUser($usernameConnected);
+        $isPasswordCorrect =  password_verify($passConnected, $userRegistered['pass']);
+        
+        
+        
+        
+        if (!empty($usernameConnected) || !empty($passConnected)) {
+            if ($userRegistered) {
+                if ($isPasswordCorrect) {
+
+                        
+                            
+                        $_SESSION['id'] = $userRegistered['id'];
+                               
+                        $_SESSION['username'] = $userRegistered['username'];
+                               
+                            
+                        $this->success2['connexion'] = 'Vous êtes bien connecté !';
+                            
+                            
+                                
+                        header('Location: index.php?action=about');
+
+                            
+                                           
+
+               }else {
+                   //Le return la aussi
+                   $this->error4['connexion'] = 'Votre nom d\'utilisateur ou mot de passe est invalide !';
+               }
+           }else {
+               $this->error5['connexion'] = 'Vous n\'êtes pas inscrit !';
+
+               header('Location:index.php?action=showPrivateForms');
+           } 
+       }
+        
+        $view = new ViewBackEnd('privateFormsView');
+        $view->generate(['error4' => $this->error4, 'error5' => $this->error5, 'success2' => $this->success2]);
+        
+        exit();
+        
+    }
+         
     
 } 

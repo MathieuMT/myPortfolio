@@ -28,7 +28,42 @@
         </div>
         
         
-    <div class="success alert alert-success" role="alert"><?php if (isset($success['registration'])) echo $success['registration']; ?></div>
+        <!-- MESSAGES DE SUCCÈS ET D'ERREURS -->
+        
+        <!-- L'utilisateur est bien enregistré -->
+        <?php if(isset($success1)) 
+            {
+            ?>
+                <div class="alert alert-success" role="alert"><?php if (isset($success1['registration'])) echo $success1['registration']; ?></div>
+            <?php
+            } 
+        ?>
+        <!-- Nom d'utilisateur doit comprendre entre 3 et 25 caractères -->   
+        <?php if(isset($error1)) 
+            {
+            ?>
+                <div class="alert alert-danger" role="alert"><?php if (isset($error1['usernameRegistered'])) {echo $error1['usernameRegistered'] ;} ?></div>
+            <?php
+            } 
+        ?>
+        
+        <!-- Nom d'utilisateur déjà utilisé -->
+        <?php if(isset($error2)) 
+            {
+            ?>
+                <div class="alert alert-danger" role="alert"><?php if (isset($error2['usernameRegistered'])) {echo $error2['usernameRegistered'] ;} ?></div>
+            <?php
+            } 
+        ?> 
+          
+        <!-- Les mots de passe ne correspondent pas -->
+        <?php if(isset($error3)) 
+            {
+            ?>
+                <div class="alert alert-danger" role="alert"><?php if (isset($error3['passRegistered'])) {echo $error3['passRegistered'] ;} ?></div>
+            <?php
+            } 
+        ?> 
 
     
 <!-- FORMULAIRE D'INSCRIPTION -->    
@@ -44,9 +79,7 @@
             
                     <div class="col-sm-6">
 
-                        <input type="text" class="form-control" id="usernameRegistered" name="usernameRegistered" placeholder="Nom d'utilisateur" required />
-                        
-                        <div class="error alert alert-danger" role="alert"><?php if (isset($error['usernameRegistered'])) {echo $error['usernameRegistered'] ;} ?></div>
+                        <input type="text" class="form-control" id="usernameRegistered" name="usernameRegistered" placeholder="Nom d'utilisateur" required autofocus />
 
                     </div>
                     
@@ -70,8 +103,6 @@
 
                         <input type="password" class="form-control" id="passRegistered" name="passRegistered" placeholder="Mot de passe" required />
 
-                        <div class="error alert alert-danger" role="alert"><?php if (isset($error['passRegistered'])) {echo $error['passRegistered'] ;} ?></div>
-
                     </div>
                     
                 </div>
@@ -93,8 +124,6 @@
 
                         <input type="password" class="form-control" id="checkPassRegistered" name="checkPassRegistered" placeholder="Confirmation" required />
 
-                        <div class="error alert alert-danger" role="alert"><?php if (isset($error['passRegistered'])) {echo $error['passRegistered'] ;} ?></div>
-
                     </div>
                 
                 </div>
@@ -107,7 +136,8 @@
                       
             
 
-                <button type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3" data-dismiss="alert" name="btnRegistration">S'inscrire</button>
+                <!--<input type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3"  name="btnRegistration" value="S'inscrire" />-->
+                <button type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3"  name="btnRegistration" />S'inscrire</button>
                 
               
 
@@ -116,8 +146,6 @@
         
         
     </form>
-    
-    <div class="error alert alert-danger" role="alert"><?php if (isset($error['fieldRegistration'])) {echo $error['fieldRegistration'] ;} ?></div>
     
 </div>
 
@@ -132,10 +160,8 @@
 
 <!-- FORMULAIRE DE CONNEXION -->
 <div class="mx-auto col-sm-10 text-center border border-primary p-2 mt-5">
-    
-    <form>
-    
-        <div class="row">
+   
+   <div class="row">
 
             <div class="col-md-12">
 
@@ -146,17 +172,53 @@
         </div>
         
         
-            
+        <!-- MESSAGES DE SUCCÈS ET D'ERREURS -->
+        
+        <!-- L'utilisateur est bien bien connecté -->
+        <?php if(isset($success2)) 
+            {
+            ?>
+                <div class="alert alert-success" role="alert"><?php if (isset($success2['connexion'])) echo $success2['connexion']; ?></div>
+            <?php
+            } 
+        ?>
+        <!-- Nom d'utilisateur ou mot de passe est invalide -->   
+        <?php if(isset($error4)) 
+            {
+            ?>
+                <div class="alert alert-danger" role="alert"><?php if (isset($error4['connexion'])) {echo $error4['connexion'] ;} ?></div>
+            <?php
+            } 
+        ?>
+        
+        <!-- Nom d'utilisateur n'est pas inscrit -->
+        <?php if(isset($error5)) 
+            {
+            ?>
+                <div class="alert alert-danger" role="alert"><?php if (isset($error5['connexion'])) {echo $error5['connexion'] ;} ?></div>
+            <?php
+            } 
+        ?> 
+   
+   
+   
+   
+    
+        <form action="index.php?action=connexion" method="post">  
 
         <div class="row">
                     
             <div class="mx-auto form-inline mt-5 col-md-7">
-
-                <label class="col-sm-5" for="Username"><u>Nom d'utilisateur:</u></label>
-                       
-                <div class="col-sm-6">
+               
+                <div class="form-group mx-auto">
                    
-                    <input type="text" class="form-control" id="Username" placeholder="Nom d'utilisateur">
+                    <label class="col-sm-5" for="usernameConnected"><u>Nom d'utilisateur:</u></label>
+            
+                    <div class="col-sm-6">
+
+                        <input type="text" class="form-control" id="usernameConnected" name="usernameConnected" placeholder="Nom d'utilisateur" required autofocus />
+
+                    </div>
                     
                 </div>
                 
@@ -169,12 +231,16 @@
         <div class="row">
                      
             <div class="mx-auto form-inline mt-2 col-md-7">
+                
+                <div class="form-group mx-auto">
 
-                <label class="col-sm-5" for="Password"><u>Mot de passe:</u></label>
-                       
-                <div class="col-sm-6">
-                   
-                    <input type="password" class="form-control" id="Password" placeholder="Mot de passe">
+                    <label class="col-sm-5" for="passConnected"><u>Mot de passe:</u></label>
+
+                    <div class="col-sm-6">
+
+                        <input type="password" class="form-control" id="passConnected" name="passConnected" placeholder="Mot de passe" required />
+
+                    </div>
                     
                 </div>
                 
@@ -189,8 +255,8 @@
                       
             
 
-                <button type="submit" class="btn btn-primary mx-auto mt-3">Se connecter</button>
-                
+                <!--<input type="submit" id="btnConnexion" class="btn btn-primary mx-auto mt-3"  name="btnConnexion" value="Se connecté" />-->
+                <button type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3"  name="btnRegistration" />Se connecté</button>
               
 
         </div>
