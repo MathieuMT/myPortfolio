@@ -31,7 +31,7 @@
 
 <!-- NAVBAR -->
 <?php
-    if (isset($_SESSION['id'])) {
+    if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
 ?>
 
             <nav class="navbar sticky-top navbar-expand-sm">

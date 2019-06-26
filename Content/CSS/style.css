@@ -617,7 +617,13 @@ img:after {
    color: red;
 }
 
+.containerGallery, .rowGallery, .myImg {
+    margin-top: 50px;
+}
 
+#uploadedFiles img{
+    width: 100% !important;
+}
 
 
 /*

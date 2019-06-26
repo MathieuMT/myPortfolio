@@ -1,5 +1,6 @@
 <?php
 require_once 'Models/Frontend/AdminCertificatesManager.php';
+
 require_once 'Views/ViewBackEnd.php';
 
 
@@ -25,52 +26,137 @@ class AdminCertificatesController {
     
     // Affichage de la page de gestion des certificats:
     public function showAdminCertificates() {
+        
+        $aboutCertificate = $this->_adminCertificates->getCertificateDescription();
+        $view = new ViewBackEnd('adminCertificatesView');
+        $view->generate(array('aboutCertificate' => $aboutCertificate));
+        
+        /*
         $view = new ViewBackEnd('adminCertificatesView');
         $view->generate([]);
+        */
     }
     
+    
+        /*-------------------
+        UPLOAD MULTIPLE FILES
+        ---------------------*/
     
     public function uploadCertImgs() {
         
         
-        $uploadCertificatesImages = basename($_FILES['certificatImg']['name']);
+        if (isset($_POST['delImage'])) {
+            
+            $id = htmlspecialchars($_POST['id']);
+            
+            //$this->_adminCertificates->delImageCertFile($id);
+            
+            
+            /*************************/
+            /*
+            $file = $_POST['delImage'];
+            
+            $linkFile = 'Content/img/certificats/$file';
+            $response = unlink($linkFile);
+            */
+            //$file = $_POST['delImage'];
+            //unlink('Content/img/certificats/' . $file . '.' . jpg);
+            /***************************/
+            
+            
+            $this->_adminCertificates->delImageBDD($id);
+            
+            //exit(json_encode(array("success" => $response)));
+            
+            exit('success');
+
+        }
         
-        if (isset($_FILES['certificatImg'])) {
-            $msg = "";
-            $targetFile = "Content/img/certificats/";
+        if (isset($_POST['getImages'])) {
             
-            $target = $targetFile.$uploadCertificatesImages;
+            $start = htmlspecialchars($_POST['start']);
             
-            if (file_exists($target))
-                $msg = array("status" => 0, "msg" => "File already exists!");
-            else if (move_uploaded_file($_FILES['certificatImg']['tmp_name'], $target))
-                $msg = array("status" => 1, "msg" => "File Has Been Uploaded", "Content/img/certificats/" => $targetFile);
+            $this->_adminCertificates->getImages($start);
             
-            /***************/
+            exit(json_encode(array("images" => $response)));
             
-            
-            $view = new ViewBackEnd('adminCertificatesView');
-            $view->generate(['msg' => $msg]);
-            
-            
-            /***************/
-            exit(json_encode($msg));
         }
         
         
+        if (isset($_FILES['certificatImg'])) {
+            
+            $msg = "";
+            
+            $targetFile =  basename($_FILES['certificatImg']['name'][0]);
+            
+            if (file_exists($targetFile))
+                $msg = array("status" => 0, "msg" => "File already exists!");
+            else if (move_uploaded_file($_FILES['certificatImg']['tmp_name'][0], "Content/img/certificats/".$targetFile)) {
+                
+                $msg = array("status" => 1, "msg" => "File Has Been Uploaded", "path" => "Content/img/certificats/".$targetFile);
+                
+               // Éviter les doublons dans le champs certificatImg de la table certificates: 
+              if($this->_adminCertificates->existeCertificatImg($targetFile)) {
+                  
+                $msg = array("status" => 0, "msg" => "File already exists!"); 
+                  
+              }else {
+                  // S'il n'y a pas de doublons nous inserons l'image du certificat:
+                  $this->_adminCertificates->insertImages($targetFile);
+              }
+                   
+              
+                
+                
+                
+              
+            }
+                
+            
+            exit(json_encode($msg));
+        }
         
-       
+        /* à refaire:
+        
+        $numRows = $this->_adminCertificates->numRows();
+        */
+        
+         
+        
+        $this->_adminCertificates->numRows();
         
     }
     
+/*
+    //Show list of all details of "aboutCertificates"
+    public function aboutCertificates() {
+        $aboutCertificate = $this->_adminCertificates->getCertificateDescription();
+        $view = new ViewBackEnd('adminCertificatesView');
+        $view->generate(array('aboutCertificate' => $aboutCertificate));
+    }
     
+*/   
+    
+
+    
+    
+   
+    
+    
+    
+    
+    
+    
+        /*-------------
+        UPLOAD ONE FILE
+        --------------*/
     public function getCertificatImg() {
         
         
         if(isset($_POST["subCertImg"])){
             
             
-            $getCertImg =  basename($_FILES["certificatImg"]["name"]);
+            $getCertImg =  basename($_FILES["certificatImg"][0]["name"]);
             if($getCertImg==""){
                 $this->_error1['getCertificatImg'] = "Please choose";
             }
@@ -84,11 +170,11 @@ class AdminCertificatesController {
                 //var_dump($certificatImgName);
                //echo "<img src='Content/img/certificats/$certificatImgName'/>";
                 
-                if($_FILES["certificatImg"]["type"]=="image/jpg"||$_FILES["certificatImg"]["type"]=="image/jpeg"){
+                if($_FILES["certificatImg"][0]["type"]=="image/jpg"||$_FILES["certificatImg"][0]["type"]=="image/jpeg"){
                     
                     
                     
-                    $certImgLocal = move_uploaded_file($_FILES["certificatImg"]["tmp_name"], $target);
+                    $certImgLocal = move_uploaded_file($_FILES["certificatImg"][0]["tmp_name"], $target);
                     if($certImgLocal){
                         include_once 'Models/Frontend/AdminCertificatesManager.php';
                         $this->_adminCertificates->uploadCertificatImg($certificatImgName);

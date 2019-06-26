@@ -18,7 +18,7 @@ class CertificateController {
     
     
     
-     //Show list of all blog posts
+     //Show list of all details of "aboutCertificates"
     public function aboutCertificates() {
         $aboutCertificate = $this->_certificate->getCertificateDescription();
         $view = new ViewFrontEnd('certificatesView');
