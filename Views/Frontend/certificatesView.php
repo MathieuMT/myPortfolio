@@ -51,12 +51,151 @@ foreach ($aboutCertificate as $eachCertificate): ?>
 
 
 <hr class="hr"/>
+<br/>
+<br/>
+<br/>
+<h1 class="text-center">TÉMOIN</h1>
+<div class="container containerGallery" id="uploadedFiles">
+    <div class="row rowGallery">
+       
+        <!-- <div class="col-md-4 myImg"></div> -->
+        
+        <?php foreach ($aboutCertificate as $eachCertificate): ?>
+        
+            <div id="<?= $eachCertificate->id(); ?>'" class="col-md-4 myImg" onclick="delImg('<?= $eachCertificate->id(); ?>')"><img src="Content/img/certificats/<?= $eachCertificate->certificatImg(); ?>" /></div>
+        
+        
+        <?php endforeach; ?>
+        
+        
+        
+        
+        
+    </div>
+</div>   
+
+
+
+
+<hr class="hr"/>
+<br/>
+<br/>
+<br/>
+<h1 class="text-center">ÉSSAI</h1>
+
+
+<div class="heading">
+                       
+    <h2 class="card-header text-center animated fadeInLeft">Certificats</h2>                
+                       
+</div>
+
+
+<div class="certificates">
+   
+   
+    <section class="gallery-block cards-gallery">
+   
+        <div class="container containerGallery" id="uploadedFiles">
+            
+            <div class="galleryOne">
+           
+                <div class="row rowGallery">
+
+                    <!-- <div class="col-md-4 myImg"></div> -->
+
+                    <?php foreach ($aboutCertificate as $eachCertificate): ?>
+
+                        <div id="<?= $eachCertificate->id(); ?>'" class="col-md-6 col-lg-4 animated fadeInLeft" onclick="delImg('<?= $eachCertificate->id(); ?>')">
+                           
+                            <div class="card border-0 transform-on-hover">
+                               
+                                <a class="lightbox" href="Content/img/certificats/<?= $eachCertificate->certificatImg(); ?>">
+                                
+                                    <img src="Content/img/certificats/<?= $eachCertificate->certificatImg(); ?>" class="card-img-top" alt="<?= $eachCertificate->name(); ?>"/>
+                                
+                                </a>
+                                
+                                <div class="card-body">
+                                   
+                                    <h6><b><?= $eachCertificate->name(); ?></b> <?= $eachCertificate->certificatTitle(); ?></h6><br />
+                                    
+                                    <span><i><?= $eachCertificate->certificatCategory(); ?></i></span><br />
+                                    
+                                    <p class="text-muted card-text"><?= $eachCertificate->certificatDescription(); ?></p>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+
+
+                    <?php endforeach; ?>
 
 
 
 
 
+                </div>
+            
+            </div><!-- .galleryOne -->
+            
+            
+            <div class="galleryTwo">
+           
+                <div class="row rowGallery">
 
+                    <!-- <div class="col-md-4 myImg"></div> -->
+
+                    <?php foreach ($aboutCertificate as $eachCertificate): ?>
+
+                        <div id="<?= $eachCertificate->id(); ?>'" class="col-md-6 col-lg-4 animated fadeInLeft" onclick="delImg('<?= $eachCertificate->id(); ?>')">
+                           
+                            <div class="card border-0 transform-on-hover">
+                               
+                                <a class="lightbox" href="Content/img/certificats/<?= $eachCertificate->certificatImg(); ?>">
+                                
+                                    <img src="Content/img/certificats/<?= $eachCertificate->certificatImg(); ?>" class="card-img-top" alt="<?= $eachCertificate->name(); ?>"/>
+                                
+                                </a>
+                                
+                                <div class="card-body">
+                                   
+                                    <h6><b><?= $eachCertificate->name(); ?></b> <?= $eachCertificate->certificatTitle(); ?></h6><br />
+                                    
+                                    <span><i><?= $eachCertificate->certificatCategory(); ?></i></span><br />
+                                    
+                                    <p class="text-muted card-text"><?= $eachCertificate->certificatDescription(); ?></p>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+
+
+                    <?php endforeach; ?>
+
+
+
+
+
+                </div>
+            
+            </div><!-- .galleryTwo -->
+            
+            
+            
+        </div> 
+    
+    </section>
+           
+
+</div>
+
+
+<hr class="hr"/>
 
 
 

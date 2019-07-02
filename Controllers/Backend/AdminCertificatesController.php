@@ -8,8 +8,8 @@ class AdminCertificatesController {
     
     private $_success1;
     private $_error1;
-    private $_error2;
-    private $_error3;
+    //private $_error2;
+    //private $_error3;
     
    
     
@@ -27,9 +27,16 @@ class AdminCertificatesController {
     // Affichage de la page de gestion des certificats:
     public function showAdminCertificates() {
         
+        //$certImg = $this->_adminCertificates->getCertImg($id);
+        
         $aboutCertificate = $this->_adminCertificates->getCertificateDescription();
+        
+        //$numRows = $this->_adminCertificates->numRows();
+        
         $view = new ViewBackEnd('adminCertificatesView');
         $view->generate(array('aboutCertificate' => $aboutCertificate));
+        // 'numRows' => $numRows,
+        // 'certImg' => $certImg, 
         
         /*
         $view = new ViewBackEnd('adminCertificatesView');
@@ -44,44 +51,91 @@ class AdminCertificatesController {
     
     public function uploadCertImgs() {
         
+         ///////////////////
+        /*
+          if (isset($_POST['selecImage'])) {
+            
+                $id = htmlspecialchars($_POST['id']);
+                $path = htmlspecialchars($_POST['path']);
+
+                $certImg = $this->_adminCertificates->getCertImg($id);
+
+                if (!empty($_POST['path'])) {
+                    unlink($_POST['certificatImg']);
+                }
+                
+               exit('success');
+          
+            }
+          */  
+            
+            
+       
+        /////////////////////////////
+        
+            
+        
+        
         
         if (isset($_POST['delImage'])) {
+            
+          
+            
             
             $id = htmlspecialchars($_POST['id']);
             
             //$this->_adminCertificates->delImageCertFile($id);
             
             
-            /*************************/
-            /*
-            $file = $_POST['delImage'];
+            //////////////////////////
             
-            $linkFile = 'Content/img/certificats/$file';
-            $response = unlink($linkFile);
-            */
+           
+            
+            
+            
+            
+            ///////////////////////////////
+            
             //$file = $_POST['delImage'];
             //unlink('Content/img/certificats/' . $file . '.' . jpg);
-            /***************************/
             
+            /*************************/
+            /*
+            $certImg = $this->_adminCertificates->getCertImg($id);
+            //var_dump($file);
+            
+            
+            $linkCertImg = 'Content/img/certificats/'.$certImg['certificatImg'];
+            
+            unlink($linkCertImg);
+            */
+            /***************************/
+           
+            
+            
+            
+            ////////////
             
             $this->_adminCertificates->delImageBDD($id);
+            
+            ////////////
             
             //exit(json_encode(array("success" => $response)));
             
             exit('success');
 
         }
-        
+        /*
         if (isset($_POST['getImages'])) {
             
-            $start = htmlspecialchars($_POST['start']);
+            //$start = htmlspecialchars($_POST['start']);
             
             $this->_adminCertificates->getImages($start);
             
             exit(json_encode(array("images" => $response)));
             
         }
-        
+        */
         
         if (isset($_FILES['certificatImg'])) {
             
@@ -123,9 +177,71 @@ class AdminCertificatesController {
         
          
         
-        $this->_adminCertificates->numRows();
+        
+        
         
     }
+    
+   /************* FORMULAIRE DES DETAILS DE CHAQUE CERTIFICAT ***************/ 
+    
+   public function sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateCategory, $certificateId) {
+       
+        
+        $certificateName= htmlspecialchars($certificateName);
+        $certificateTitle = htmlspecialchars($certificateTitle);
+        $certificateDescription = htmlspecialchars($certificateDescription);
+        $certificateCategory = htmlspecialchars($certificateCategory);
+        $certificateId = intval($certificateId);
+       
+       
+       if (isset($certificateName) && isset($certificateTitle) && isset($certificateDescription) && isset($certificateCategory) && !empty($certificateName) && !empty($certificateTitle) && !empty($certificateDescription) && !empty($certificateCategory)) {
+
+                $sendCertificateDetails = $this->_adminCertificates->sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateCategory, $certificateId);
+            }
+        $certificate = $this->_adminCertificates->getCertificate($certificateId);
+       
+        header('Location: index.php?action=adminCertificates');
+       
+        $view = new ViewBackEnd('adminCertificatesView');
+        $view->generate(array('certificate' => $certificate,'certificateName' => $certificateName, 'certificateTitle' => $certificateTitle, 'certificateDescription' => $certificateDescription, 'certificateCategory' => $certificateCategory));
+            
+       exit();
+       
+   }
+    
+    
+    
+    
+    
+    // Edit the author and post content based on the post id:
+    public function updateEditPost($title, $content, $author, $postId) {
+        
+        $postId = intval($postId);
+        $author= htmlspecialchars($author);
+        $title = htmlspecialchars($title);
+        //$content = htmlspecialchars($content);
+        
+        if (isset($author) && isset($title) && isset($content) && !empty($author) && !empty($title) && !empty($content)) {
+
+                $updatePost = $this->showUpdatePost->updatePost($title, $content, $author, $postId);
+            }
+        
+        $post = $this->post->getPost($postId);
+        
+        header('Location: index.php?action=showAdminPost&id='. $_SESSION['id']);
+
+        $view = new View('adminUpdatePostView');
+        $view->generate(array('post' => $post,'author' => $author, 'title' => $title, 'content' => $content));
+            
+       exit();
+    }
+    
+    
+    
+    /*************************************************************************/
+    
+    
+    
     
 /*
     //Show list of all details of "aboutCertificates"
@@ -150,6 +266,7 @@ class AdminCertificatesController {
         /*-------------
         UPLOAD ONE FILE
         --------------*/
+    /*
     public function getCertificatImg() {
         
         
@@ -201,7 +318,18 @@ class AdminCertificatesController {
         
         exit();
     }
-     
+    */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     /*
     // Show list of images of certificates:

@@ -62,6 +62,40 @@ class AdminCertificatesManager extends Model{
     } 
     */
     
+//////////////////////////////////
+/*
+    public function getCertImg($id) {
+        
+        $sql="SELECT * certificates WHERE id = :id";
+        
+        $response = $this->executeRequest($sql, array("id" => $id));
+        
+        if ($response->rowCount() > 0) {
+            
+            return $response->fetch();
+        }
+            
+                                         
+        else
+            throw new Exception("Aucune image de certificat ne correspond à l'identifiant '$id'");
+            
+      
+    }
+*/
+ 
+        /*
+        $certImg = $response->fetch(PDO::FETCH_ASSOC);
+        */
+        /*
+        $certImg = $response->fetch();
+        
+        return $certImg;
+        */
+       
+ //////////////////////////////////   
+
+    
+    
     
   /////// OK //////////////  
     
@@ -127,7 +161,7 @@ class AdminCertificatesManager extends Model{
     /** À RETRAVAILLER !!! **/
     
     // get images of certificates in the database:
-   
+   /*
     public function getImages($start) {
         
         
@@ -144,7 +178,7 @@ class AdminCertificatesManager extends Model{
         return $response;
         
     }
-    
+    */
   
     
     /*
@@ -306,7 +340,23 @@ INSERT IGNORE INTO certificates (certificatImg) VALUES ('$targetFile')";
     ***************************************/
     
     // Number of rows in the gallery:
+    /*
     public function numRows() {
+        
+        $sql = 'SELECT count(*) AS numRows FROM certificates';
+        
+        $result = $this->executeRequest($sql);
+        
+        $data = $result->fetch();
+        
+        $numRows = floor($data['numRows']/3)+1;
+        //$numRows = $result->rowCount();
+        
+        return $numRows;
+        
+        
+    }
+     */
         /*
         $sql = 'SELECT COUNT(id) FROM certificates';
         
@@ -314,21 +364,6 @@ INSERT IGNORE INTO certificates (certificatImg) VALUES ('$targetFile')";
         
         return $numRows;
         */
-        $sql = 'SELECT count(*) AS numRows FROM certificates';
-        
-        $result = $this->executeRequest($sql);
-        
-        $data = $result->fetch();
-        
-        $numRows = $data['numRows'];
-        //$numRows = $result->rowCount();
-        
-        return $numRows;
-        
-        
-    }
-     
-    
     
     /*
     $res = $bdd->query('select count(*) as nb from maTable');
@@ -548,6 +583,50 @@ $nb = $data['nb'];
     }
     
     */
+    
+    
+    
+    /************* FORMULAIRE DES DETAILS DE CHAQUE CERTIFICAT ***************/
+    
+    
+    // Update certificate in the database:
+    public function sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateCategory, $certificateId) {
+        
+        $sql = 'UPDATE certificates SET name = :name,  certificatTitle = :certificatTitle, certificatDescription = :certificatDescription, certificatCategory = :certificatCategory WHERE id = :id';
+        
+        $result = $this->executeRequest($sql, array(
+        
+                                ':name' => $certificateName,
+                                ':certificatTitle' => $certificateTitle,
+                                ':certificatDescription' => $certificateDescription,
+                                ':certificatCategory' => $certificateCategory,
+                                ':id' => $certificateId
+                                ));
+        
+       return $result;  
+    }
+    
+    
+   
+    // Returns information on a certificat:
+    public function getCertificate($certificateId) {
+        
+        $sql ='SELECT id, name, certificatImg, certificatTitle,  certificatDescription, certificatCategory FROM certificates WHERE id = ?';
+        
+        $certificate = $this->executeRequest($sql, array($certificateId));
+        
+        if ($certificate->rowCount() > 0)
+            return $certificate->fetch(); // Access to the first result line.
+        else
+            throw new Exception("Aucun certificat ne correspond à l'identifiant '$certificateId'");
+    }
+   
+    /*************************************************************************/
+    
+    
+    
+    
+    
     
    
     

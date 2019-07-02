@@ -66,20 +66,29 @@ class Rooter {
                     $this->_adminCertificatesCtrl->showAdminCertificates();
                 }
                 else if ($_GET['action'] == 'uploadCertificatesImages') {
-                    
-                   /*$uploadCertificatesImages = $this->getParameter($_FILES, 'certificatImg');
-                     */  
-                        
                     $this->_adminCertificatesCtrl->uploadCertImgs();
-                   
-                    
                 }
                 
+                /*
                 else if ($_GET['action'] == 'getCertificatImg') { 
                     $this->_adminCertificatesCtrl->getCertificatImg();
                 }
+                */
                 
-                
+                else if ($_GET['action'] == 'sendCertificateDetails') {
+                    
+                    $certificateName = $this->getParameter($_POST, 'certificateName');
+                    $certificateTitle = $this->getParameter($_POST, 'certificateTitle');
+                    $certificateDescription = $this->getParameter($_POST, 'certificateDescription');
+                    $certificateCategory = $this->getParameter($_POST, 'certificateCategory');
+                    $certificateId = $this->getParameter($_POST, 'certificateId');
+                    
+                    if ($certificateId > 0) {
+                            $this->_adminCertificatesCtrl->sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateCategory, $certificateId);
+                        }
+                    else
+                            throw new Exception("Identifiant du certificat non valide");  
+                }
                 elseif ($_GET['action'] == 'works') {
                     $this->_workCtrl->aboutWorks();
                }

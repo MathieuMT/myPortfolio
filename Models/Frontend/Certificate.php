@@ -6,7 +6,7 @@ require_once 'Views/ViewFrontEnd.php';
 
 
 class Certificate {
-    private $_id,$_name,$_certificatImg,$_slug, $_category_id;
+    private $_id,$_name,$_certificatImg,$_certificatTitle,$_certificatDescription,$_slug,$_certificatCategory,$_category_id;
     
     
     public function __construct(array $data){
@@ -26,7 +26,10 @@ class Certificate {
     public function id() { return $this->_id; }
     public function name() { return $this->_name;}
     public function certificatImg() { return $this->_certificatImg;}
+    public function certificatTitle() { return $this->_certificatTitle;}
+    public function certificatDescription() { return $this->_certificatDescription;}
     public function slug() { return $this->_slug;}
+    public function certificatCategory() { return $this->_certificatCategory;}
     public function categiryid() { return $this->_category_id;}
     
     // Setters:
@@ -52,11 +55,32 @@ class Certificate {
         }
     }
     
+    public function setCertificatTitle($certificatTitle) {
+        
+        if(is_string($certificatTitle)) {
+            $this->_certificatTitle = $certificatTitle;
+        }
+    }
+    
+    public function setCertificatDescription($certificatDescription) {
+        
+        if(is_string($certificatDescription)) {
+            $this->_certificatDescription = $certificatDescription;
+        }
+    }
+    
     
     public function setSlug($slug) {
         
         if(is_string($slug)) {
             $this->_slug = $slug;
+        }
+    }
+    
+    public function setCertificatCategory($certificatCategory) {
+        
+        if(is_string($certificatCategory)) {
+            $this->_certificatCategory = $certificatCategory;
         }
     }
     

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Mer 26 Juin 2019 à 16:23
+-- Généré le :  Mar 02 Juillet 2019 à 12:00
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.1
 
@@ -47,22 +47,24 @@ CREATE TABLE `certificates` (
   `path` varchar(255) NOT NULL,
   `certUploadedOn` datetime NOT NULL,
   `slug` varchar(255) NOT NULL,
-  `catergory_id` int(11) NOT NULL
+  `category_id` int(11) NOT NULL,
+  `certificatCategory` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `certificates`
 --
 
-INSERT INTO `certificates` (`id`, `name`, `certificatImg`, `certificatTitle`, `certificatDescription`, `path`, `certUploadedOn`, `slug`, `catergory_id`) VALUES
-(1, '', 'certificat_1_comprendre-le-web.jpg', '', '', '', '0000-00-00 00:00:00', '', 0),
-(2, '', 'certificat_2_creer-votre-site-web-avec-html5-et-css3.jpg', '', '', '', '0000-00-00 00:00:00', '', 0),
-(3, '', 'certificat_3_decouvrez-les-solutions-cms.jpg', '', '', '', '0000-00-00 00:00:00', '', 0),
-(4, '', 'certificat_4_apprenez-a-coder-avec-javascript.jpg', '', '', '', '0000-00-00 00:00:00', '', 0),
-(5, '', 'certificat_5_creez-des-pages-web-interactives-avec-javascript.jpg', '', '', '', '0000-00-00 00:00:00', '', 0),
-(6, '', 'certificat_6_introduction-a-jquery.jpg', '', '', '', '0000-00-00 00:00:00', '', 0),
-(7, '', 'certificat_7_les-cles-pour-reussir-son-referencement.jpg', '', '', '', '0000-00-00 00:00:00', '', 0),
-(8, '', 'certificat_8_concever-votre-site-web-avec-PHP-et-MySQL.jpg', '', '', '', '0000-00-00 00:00:00', '', 0);
+INSERT INTO `certificates` (`id`, `name`, `certificatImg`, `certificatTitle`, `certificatDescription`, `path`, `certUploadedOn`, `slug`, `category_id`, `certificatCategory`) VALUES
+(1, 'Certificat 1', 'certificat_1_comprendre-le-web.jpg', 'Comprendre le web', 'La culture du Web !', '', '0000-00-00 00:00:00', '', 0, 'WEB'),
+(2, '', 'certificat_2_creer-votre-site-web-avec-html5-et-css3.jpg', '', '', '', '0000-00-00 00:00:00', '', 0, ''),
+(3, '', 'certificat_4_apprenez-a-coder-avec-javascript.jpg', '', '', '', '0000-00-00 00:00:00', '', 0, ''),
+(4, '', 'certificat_3_decouvrez-les-solutions-cms.jpg', '', '', '', '0000-00-00 00:00:00', '', 0, ''),
+(5, '', 'certificat_6_introduction-a-jquery.jpg', '', '', '', '0000-00-00 00:00:00', '', 0, ''),
+(6, '', 'certificat_5_creez-des-pages-web-interactives-avec-javascript.jpg', '', '', '', '0000-00-00 00:00:00', '', 0, ''),
+(7, '', 'certificat_7_les-cles-pour-reussir-son-referencement.jpg', '', '', '', '0000-00-00 00:00:00', '', 0, ''),
+(8, '', 'certificat_8_concever-votre-site-web-avec-PHP-et-MySQL.jpg', '', '', '', '0000-00-00 00:00:00', '', 0, ''),
+(9, '', 'certificat_9_realisez-des-sites-modernes-et-beaux-grace-a-wordpress-min copie.jpg', '', '', '', '0000-00-00 00:00:00', '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -127,7 +129,7 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `certificates`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `catergory_id` (`catergory_id`);
+  ADD KEY `catergory_id` (`category_id`);
 
 --
 -- Index pour la table `users`
@@ -155,7 +157,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT pour la table `certificates`
 --
 ALTER TABLE `certificates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
