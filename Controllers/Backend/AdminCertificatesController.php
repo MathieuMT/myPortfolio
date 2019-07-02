@@ -8,11 +8,6 @@ class AdminCertificatesController {
     
     private $_success1;
     private $_error1;
-    //private $_error2;
-    //private $_error3;
-    
-   
-    
     private $_adminCertificates;
     
     
@@ -21,27 +16,15 @@ class AdminCertificatesController {
         $this->_adminCertificates = new AdminCertificatesManager();
     }
     
-    
-    
-    
+ 
     // Affichage de la page de gestion des certificats:
     public function showAdminCertificates() {
         
-        //$certImg = $this->_adminCertificates->getCertImg($id);
-        
         $aboutCertificate = $this->_adminCertificates->getCertificateDescription();
-        
-        //$numRows = $this->_adminCertificates->numRows();
         
         $view = new ViewBackEnd('adminCertificatesView');
         $view->generate(array('aboutCertificate' => $aboutCertificate));
-        // 'numRows' => $numRows,
-        // 'certImg' => $certImg, 
-        
-        /*
-        $view = new ViewBackEnd('adminCertificatesView');
-        $view->generate([]);
-        */
+       
     }
     
     
@@ -50,92 +33,29 @@ class AdminCertificatesController {
         ---------------------*/
     
     public function uploadCertImgs() {
-        
-         ///////////////////
-        /*
-          if (isset($_POST['selecImage'])) {
-            
-                $id = htmlspecialchars($_POST['id']);
-                $path = htmlspecialchars($_POST['path']);
-
-                $certImg = $this->_adminCertificates->getCertImg($id);
-
-                if (!empty($_POST['path'])) {
-                    unlink($_POST['certificatImg']);
-                }
                 
-               exit('success');
-          
-            }
-          */  
-            
-            
-       
-        /////////////////////////////
-        
-            
-        
-        
         
         if (isset($_POST['delImage'])) {
-            
-          
             
             
             $id = htmlspecialchars($_POST['id']);
             
-            //$this->_adminCertificates->delImageCertFile($id);
             
-            
-            //////////////////////////
-            
+            /* DELETE FILE IMAGE CERTIFICATE */
+            $certImg = $this->_adminCertificates->getCertificate($id);
            
-            
-            
-            
-            
-            ///////////////////////////////
-            
-            //$file = $_POST['delImage'];
-            //unlink('Content/img/certificats/' . $file . '.' . jpg);
-            
-            /*************************/
-            /*
-            $certImg = $this->_adminCertificates->getCertImg($id);
-            //var_dump($file);
-            
-            
             $linkCertImg = 'Content/img/certificats/'.$certImg['certificatImg'];
             
             unlink($linkCertImg);
-            */
-            /***************************/
-           
             
             
-            
-            ////////////
-            
+            /* DELETE IMAGE CERTIFICATE FROM DATABASE */
             $this->_adminCertificates->delImageBDD($id);
-            
-            ////////////
-            
-            //exit(json_encode(array("success" => $response)));
             
             exit('success');
 
         }
-        /*
-        if (isset($_POST['getImages'])) {
-            
-            //$start = htmlspecialchars($_POST['start']);
-            
-            $this->_adminCertificates->getImages($start);
-            
-            exit(json_encode(array("images" => $response)));
-            
-        }
-        */
+        
         
         if (isset($_FILES['certificatImg'])) {
             
@@ -150,19 +70,14 @@ class AdminCertificatesController {
                 $msg = array("status" => 1, "msg" => "File Has Been Uploaded", "path" => "Content/img/certificats/".$targetFile);
                 
                // Éviter les doublons dans le champs certificatImg de la table certificates: 
-              if($this->_adminCertificates->existeCertificatImg($targetFile)) {
+                if($this->_adminCertificates->existeCertificatImg($targetFile)) {
                   
-                $msg = array("status" => 0, "msg" => "File already exists!"); 
+                    $msg = array("status" => 0, "msg" => "File already exists!"); 
                   
-              }else {
+                }else {
                   // S'il n'y a pas de doublons nous inserons l'image du certificat:
                   $this->_adminCertificates->insertImages($targetFile);
-              }
-                   
-              
-                
-                
-                
+                }
               
             }
                 
@@ -170,17 +85,10 @@ class AdminCertificatesController {
             exit(json_encode($msg));
         }
         
-        /* à refaire:
-        
-        $numRows = $this->_adminCertificates->numRows();
-        */
-        
-         
-        
-        
-        
-        
     }
+    
+    
+    
     
    /************* FORMULAIRE DES DETAILS DE CHAQUE CERTIFICAT ***************/ 
     
@@ -235,34 +143,21 @@ class AdminCertificatesController {
             
        exit();
     }
+ 
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
     /*************************************************************************/
     
-    
-    
-    
-/*
-    //Show list of all details of "aboutCertificates"
-    public function aboutCertificates() {
-        $aboutCertificate = $this->_adminCertificates->getCertificateDescription();
-        $view = new ViewBackEnd('adminCertificatesView');
-        $view->generate(array('aboutCertificate' => $aboutCertificate));
-    }
-    
-*/   
-    
 
-    
-    
-   
-    
-    
-    
-    
-    
-    
         /*-------------
         UPLOAD ONE FILE
         --------------*/
@@ -320,70 +215,9 @@ class AdminCertificatesController {
     }
     */
     
+    /*************************************************************************/
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    // Show list of images of certificates:
-    public function listCertImg() {
-        $this->_certImgs =  $this->_adminCertificates->listCertImg();
-        $view = new ViewBackEnd('adminCertificatesView');
-        $view->generate(array('_certImgs' => $this->_certImgs));
-    }
-    */
-    
-    
-    /*
-    // Show list of all blog posts
-    public function listPosts() {
-        $posts = $this->post->getExtractPostsWithNumberOfComments();
-        $view = new View('listPostsView');
-        $view->generate(array('posts' => $posts));
-    }
-    
-    */
-    
-/*   
-    
- if(isset($_FILES['certificatImg']['name']))
-
-{$_FILES['certificatImg']['name']=("".$certificateImg['id']."jpg");}
-
-*/  
-    
-    
-    
-    
-    /*
-    // Show post detail:
-    public function certificateImg($certificateImgId) {
-        $certificateImg = $this->_adminCertificates->getCertificateImg($certificateImgId);
-        
-        $view = new ViewBackEnd('adminCertificatesView');
-        $view->generate(array('certificateImg' => $certificateImg));
-        
-        exit();
-    }   
-    */
-    
- 
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
     
     
 }

@@ -8,75 +8,11 @@ $(document).ready(function() {
 
 
 
-/*
-function getImages(start, max) {
-    if (start > max)
-        return;
-    
-    $.ajax({
-        url: 'index.php?action=uploadCertificatesImages',
-        method: 'POST',
-        dataType: 'json',
-        data: {
-            getImages: 1,
-            start: start
-        }, success: function (response)
-            {
-                for (var i = 0; i < response.images.length; i++)
-                    addImage("Content/img/certificats/" + response.images[i].path, response.images[i].id);
-                
-                getImages((start + 8), max);
-            }
-    });
-    
-}
-
-*/
-///////////////////////////////////
-
-/*
-function selecImg(id) {
-    
-    if (id === 0)
-        alert ('You are not able to delete this image now!');
-    else if (confirm('Are you sure that you want to delete this image?')) {
-        var path = $("#"+id).children('img').data("path");
-        //$('.event').children('img').attr('src', '<source here>');
-        $.ajax({
-            
-            url: 'index.php?action=uploadCertificatesImages',
-            method: 'POST',
-            dataType: 'json',
-            data: {
-                selecImage: 1,
-                id: id,
-                path: path
-            }, success: function(data) {
-               //$("#"+id).find(response);
-               //$("#"+id).next(img.myImg).attr('src', response.path);
-                
-                if (data !='') {
-                    $("#"+id).children('img').html('');
-                    //window.location.reload();
-                }
-            }
-            
-        });
-        
-    }
-    
-}
-*/
-
-
-
-
-
 /////////////////////////////////////
 
 function delImg(id) {
-    
-    if (id === 0)
+    'use strict';
+    if (id === 0) 
         alert ('You are not able to delete this image now!');
     else if (confirm('Are you sure that you want to delete this image?')) {
         
@@ -88,39 +24,12 @@ function delImg(id) {
                 delImage: 1,
                 id: id
             }, success: function (response) {
-                
-                /*$("#"+id).slideUp('slow', function () {
-                    $(this).remove();
-                });
-                  */  
-                //alert('Jquery est prêt'); 
-                
-                
-                //$('<div id="'+id+'" class="col-md-3 myImg" onclick="delImg('+id+')"><img src="Content/img/certificats/'+id+'" /></div>').remove();
                
-                
-                //$("#"+id).find(response);
-                //$(this).find(response);
-                
-                //$("#"+id).find('img.myImg');
-                
-                /********* GOOD ***************/
-                
                 // SUPPRIME la DIV contenant l'image:
-               $("#"+id).remove(response);
-                
-                
+               $("#"+id).remove(response);               
                 
                 // Rafraichit la fenêtre où on est :
                 window.location.reload();
-                
-                /***************************/
-                
-                
-                //window.location = window.location.pathname;
-               //$("#"+id+"+ .myImg").remove();
-                
-                //$("#"+id).css("display","none");
                 
                
             }
@@ -133,7 +42,7 @@ function delImg(id) {
 
 
 $(function () {
-    // console.log('document is ready - 2');
+    
     
     var files = $("#files");
 
@@ -173,16 +82,7 @@ $(function () {
             /* Pour pouvoir supprimer les nouvelles images uploadées où leurs:" id != 0 " */
             window.location.reload();
             
-            
-            
-            
-           // var path = data.originalFiles[0]['name'];
-            /*
-            for (i = 0; i < data.lenght; i++ ) {
-                console.log(data[i]);
-            }
-            */
-            
+          
         } else
             $("#error").html(msg);
     }).on('fileuploadprogressall', function (e, data) {

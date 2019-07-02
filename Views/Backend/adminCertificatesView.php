@@ -80,8 +80,13 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
         <?php foreach ($aboutCertificate as $eachCertificate): ?>
         <div class="row rowGallery border mb-5 p-5">
            
-           
-           <!-- MESSAGES DE SUCCÈS ET D'ERREURS -->
+          
+            <h3 class="text-center col-md-12">Ajouter ou Modifier les informations du certificat numéro <?= $eachCertificate->id(); ?></h3><br/>
+            <h6 class="text-center col-md-12"><i>(Pour supprimer un certificat et ses informations de la base de données: cliquer sur son image!)</i></h6><br />
+            
+            
+            
+             <!-- MESSAGES DE SUCCÈS ET D'ERREURS -->
         
             <!-- Les détails du certificat sont bien enregistrés ! -->
             <?php  if(isset($_success1)) 
@@ -99,25 +104,19 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
                 <?php
                 } 
             ?>
-           
-           
-           
-           
-           
-           
-           
-            <h3 class="text-center col-md-12">Ajouter ou Modifier les informations du certificat numéro <?= $eachCertificate->id(); ?></h3><br/>
-            <h6 class="text-center col-md-12"><i>(Pour supprimer un certificat et ses informations de la base de données: cliquer sur son image!)</i></h6><br />
+            
+            
+            
            
             
             <div id="<?= $eachCertificate->id(); ?>'" class="col-md-4 myImg" onclick="delImg('<?= $eachCertificate->id(); ?>')">
-                <img src="Content/img/certificats/<?= $eachCertificate->certificatImg(); ?>" /><br /><br />
+                <img src="Content/img/certificats/<?= $eachCertificate->certificatImg(); ?>" alt="<?= $eachCertificate->name(); ?>" title="Cliquer sur l'image du certificat pour le supprimer"/><br /><br />
                 <fieldset class="border p-2">
-                <legend  class="w-auto">Informations BDD</legend>
-                <span><label>Nom: </label><b> <?= $eachCertificate->name(); ?></b></span><br />
-                <span><label>Titre: </label><b> <?= $eachCertificate->certificatTitle(); ?></b></span><br />
-                <span><label>Categorie: </label><i> <?= $eachCertificate->certificatCategory(); ?></i></span><br />
-                <span><label>Description: </label><i> <?= $eachCertificate->certificatDescription(); ?></i></span><br />
+                    <legend  class="w-auto">Informations BDD</legend>
+                    <span><label>Nom: </label><b> <?= $eachCertificate->name(); ?></b></span><br />
+                    <span><label>Titre: </label><b> <?= $eachCertificate->certificatTitle(); ?></b></span><br />
+                    <span><label>Categorie: </label><i> <?= $eachCertificate->certificatCategory(); ?></i></span><br />
+                    <span><label>Description: </label><i> <?= $eachCertificate->certificatDescription(); ?></i></span><br />
                 </fieldset>
             </div>
             <div class="col-md-8">
@@ -356,70 +355,6 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
 --> <!-- .container -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- JAVASCRIPT -->
-
-<!-- jQuery 3.2.1 pour uploader les images dans la zone Drag & Drop -->
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script src="Content/JS/js/vendor/jquery.ui.widget.js"></script>
-<script src="Content/JS/js/jquery.iframe-transport.js"></script>
-<script src="Content/JS/js/jquery.fileupload.js"></script>
--->
-
-
-<!-- baguetteBox -->
-<!--
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
--->
-
-<!-- Gallerie des certificats -->
-
-
-
-<!-- DROPZONE -->
-<!--
-<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
--->
-
-
 <script src="Content/JS/vendor/jquery.ui.widget.js" type="text/javascript"></script>
 
 <script src="Content/JS/jquery.iframe-transport.js"></script>
@@ -427,20 +362,6 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
 <script src="Content/JS/jquery.fileupload.js"></script>
 
 <script src="Content/JS/uploadCertificates.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
