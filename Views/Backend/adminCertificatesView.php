@@ -89,19 +89,22 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
              <!-- MESSAGES DE SUCCÈS ET D'ERREURS -->
         
             <!-- Les détails du certificat sont bien enregistrés ! -->
-            <?php  if(isset($_success1)) 
+            <?php  if(isset($_SESSION['sendCertificateDetails'])) 
                 {
                 ?>
-                <div class="alert alert-success text-center" role="alert"><?php if (isset($_success1['sendCertificateDetails'])) echo $_success1['sendCertificateDetails']; ?></div>
+                <div class="alert alert-success text-center" role="alert"><?php if (isset($_SESSION['sendCertificateDetails'])) echo $_SESSION['sendCertificateDetails']; ?></div>
                 <?php
+                unset($_SESSION['sendCertificateDetails']);
                 } 
             ?>
             <!-- Les détails du certificat n'ont pas été enregistrés ! -->   
-            <?php if(isset($_error1)) 
+            <?php if(isset($_SESSION['error'])) 
                 {
                 ?>
-                  <div class="alert alert-danger text-center" role="alert"><?php if (isset($_error1['sendCertificateDetails'])) {echo $_error1['sendCertificateDetails'] ;} ?></div>
+                  <div class="alert alert-danger text-center" role="alert"><?php if (isset($_SESSION['error'])) {echo $_SESSION['error'] ;} ?></div>
+                  
                 <?php
+                unset($_SESSION['error']);
                 } 
             ?>
             

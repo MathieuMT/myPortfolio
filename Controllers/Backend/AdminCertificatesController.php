@@ -6,8 +6,7 @@ require_once 'Views/ViewBackEnd.php';
 
 class AdminCertificatesController {
     
-    private $_success1;
-    private $_error1;
+   
     private $_adminCertificates;
     
     
@@ -105,7 +104,24 @@ class AdminCertificatesController {
        if (isset($certificateName) && isset($certificateTitle) && isset($certificateDescription) && isset($certificateCategory) && !empty($certificateName) && !empty($certificateTitle) && !empty($certificateDescription) && !empty($certificateCategory)) {
 
                 $sendCertificateDetails = $this->_adminCertificates->sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateCategory, $certificateId);
-            }
+        }
+       
+        /********** MESSAGES D'ALERTES***********/
+        
+        if ($sendCertificateDetails) {
+            $_SESSION['sendCertificateDetails'] = 'Les informations du certificat ont bien été enregistrées dans la base de données';
+            
+        } else {
+            $_SESSION['error'] = 'Les informations du certificat n\'ont pas été enregistrées dans la base de données';
+            
+        }
+       
+       
+        /****************************************/
+       
+       
+       
+       
         $certificate = $this->_adminCertificates->getCertificate($certificateId);
        
         header('Location: index.php?action=adminCertificates');
@@ -119,41 +135,7 @@ class AdminCertificatesController {
     
     
     
-    
-    
-    // Edit the author and post content based on the post id:
-    public function updateEditPost($title, $content, $author, $postId) {
-        
-        $postId = intval($postId);
-        $author= htmlspecialchars($author);
-        $title = htmlspecialchars($title);
-        //$content = htmlspecialchars($content);
-        
-        if (isset($author) && isset($title) && isset($content) && !empty($author) && !empty($title) && !empty($content)) {
-
-                $updatePost = $this->showUpdatePost->updatePost($title, $content, $author, $postId);
-            }
-        
-        $post = $this->post->getPost($postId);
-        
-        header('Location: index.php?action=showAdminPost&id='. $_SESSION['id']);
-
-        $view = new View('adminUpdatePostView');
-        $view->generate(array('post' => $post,'author' => $author, 'title' => $title, 'content' => $content));
-            
-       exit();
-    }
- 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     
     /*************************************************************************/
     
