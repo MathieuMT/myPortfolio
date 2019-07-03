@@ -34,7 +34,7 @@
     if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
 ?>
 
-            <nav class="navbar sticky-top navbar-expand-sm">
+            <nav class="navbar sticky-top navbar-expand-md">
 
                 <div class="row mr-auto">
                     <a class="navbar-brand"><img src="Content/img/portrait_min.png"></a>
@@ -125,7 +125,7 @@
 
 
             
-            <nav class="navbar sticky-top navbar-expand-sm">
+            <nav class="navbar sticky-top navbar-expand-md">
 
                 <div class="row mr-auto">
                     <a class="navbar-brand"><img src="Content/img/portrait_min.png"></a>
