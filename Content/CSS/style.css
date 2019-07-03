@@ -1,4 +1,3 @@
-
 html
 {
     overflow-x: hidden; /* enlève le scroll horizontal sur mes page web !!!*/
@@ -606,6 +605,14 @@ img:after {
 *page PrivateFormsView.php
 **/
 
+
+
+
+/*
+* Page adminCertificatesView.php
+**/
+
+
 /* DROPZONE */
 
 
@@ -672,6 +679,15 @@ img:after {
 }
 
 
+
+
+/* largeur des champs du formulaire des infos des certificats*/
+#certificateName, #certificateTitle, #certificateCategory {
+    
+    width: 200px;
+    
+}
+
 /*
 #dropZone {
     border: 3px dashed rgba(248,13,32,0.6);
@@ -699,7 +715,4 @@ img:after {
 
 
 
-/*
-* Page adminCertificatesView.php
-**/
 

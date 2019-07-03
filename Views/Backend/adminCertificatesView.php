@@ -128,8 +128,8 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
                     <div class="row justify-content-center">
                         <div class="mx-auto form-inline mt-5 ">
                             <div class="form-group mx-auto">
-                                <label class="text-center col-md-4" for="certificateName"><u>Nom:</u></label>
-                                <div class="col-md-8 pr-0">
+                                <label class="text-center col-md-3" for="certificateName"><u>Nom:</u></label>
+                                <div class="col-md-9 pr-0">
                                     <input type="text" class="form-control" id="certificateName" name="certificateName" placeholder="Nom du certificat" required autofocus />
                                 </div>
                             </div>
@@ -138,8 +138,8 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
                     <div class="row justify-content-center">
                         <div class="mx-auto form-inline mt-5 ">
                             <div class="form-group mx-auto">
-                                <label class="text-center col-md-4" for="certificateTitle"><u>Titre:</u></label>
-                                <div class="col-md-8 pr-0">
+                                <label class="text-center col-md-3" for="certificateTitle"><u>Titre:</u></label>
+                                <div class="col-md-9 pr-0">
                                     <input type="text" class="form-control" id="certificateTitle" name="certificateTitle" placeholder="Titre du certificat" required autofocus />
                                 </div>
                             </div>
@@ -148,8 +148,8 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
                     <div class="row justify-content-center">
                         <div class="mx-auto form-inline mt-5 ">
                             <div class="form-group mx-auto">
-                                <label class="text-center col-md-4" for="certificateCategory"><u>Categorie:</u></label>
-                                <div class="col-md-8 pr-0">
+                                <label class="text-center col-md-3" for="certificateCategory"><u>Cat:</u></label>
+                                <div class="col-md-9 pr-0">
                                     <input type="text" class="form-control" id="certificateCategory" name="certificateCategory" placeholder="Catégorie du certificat" required autofocus />
                                 </div>
                             </div>
