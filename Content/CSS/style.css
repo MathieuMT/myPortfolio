@@ -129,22 +129,6 @@ body {
 }
 
 /*
-.navbar-nav {
-    flex-direction: row;
-}
-*/
-/*
-.navbar-default {
-    background-color: #f8f8f8;
-    border-color: #e7e7e7;
-}
-.inline-form input {
-    display: inline-block;
-    width: 100px;
-}
-*/
-
-/*
 * TEMPLATE
 **/
 #content {
@@ -316,13 +300,6 @@ transform: rotate(-135deg);
     padding-top: 60px;
 }
 
-/*
-.gallery-block .heading {
-    margin-bottom: 50px;
-    text-align: center;
-}
-*/
-
 h2 {
     font-weight: bold;
     font-size: 1.4rem;
@@ -421,39 +398,40 @@ h2 {
 * worksView.php
 **/
 
-/*
-em {
-    opacity: 0.6;
+
+
+
+/* accordion */
+
+.stagger1 {
+    animation-delay: 0.3s;  
 }
 
-.work {
-    
-    margin-top: 10px;
-    margin-bottom: 10px;
+.stagger2 {
+    animation-delay: 0.5s;  
 }
 
-.work_detail, .work_detail_mobile {
-    display: none;
-    background-color: rgba(233,236,239,0.6);
+.stagger3 {
+    animation-delay: 0.7s;  
 }
 
-.work_slideshow {
-    height: 346px;
-    overflow-y: hidden;
+.stagger4 {
+    animation-delay: 0.9s;  
 }
-*/
 
+.card {
+    background-color:rgb(0,255,255);
+}
 
+.bg {
+    background-color: rgba(255,35,255,0.6);
+}
 
-
-
-
-
-
-
-
-
-
+p.stagger4 > a {
+    font-size: 30px;
+    text-decoration: none;
+    color:rgb(255,165,0);
+}
 
 
 
@@ -463,53 +441,6 @@ em {
 }
 
 
-/**********/
-/* images */
-/*
-img {  
-  
-  min-height: 50px;
-}
-
-img:before {  
-  content: " ";
-  display: block;
-
-  position: absolute;
-  top: -10px;
-  left: 0;
-  height: calc(100% + 10px);
-  width: 100%;
-  background-color: rgb(230, 230, 230);
-  border: 2px dotted rgb(200, 200, 200);
-  border-radius: 5px;
-}
-
-img:after {  
-  content: ;
-  display: block;
-  font-size: 16px;
-  font-style: normal;
-  font-family: FontAwesome;
-  color: rgb(100, 100, 100);
-
-  position: absolute;
-  top: 5px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-*/
-
-
-
-/**********/
-
-
-
-
-
-/*********/
 
 /* Carousel
 
@@ -579,20 +510,6 @@ img:after {
 }
 
 
-/********/
-/*
-.carousel-fade .carousel-inner .carousel-item {
-    opacity: 0;
-    transition-property: opacity;
-}
-
-
-.carousel-fade .carousel-inner .active {
-    opacity: 1;
-}
-*/
-
-
 
 
 
@@ -657,15 +574,6 @@ img:after {
     
 }
 
-
-
-#files {
-	border: 1px dotted #0088cc;
-	padding: 20px;
-	width: 200px;
-	display: none;
-}
-
 #error {
    color: red;
 }
@@ -681,38 +589,84 @@ img:after {
 
 
 
-/* largeur des champs du formulaire des infos des certificats*/
+/* largeur des champs du formulaire des infos des certificats */
 #certificateName, #certificateTitle, #certificateCategory {
+    width: 200px; 
+}
+
+
+
+/*
+* adminWorksView.php
+**/
+
+
+/* DROPZONE2 */
+
+
+
+ input[type="file"]{
+    width: 90px;
+}
+
+
+.dropzoneTitle2 {
+    font-size: 15px;
+}
+
+.dropZone2 {
+    text-align: center;
+	border: 1px dashed #0088cc;
+	padding: 30px;
+	width: 200px;
+	margin-top: 20px;
+}
     
+   
+@media (min-width:576px) {
+    /*
+    * DROPZONE
+    **/
+    
+    input[type="file"]{
+        width: 300px;
+    }
+
+    
+    .dropzoneTitle2 {
+        font-size: 20px;
+    }
+    
+    .dropZone2 {
+        text-align: center;
+        border: 2px dashed #0088cc;
+        padding: 30px;
+        width: 250px;
+        margin-top: 15px;
+    }
+    
+}
+
+/* largeur des champs du formulaire des infos des projets */
+#workName, #workTitle, #workCategory {
     width: 200px;
+}
+
+
+.bgSlides, .rowGallery2 {
+    background-color: rgb(0,255,255);
+}
+
+.containerGallery2, .rowGallery2, myImg2 {
+    margin-top: 50px;
     
 }
 
-/*
-#dropZone {
-    border: 3px dashed rgba(248,13,32,0.6);
-    padding: 50px;
+.uploadedFiles2 img{
+    width: 100% !important;
 }
 
-#files {
-    border: 1px dotted rgba(233,236,239,0.6);
-    padding: 20px;
-    display: none;
+.borderFieldset {
+    border: 1px solid rgb(0,0,102);
+    color: rgb(0,0,102);
 }
-
-#error {
-    color: red;
-}
-*/
-/*
-.alert {
-    display: none;
-}
-*/
-
-
-
-
-
-
-

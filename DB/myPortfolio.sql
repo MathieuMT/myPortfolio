@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Mar 02 Juillet 2019 à 23:05
+-- Généré le :  Sam 13 Juillet 2019 à 16:07
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.1
 
@@ -19,18 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `myPortfolio`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `categories`
---
-
-CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `slug` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -53,11 +41,26 @@ CREATE TABLE `certificates` (
 
 INSERT INTO `certificates` (`id`, `name`, `certificatImg`, `certificatTitle`, `certificatDescription`, `certificatCategory`) VALUES
 (1, 'Certificat 1', 'certificat_1_comprendre-le-web.jpg', 'Comprendre le web', 'La culture du Web !', 'WEB'),
-(2, 'certificat 2', 'certificat_2_creer-votre-site-web-avec-html5-et-css3.jpg', 'Créer votre site web', 'Le développement de sites web en HTML5 et CSS3', 'HTML5 CSS3'),
-(3, '', 'certificat_4_apprenez-a-coder-avec-javascript.jpg', '', '', ''),
-(4, '', 'certificat_3_decouvrez-les-solutions-cms.jpg', '', '', ''),
-(5, '', 'certificat_6_introduction-a-jquery.jpg', '', '', ''),
-(6, '', 'certificat_5_creez-des-pages-web-interactives-avec-javascript.jpg', '', '', '');
+(4, 'Certificat 4', 'certificat_3_decouvrez-les-solutions-cms.jpg', 'CMS', 'lehflhzneg', 'CMS'),
+(5, 'Certificat 5', 'certificat_6_introduction-a-jquery.jpg', 'Jquery', 'blaldjclc', 'Jquery'),
+(6, '', 'certificat_5_creez-des-pages-web-interactives-avec-javascript.jpg', '', '', ''),
+(14, '', 'certificat_2_creer-votre-site-web-avec-html5-et-css3.jpg', '', '', ''),
+(15, '', 'certificat_4_apprenez-a-coder-avec-javascript.jpg', '', '', ''),
+(16, '', 'certificat_7_les-cles-pour-reussir-son-referencement.jpg', '', '', ''),
+(17, '', 'certificat_8_concever-votre-site-web-avec-PHP-et-MySQL.jpg', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `slides`
+--
+
+CREATE TABLE `slides` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `slideImg` text NOT NULL,
+  `work_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -96,32 +99,37 @@ INSERT INTO `users` (`id`, `username`, `pass`, `description`) VALUES
 CREATE TABLE `works` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `slug` varchar(255) NOT NULL,
-  `category_id` int(11) NOT NULL
+  `workImg` text NOT NULL,
+  `workTitle` varchar(255) NOT NULL,
+  `workDescription` text NOT NULL,
+  `workCategory` varchar(255) NOT NULL,
+  `workLink` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `works`
 --
 
-INSERT INTO `works` (`id`, `name`, `slug`, `category_id`) VALUES
-(1, 'HTML', '', 0);
+INSERT INTO `works` (`id`, `name`, `workImg`, `workTitle`, `workDescription`, `workCategory`, `workLink`) VALUES
+(3, 'Projet 3', 'work3_1.jpg', 'Application Vélib‘', 'epfhpozejfpohpozef', 'JAVASCRIPT', 'https://github.com/MathieuMT'),
+(4, '', 'work4_1.jpg', '', '', '', '');
 
 --
 -- Index pour les tables exportées
 --
 
 --
--- Index pour la table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Index pour la table `certificates`
 --
 ALTER TABLE `certificates`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `slides`
+--
+ALTER TABLE `slides`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `workId` (`work_id`);
 
 --
 -- Index pour la table `users`
@@ -133,23 +141,22 @@ ALTER TABLE `users`
 -- Index pour la table `works`
 --
 ALTER TABLE `works`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `category_id` (`category_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT pour la table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT pour la table `certificates`
 --
 ALTER TABLE `certificates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+--
+-- AUTO_INCREMENT pour la table `slides`
+--
+ALTER TABLE `slides`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
@@ -159,7 +166,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `works`
 --
 ALTER TABLE `works`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `slides`
+--
+ALTER TABLE `slides`
+  ADD CONSTRAINT `work_slides` FOREIGN KEY (`work_id`) REFERENCES `works` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

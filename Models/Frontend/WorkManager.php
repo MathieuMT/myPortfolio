@@ -5,7 +5,7 @@ require_once 'Models/Model.php';
 class WorkManager extends Model{
     
     
-    public function getWorkDescription() { // Obtenir la liste des données descriptives pour chaque "User" sous forme de tableau d'objets.
+    public function getWorkDescription() { // Obtenir la liste des données descriptives pour chaque "Work" sous forme de tableau d'objets.
         
         $works = [];
         $sql = "SELECT * FROM works";

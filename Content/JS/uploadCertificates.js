@@ -1,14 +1,3 @@
-/*
-$(document).ready(function() {
-    // console.log('document is ready - 1');
-    getImages(0, numRows);
-   
-});
-*/
-
-
-
-/////////////////////////////////////
 
 function delImg(id) {
     'use strict';
@@ -44,7 +33,7 @@ function delImg(id) {
 $(function () {
     
     
-    var files = $("#files");
+    //var files = $("#files");
 
     $("#fileupload").fileupload({
         url: 'index.php?action=uploadCertificatesImages',

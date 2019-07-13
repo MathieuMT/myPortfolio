@@ -5,7 +5,7 @@ require_once 'Models/Model.php';
 class CertificateManager extends Model{
     
     
-    public function getCertificateDescription() { // Obtenir la liste des données descriptives pour chaque "User" sous forme de tableau d'objets.
+    public function getCertificateDescription() { // Obtenir la liste des données descriptives pour chaque "Certificat" sous forme de tableau d'objets.
         
         $certificates = [];
         $sql = "SELECT * FROM certificates";

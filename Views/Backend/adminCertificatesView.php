@@ -54,7 +54,7 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
 			
 			<h1 id="progress"></h1><br><br>
 			
-			<div id="files"></div><!-- NE PAS GARDER CETTE DIV !!! à VÉRIFIER !!! --->
+			<!-- <div id="files"></div> --><!-- NE PAS GARDER CETTE DIV !!! à VÉRIFIER !!! --->
 			
 		</center>
       
@@ -78,15 +78,9 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
         <!-- <div class="col-md-4 myImg"></div> -->
         
         <?php foreach ($aboutCertificate as $eachCertificate): ?>
-        <div class="row rowGallery border mb-5 p-5">
-           
-          
-            <h3 class="text-center col-md-12">Ajouter ou Modifier les informations du certificat numéro <?= $eachCertificate->id(); ?></h3><br/>
-            <h6 class="text-center col-md-12"><i>(Pour supprimer un certificat et ses informations de la base de données: cliquer sur son image!)</i></h6><br />
-            
-            
-            
-             <!-- MESSAGES DE SUCCÈS ET D'ERREURS -->
+        
+        
+        <!-- MESSAGES DE SUCCÈS ET D'ERREURS -->
         
             <!-- Les détails du certificat sont bien enregistrés ! -->
             <?php  if(isset($_SESSION['sendCertificateDetails'])) 
@@ -108,11 +102,24 @@ if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
                 } 
             ?>
             
+        
+        
+        
+        
+        <div class="row rowGallery border mb-5 p-5">
+           
+          
+            <h3 class="text-center col-md-12">Ajouter ou Modifier les informations du certificat numéro <?= $eachCertificate->id(); ?></h3><br/>
+            <h6 class="text-center col-md-12"><i>(Pour supprimer un certificat et ses informations de la base de données: cliquer sur son image!)</i></h6><br />
+            
+            
+            
+             
             
             
            
             
-            <div id="<?= $eachCertificate->id(); ?>'" class="col-md-5 myImg" onclick="delImg('<?= $eachCertificate->id(); ?>')">
+            <div id="<?= $eachCertificate->id(); ?>" class="col-md-5 myImg" onclick="delImg('<?= $eachCertificate->id(); ?>')">
                 <img src="Content/img/certificats/<?= $eachCertificate->certificatImg(); ?>" alt="<?= $eachCertificate->name(); ?>" title="Cliquer sur l'image du certificat pour le supprimer"/><br /><br />
                 <fieldset class="border p-2">
                     <legend  class="w-auto">Informations BDD</legend>

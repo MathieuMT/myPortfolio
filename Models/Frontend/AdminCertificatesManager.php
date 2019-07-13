@@ -4,18 +4,7 @@ require_once 'Models/Model.php';
 
 class AdminCertificatesManager extends Model{
     
-    
-   public function uploadCertificatImg($certificatImgName){
-        $sql="INSERT INTO certificates (certificatImg) VALUES ('$certificatImgName')";
-        $result=$this->executeRequest($sql);
-        if($result){
-            echo "File is uploaded";
-        }
-        else
-        {
-            echo "File is not uploaded";
-        }
-    }
+  
 
     
    // Delete a image of certificate in the database:

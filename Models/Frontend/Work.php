@@ -6,7 +6,7 @@ require_once 'Views/ViewFrontEnd.php';
 
 
 class Work {
-    private $_id,$_name,$_slug, $_category_id;
+    private $_id,$_name,$_workImg,$_workTitle,$_workDescription,$_workCategory, $_workLink;
     
     
     public function __construct(array $data){
@@ -25,8 +25,12 @@ class Work {
     // Getters:
     public function id() { return $this->_id; }
     public function name() { return $this->_name;}
-    public function slug() { return $this->_slug;}
-    public function categiryid() { return $this->_category_id;}
+    public function workImg() { return $this->_workImg;}
+    public function workTitle() { return $this->_workTitle;}
+    public function workCategory() { return $this->_workCategory;}
+    public function workLink() { return $this->_workLink;}
+    public function workDescription() { return $this->_workDescription;}
+
     
     // Setters:
     public function setId($id) {
@@ -44,20 +48,39 @@ class Work {
         }
     }
     
-    
-    public function setSlug($slug) {
+     public function setWorkImg($workImg) {
         
-        if(is_string($slug)) {
-            $this->_slug = $slug;
+        if(is_string($workImg)) {
+            $this->_workImg = $workImg;
         }
     }
     
-    
-    public function setCategoryid($categoryid) {
+    public function setWorkTitle($workTitle) {
         
-        if (is_string($categoryid)) {
-            $this->_category_id = $categoryid;
+        if(is_string($workTitle)) {
+            $this->_workTitle = $workTitle;
         }
     }
     
+    public function setWorkCategory($workCategory) {
+        
+        if(is_string($workCategory)) {
+            $this->_workCategory = $workCategory;
+        }
+    }
+    
+    public function setWorkLink($workLink) {
+        
+        if(is_string($workLink)) {
+            $this->_workLink = $workLink;
+        }
+    }
+    
+    public function setWorkDescription($workDescription) {
+        
+        if(is_string($workDescription)) {
+            $this->_workDescription = $workDescription;
+        }
+    }
+   
 }
