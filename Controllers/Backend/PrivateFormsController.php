@@ -26,7 +26,7 @@ class PrivateFormsController {
         $view->generate([]);
     }
     
-    
+  
     
     /* FORMULAIRE D'INSCRIPTION */
     

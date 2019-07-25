@@ -7,9 +7,7 @@ class AdminWorkManager extends Model{
 
     /*********** PROJECT MANAGER *********/
 
-  
-
-    
+ 
    // Delete a image of certificate in the database:
     public function delImageBDD($id) {
        
@@ -201,45 +199,8 @@ class AdminWorkManager extends Model{
             throw new Exception("Aucun diapositif ne correspond à l'identifiant '$slideId'");
     }
     
-    /*
-    // Returns information on a slide:
-    public function getSlide($work_id) {
-        
-        //$work_id = intval($_GET['id']);
-        
-        $sql ='SELECT id, name, slideImg, work_id FROM slides WHERE work_id = ?';
-        
-        $slide = $this->executeRequest($sql, array($work_id));
-        
-        if ($slide->rowCount() > 0)
-            return $slide->fetch(); // Access to the first result line.
-        else
-            throw new Exception("Aucun diapositif ne correspond à l'identifiant '$work_id'");
-    }
-    */
-    
-    /*
-    // Returns information on a slide:
-    public function getSlide($work_id) {
-        
-        $sql ='SELECT s.id, s.name, s.slideImg, s.work_id FROM slides s LEFT JOIN works w ON s.work_id = w.id';
-        
-        $slide = $this->executeRequest($sql, array($work_id));
-        
-        if ($slide->rowCount() > 0)
-            return $slide->fetch(); // Access to the first result line.
-        else
-            throw new Exception("Aucun diapositif ne correspond à l'identifiant '$work_id'");
-    }
-    */
     /*************************************************************************/
     
-    
-    public function getComments($postId) {
-        $sql = 'SELECT id, post_id, author, comment, flagged, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE post_id = ?';
-        $comments = $this->executeQuery($sql, array($postId));
-        return $comments;
-    }
     
 }
 

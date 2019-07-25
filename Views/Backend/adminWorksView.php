@@ -4,7 +4,7 @@
 
 
 <?php
-if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
+if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
 ?>
 
 

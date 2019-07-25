@@ -18,11 +18,22 @@ class UserController {
     
     
     
-     //Show list of all blog posts
+     //Show list of all users:
+    
     public function aboutUser() {
         $aboutUser = $this->_user->getUserDescription();
         $view = new ViewFrontEnd('aboutView');
         $view->generate(array('aboutUser' => $aboutUser));
     }
-
+    
+    
+    /*
+    public function aboutUser($userId) {
+        $aboutUser = $this->_user->getUser($userId);
+        $view = new ViewFrontEnd('aboutView');
+        $view->generate(array('aboutUser' => $aboutUser));
+    }
+    */
+    
+    
 }

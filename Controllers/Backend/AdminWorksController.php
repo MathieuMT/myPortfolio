@@ -27,10 +27,23 @@ class AdminWorksController {
     
     /*********** PROJECT CONTROLLER *********/
         
+        
+    public function deleteSlides ($id) {
+        
+        //$workId = $this->_adminWorks->getWorkId($id);
+            $slidesByWorkId = $this->_adminWorks->getSlidesByWorkId ($id);
+            
+            foreach ($slidesByWorkId as $slide) {
+                $linkSlideImg = 'Content/img/slides_works/'.$slide['slideImg'];
+                 unlink($linkSlideImg);  
+            }
+        
+        
+    }
+    
         /*---------------------------
         UPLOAD MULTIPLE FILES PROJECTS
         -----------------------------*/
-    
     public function uploadWorkImgs() {
                 
         
@@ -40,15 +53,9 @@ class AdminWorksController {
             $id = htmlspecialchars($_POST['id']);
             
             
-            
             /*****************************************************/
-            
-            /* DELETE FILE IMAGES SLIDES */
-            $slideImg = $this->_adminWorks->getSlide($id);
-            
-            $linkSlideImg = 'Content/img/slides_works/'.$slideImg['slideImg'];
-               
-            unlink($linkSlideImg);  
+            /* DELETE FILES IMAGES SLIDES BY WORK_ID  */
+            $this->deleteSlides ($id); 
                 
             /****************************************************/
             
@@ -61,10 +68,10 @@ class AdminWorksController {
             
             unlink($linkWorkImg);
             
-            /* DELETE IMAGE CERTIFICATE FROM DATABASE */
+            /* DELETE IMAGE PROJECT FROM DATABASE */
             //$this->_adminWorks->delImageSlideBDD($id);
             
-            /* DELETE IMAGE CERTIFICATE FROM DATABASE */
+            /* DELETE IMAGE PROJECT FROM DATABASE */
             $this->_adminWorks->delImageBDD($id);
             
             exit('success');

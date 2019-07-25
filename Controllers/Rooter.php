@@ -6,7 +6,7 @@ require_once 'Controllers/Frontend/ContactController.php';
 
 require_once 'Controllers/Backend/PrivateFormsController.php';
 
-require_once 'Controllers/Backend/AdminAboutController.php';
+//require_once 'Controllers/Backend/AdminContactsController.php';
 require_once 'Controllers/Backend/AdminCertificatesController.php';
 require_once 'Controllers/Backend/AdminWorksController.php';
 require_once 'Controllers/Backend/AdminWorkController.php';
@@ -18,13 +18,13 @@ require_once 'Views/ViewFrontEnd.php';
 require_once 'Views/ViewBackEnd.php';
 
 class Rooter {
-    
+   
     private $_userCtrl;
     private $_workCtrl;
     private $_certificateCtrl;
     private $_contactCtrl;
     private $_privateFormsCtrl;
-    private $_adminAboutCtrl;
+    //private $_adminContactsCtrl;
     private $_adminCertificatesCtrl;
     private $_adminWorksCtrl;
     private $_adminWorkCtrl;
@@ -38,7 +38,7 @@ class Rooter {
         $this->_certificateCtrl = new CertificateController();
         $this->_contactCtrl = new ContactController();
         $this->_privateFormsCtrl = new PrivateFormsController();
-        $this->_adminAboutCtrl = new AdminAboutController();
+        //$this->_adminContactsCtrl = new AdminContactsController();
         $this->_adminCertificatesCtrl = new AdminCertificatesController();
         $this->_adminWorksCtrl = new AdminWorksController();
         $this->_adminWorkCtrl = new AdminWorkController();
@@ -54,14 +54,170 @@ class Rooter {
             if (isset($_GET['action'])) {
                 
                if ($_GET['action'] == 'about') {
-                    $this->_userCtrl->aboutUser();
+                   
+                  $this->_userCtrl->aboutUser();
+                   
+                   
+                   
+                  
                 }
-                elseif ($_GET['action'] == 'adminAbout') {
-                    $this->_adminAboutCtrl->showAdminAbout();
+                /*
+                elseif ($_GET['action'] == 'adminContacts') {
+                    $this->_adminContactsCtrl->showAdminAbout();
                 }
+                */
                 elseif ($_GET['action'] == 'adminProfile') {
-                    $this->_adminProfileCtrl->showAdminProfile();
+
+                     $userId = intval($this->getParameter($_GET, 'id'));
+                        if ($userId > 0) {
+                            $this->_adminProfileCtrl->showAdminProfile($userId);
+                        }
+                        else
+                            throw new Exception("Identifiant du profil de l'utilisateur non valide");
                 }
+                else if ($_GET['action'] == 'profileAvatar') {
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    if ($userId > 0) {
+                        
+                        $avatar = $this->getParameter($_FILES, 'avatar_field');
+                      
+                        $this->_adminProfileCtrl->newAvatar($userId, $avatar);
+                    }
+                }
+                else if ($_GET['action'] == 'profileDeleteAvatar') {
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->deleteAvatar($userId);
+                    }
+                }
+                else if ($_GET['action'] == 'profileMiniAvatar') {
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    if ($userId > 0) {
+                        
+                        $miniAvatar = $this->getParameter($_FILES, 'mini_avatar_field');
+                      
+                        $this->_adminProfileCtrl->newMiniAvatar($userId, $miniAvatar);
+                    }
+                }
+                else if ($_GET['action'] == 'profileDeleteMiniAvatar') {
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->deleteMiniAvatar($userId);
+                    }
+                }
+                else if ($_GET['action'] == 'profileUsername') {
+                    
+                    $newUsername = $this->getParameter($_POST, 'newUsername');
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->editUsername($userId, $newUsername);
+                    }
+                }
+                else if ($_GET['action'] == 'profileFirstname') {
+                    
+                    $newFirstname = $this->getParameter($_POST, 'newfirstname');
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->editFirstname($userId, $newFirstname);
+                    }
+                }
+                else if ($_GET['action'] == 'profileLastname') {
+                    
+                    $newLastname = $this->getParameter($_POST, 'newlastname');
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->editLastname($userId, $newLastname);
+                    }
+                }
+                else if ($_GET['action'] == 'profileEmail') {
+                    
+                    $newEmail = $this->getParameter($_POST, 'newemail');
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->editEmail($userId, $newEmail);
+                    }                    
+                }
+                else if ($_GET['action'] == 'profileDeleteEmail') {
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->deleteEmail($userId);
+                    }
+                }
+                else if ($_GET['action'] == 'profilePass') {
+                    
+                    $newPass1 = $this->getParameter($_POST, 'newPass1');
+                    $newPass2 = $this->getParameter($_POST, 'newPass2');
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->editPass($userId, $newPass1, $newPass2);
+                    }  
+                    
+                }
+                else if ($_GET['action'] == 'profileProfession') {
+                    
+                    $newProfession = $this->getParameter($_POST, 'newprofession');
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->editProfession($userId, $newProfession);
+                    }
+                }
+                else if ($_GET['action'] == 'profileDeleteProfession') {
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->deleteProfession($userId);
+                    }
+                }
+                else if ($_GET['action'] == 'profileDescription') {
+                    
+                    $newDescription = $this->getParameter($_POST, 'newDescription');
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->editDescription($userId, $newDescription);
+                    }
+                }
+                else if ($_GET['action'] == 'profileDeleteDescription') {
+                    
+                    $userId = intval($this->getParameter($_GET, 'id'));
+                    if ($userId > 0) {
+                        
+                        $this->_adminProfileCtrl->deleteDescription($userId);
+                    }
+                }
+                
+                
+                
+                
                 elseif ($_GET['action'] == 'certificates') {
                    $this->_certificateCtrl->aboutCertificates();
                }
@@ -136,6 +292,19 @@ class Rooter {
                 elseif ($_GET['action'] == 'contact') {
                     $this->_contactCtrl->Contact();
                 }
+                else if ($_GET['action'] == 'submitContactData') {
+                    
+                    $contactFirstName = $this->getParameter($_POST, 'contactFirstName1');
+                    $contactLastName = $this->getParameter($_POST, 'contactLastName1');
+                    $contactEmail = $this->getParameter($_POST, 'contactEmail1');
+                    $contactObject = $this->getParameter($_POST, 'contactObject1');
+                    $contactMsg = $this->getParameter($_POST, 'contactMsg1');
+                    
+                    $this->_contactCtrl-> newContactInDB($contactFirstName, $contactLastName, $contactEmail, $contactObject, $contactMsg);
+                }
+                
+                
+                
                 else if ($_GET['action'] == 'showPrivateForms') {
                     $this->_privateFormsCtrl->showPrivateForms();
                 }

@@ -116,7 +116,23 @@ class AdminWorksManager extends Model{
             throw new Exception("Aucun diapositif ne correspond à l'identifiant '$slideId'");
     }
     
-   
+    /*
+    public function getWorkId ($slideId) {
+        $sql ="SELECT work_id FROM slides WHERE id = :id";
+        $slide = $this->executeRequest($sql, array('id' => $slideId));
+        
+        return $slide->fetch();
+        
+    }
+    */
+    
+    
+    public function getSlidesByWorkId ($workId) {
+        
+        $sql ="SELECT * FROM slides WHERE work_id = :work_id";
+        $slidesByWorkId = $this->executeRequest($sql, array(':work_id' => $workId));
+        return $slidesByWorkId;
+    }
 }
 
 

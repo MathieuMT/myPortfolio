@@ -1,9 +1,9 @@
 <?php
-require_once 'Models/Frontend/AdminAboutManager.php';
+require_once 'Models/Frontend/AdminContactsManager.php';
 require_once 'Views/ViewBackEnd.php';
 
 
-class AdminAboutController {
+class AdminContactsController {
     
     
     private $manager;
@@ -15,9 +15,9 @@ class AdminAboutController {
     */
     
     
-    // Affichage la page de gestion d'À Propos:
+    // Affichage la page de gestion du profil:
     public function showAdminAbout() {
-        $view = new ViewBackEnd('adminAboutView');
+        $view = new ViewBackEnd('adminContactsView');
         $view->generate([]);
     }
     

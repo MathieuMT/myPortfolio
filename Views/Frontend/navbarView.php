@@ -31,7 +31,10 @@
 
 <!-- NAVBAR -->
 <?php
-    if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT'){
+    
+    /* if (isset($_SESSION['id']) && $_SESSION['username'] === 'MathieuMT') */
+    
+    if (isset($_SESSION['id'])){
 ?>
 
             <nav class="navbar sticky-top navbar-expand-md">
@@ -93,13 +96,13 @@
 
                                     <div class="dropdown-menu" aria-labelledby="dropdown_target">
                                         
-                                        <a class="dropdown-item text-center" href="index.php?action=adminAbout">Gestion de l'à propos</a>
+                                        <a class="dropdown-item text-center" href="index.php?action=adminProfile&amp;id=<?= $_SESSION['id']; ?>">Gestion du profil</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item text-center" href="index.php?action=adminCertificates">Gestion des certificats</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item text-center" href="index.php?action=adminWorks">Gestion des réalisations</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item text-center" href="index.php?action=adminProfile">Gestion du profil</a>
+                                        <a class="dropdown-item text-center" href="index.php?action=adminContacts">Gestion des contacts</a>
 
                                     </div>
 

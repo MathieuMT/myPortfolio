@@ -1,3 +1,6 @@
+html, body {
+    height: 100%;
+}
 html
 {
     overflow-x: hidden; /* enlève le scroll horizontal sur mes page web !!!*/
@@ -141,6 +144,20 @@ body {
 
 .titlePage {
     color: rgba(233,236,239,0.6);
+}
+
+.portfolioName {
+    font-size: 25px;
+}
+
+.cv {
+    text-decoration: none;
+    color: red;
+}
+
+.cv:hover {
+    text-decoration: none;
+    color: red;
 }
 
 
@@ -510,13 +527,114 @@ p.stagger4 > a {
 }
 
 
+/*
+* Page adminContactView.php
+**/
 
 
 
 
 
 
+/*
+* page adminProfileView.php
+**/
 
+
+/* USERNAME */
+.username_profile /* , .firstname_profile , .lastname_profile , .email_profile */ {
+    font-size: 30px;
+}
+
+/* AVATAR */
+.avatar_profile {
+    border: 3px solid rgba(255,0,0,0.6);
+    border-radius: 50%;
+}
+
+/* MINI-AVATAR */
+.mini_avatar_profile {
+    border: 3px solid rgba(255,0,0,0.6);
+    border-radius: 50%; 
+}
+
+.popup_update_avatar_profile, .popup_update_mini_avatar_profile, .popup_update_username_profile, .popup_update_firstname_profile, .popup_update_lastname_profile, .popup_update_email_profile, .popup_update_pass_profile, .popup_update_profession_profile, .popup_update_description_profile, .popup_delete_description_profile /*, .popup_delete_email_profil */ {
+    display: none;
+    background-color: rgba(191,191,191,0.3);
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2%;
+    margin-bottom: 1%;
+    box-sizing: content-box;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.btn_closePopupAvatar, .btn_closePopupMiniAvatar, .btn_closePopupUsername, .btn_closePopupFirstname, .btn_closePopupLastname, .btn_closePopupEmail, .btn_closePopupPass, .btn_closePopupProfession, .btn_closePopupDescription, .btn_closePopupDeletetDescription {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/*
+* Page contactView.php
+**/
+
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+}
+
+.card-img {
+    height: 1050px;
+}
+
+.boxShadow:hover { 
+    box-shadow: 0px 0px 25px 14px  red;
+}
+
+.boxShadow2:hover { 
+    box-shadow: 0px 0px 25px 14px  red;
+}
+
+
+.fond {
+    display: none;
+    position:absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    height: 400px;
+    width: 100%;
+    background-color: red;
+    opacity: 0.3;
+    z-index:5;
+    
+}
+
+.fond2 {
+    display: none;
+    position:absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    height: 1050px;
+    width: 100%;
+    background-color: red;
+    opacity: 0.3;
+    z-index:5;
+    
+}
+
+/*
+.map-container {
+    height: 800px;
+    background: white;
+}
+*/
 
 /*
 *page PrivateFormsView.php
@@ -670,3 +788,5 @@ p.stagger4 > a {
     border: 1px solid rgb(0,0,102);
     color: rgb(0,0,102);
 }
+
+
