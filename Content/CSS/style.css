@@ -10,7 +10,10 @@ body {
     margin: 0;
     padding: 0;
     /*padding-top: 80px;*/
-    background-color: rgba(0,0,102,1);
+    /*background-color: rgba(0,0,102,1);*/
+    background-image: url("../img/sand.png");
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 /*
@@ -42,7 +45,7 @@ body {
 }
 
 .bars {
-    color: red;
+    color:rgb(0,255,255);
     padding-top: 4px;
     text-align: center;
 }
@@ -55,7 +58,7 @@ body {
 */
 .navbar-toggler-icon{
     background-color:  rgba(255,35,255,0.6);
-    border: 1px solid red;
+    border: 1px solid rgb(0,255,255);
     border-radius: 50%;
     box-sizing: content-box;
 }
@@ -64,7 +67,7 @@ body {
     margin-top: 51px;
 }
 .navbar-brand img{
-    border: 3px solid rgba(255,0,0,0.6);
+    border: 3px solid rgba(0,255,255,0.6);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -77,18 +80,18 @@ body {
 }
 
 .nav-link {
-    color: rgba(255,0,0,0.6);
+    color: rgba(0,255,255,0.6);
     text-shadow: 1px 1px 1px rgba(245,245,220,0.6);
     text-align: center;
     border-top: 1px solid rgba(245,245,220,0.6);
-    background-color: rgba(0,0,102,0.6);
+    background-color: rgba(248,13,32,0.6);
     border-radius: 0;
     margin-right: 10px;
 }
 
 .nav-link:hover {
-    color: rgba(0,0,102,0.8);
-    text-shadow: 1px 1px 1px rgba(0,0,139,0.8);
+    color: rgba(0,0,255,0.6);
+    text-shadow: 1px 1px 1px rgba(0,255,255,0.6);
     background-color: rgba(245,245,220,0.6);
 }
 
@@ -116,7 +119,7 @@ body {
 .dropdown-item:hover {
     margin: 0;
     padding: 0;
-    color: rgba(0,0,139,0.6);
+    color: rgba(0,0,255,0.6);
     text-shadow: 1px 1px 1px rgba(255,0,0,0.6);
     background-color:rgba(245,245,220,0.6);
 }
@@ -135,15 +138,18 @@ body {
 * TEMPLATE
 **/
 #content {
-    color: rgba(248,13,32,0.6);
+    font-weight: bolder;
+    color: rgb(0,0,255);
 }
+
+
 
 /*
 * PAGE ABOUT
 **/
 
 .titlePage {
-    color: rgba(233,236,239,0.6);
+    color: rgb(0,0,255);
 }
 
 .portfolioName {
@@ -390,7 +396,7 @@ h2 {
 
 
 .hr {
-    background-color: rgba(248,13,32,0.6);
+    background-color: rgba(0,0,255,0.6);
 }
 
 h2 {
@@ -548,13 +554,13 @@ p.stagger4 > a {
 
 /* AVATAR */
 .avatar_profile {
-    border: 3px solid rgba(255,0,0,0.6);
+    border: 3px solid rgb(0,0,255,0.6);
     border-radius: 50%;
 }
 
 /* MINI-AVATAR */
 .mini_avatar_profile {
-    border: 3px solid rgba(255,0,0,0.6);
+    border: 3px solid rgba(0,0,255,0.6);
     border-radius: 50%; 
 }
 
@@ -593,11 +599,11 @@ p.stagger4 > a {
 }
 
 .boxShadow:hover { 
-    box-shadow: 0px 0px 25px 14px  red;
+    box-shadow: 0px 0px 25px 14px  aqua;
 }
 
 .boxShadow2:hover { 
-    box-shadow: 0px 0px 25px 14px  red;
+    box-shadow: 0px 0px 25px 14px  aqua;
 }
 
 
@@ -609,7 +615,7 @@ p.stagger4 > a {
     text-align: center;
     height: 400px;
     width: 100%;
-    background-color: red;
+    background-color: aqua;
     opacity: 0.3;
     z-index:5;
     
@@ -623,7 +629,7 @@ p.stagger4 > a {
     text-align: center;
     height: 1050px;
     width: 100%;
-    background-color: red;
+    background-color: aqua;
     opacity: 0.3;
     z-index:5;
     
@@ -662,7 +668,7 @@ p.stagger4 > a {
 }
 
 #dropZone {
-	border: 2px dashed #0088cc;
+	border: 2px dashed rgb(0,0,255);;
 	padding: 30px;
 	width: 200px;
 	margin-top: 20px;
@@ -684,13 +690,26 @@ p.stagger4 > a {
     }
     
     #dropZone {
-        border: 3px dashed #0088cc;
+        border: 3px dashed rgb(0,0,255);;
         padding: 50px;
         width: 500px;
         margin-top: 20px;
     }
     
 }
+
+
+
+.border {
+    border: 3px solid rgb(0,0,255)!important;
+    color: rgb(0,0,255)!important;
+}
+
+fieldset.border {
+    border: 3px solid rgb(0,0,255)!important;
+    color: rgb(0,0,255)!important;
+}
+
 
 #error {
    color: red;
@@ -734,7 +753,7 @@ p.stagger4 > a {
 
 .dropZone2 {
     text-align: center;
-	border: 1px dashed #0088cc;
+	border: 1px dashed rgb(0,0,255);;
 	padding: 30px;
 	width: 200px;
 	margin-top: 20px;
@@ -757,7 +776,7 @@ p.stagger4 > a {
     
     .dropZone2 {
         text-align: center;
-        border: 2px dashed #0088cc;
+        border: 2px dashed rgb(0,0,255);;
         padding: 30px;
         width: 250px;
         margin-top: 15px;
@@ -785,8 +804,8 @@ p.stagger4 > a {
 }
 
 .borderFieldset {
-    border: 1px solid rgb(0,0,102);
-    color: rgb(0,0,102);
+    border: 3px solid rgb(0,0,255);
+    color: rgb(0,0,255);
 }
 
 

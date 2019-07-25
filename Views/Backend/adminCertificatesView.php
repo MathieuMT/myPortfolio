@@ -3,7 +3,7 @@
 
 
 <?php
-if (isset($_SESSION['id']) && $_SESSION['username'] === $user->username()){
+if (isset($_SESSION['id'])){
 ?>
 
 
