@@ -8,19 +8,38 @@ class AdminContactsController {
     
     private $manager;
     
-    /*
+    
     public function __construct() {
-        $this->manager = new AdminAboutManager();
+        $this->manager = new AdminContactsManager();
     }
-    */
     
     
-    // Affichage la page de gestion du profil:
-    public function showAdminAbout() {
+    
+    // Affichage de la page de gestion des contacts:
+    public function showAdminContact() {
+        
+        $aboutContact = $this->manager->getContactDescription();
+        
         $view = new ViewBackEnd('adminContactsView');
-        $view->generate([]);
+        $view->generate(['aboutContact' => $aboutContact]);
     }
     
-    
+    // Delete a post:
+    public function removeContact() {
+
+        if (isset($_POST['submit_delete_contact'])) {
+            
+            $contactId = $_POST['contactId'];
+            
+            $deleteContact= $this->manager->deleteContact($contactId);
+
+        }
+        
+        header('Location: index.php?action=adminContacts');
+        
+        
+        
+        exit();
+    }
     
 }

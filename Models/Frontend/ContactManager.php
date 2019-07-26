@@ -1,5 +1,5 @@
 <?php
-/*require_once 'Models/Frontend/User.php';*/
+
 require_once 'Models/Model.php';
 
 class ContactManager extends Model {
@@ -19,11 +19,7 @@ class ContactManager extends Model {
             return false;
         }
     }
-    
-    
-    
-    
-    
+   
 
 }
 

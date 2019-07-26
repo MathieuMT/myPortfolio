@@ -1,0 +1,88 @@
+<?php
+
+require_once 'Views/ViewBackEnd.php';
+
+
+class Contact{
+    
+    private $_id,$_firstname,$_lastname,$_email,$_subject,$_comments,$_comment_date;
+    
+    
+    public function __construct(array $data){
+        $this->hydrate($data);
+    }
+    
+    public function hydrate(array $data) {
+        foreach ($data as $key => $value) {
+            $method = 'set' . ucfirst($key);
+            if (method_exists($this, $method)){
+                $this->$method($value);
+            }
+        }
+    }
+    
+    // Getters:
+    public function id() { return $this->_id; }
+    public function firstname() { return $this->_firstname;}
+    public function lastname() { return $this->_lastname;}
+    public function email() { return $this->_email;}
+    public function subject() { return $this->_subject;}
+    public function comments() { return $this->_comments;}
+    public function comment_date() { return $this->_comment_date;}
+
+    
+    // Setters:
+    public function setId($id) {
+        $id = (int) $id;
+        
+        if ($id > 0) {
+            $this->_id = $id;
+        }
+    }
+    
+    public function setFirstname($firstname) {
+        
+        if(is_string($firstname)) {
+            $this->_firstname = $firstname;
+        }
+    }
+    
+    public function setLastname($lastname) {
+        
+        if(is_string($lastname)) {
+            $this->_lastname = $lastname;
+        }
+    }
+    
+    public function setEmail($email) {
+        
+        if(is_string($email)) {
+            $this->_email = $email;
+        }
+    }
+    
+    public function setSubject($subject) {
+        
+        if(is_string($subject)) {
+            $this->_subject = $subject;
+        }
+    }
+    
+    
+    public function setComments($comments) {
+        
+        if(is_string($comments)) {
+            $this->_comments = $comments;
+        }
+    }
+    
+    
+    public function setComment_date($comment_date) {
+        
+        if(is_string($comment_date)) {
+            $this->_comment_date = $comment_date;
+        }
+    }
+    
+    
+}

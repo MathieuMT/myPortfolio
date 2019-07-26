@@ -6,7 +6,7 @@ require_once 'Controllers/Frontend/ContactController.php';
 
 require_once 'Controllers/Backend/PrivateFormsController.php';
 
-//require_once 'Controllers/Backend/AdminContactsController.php';
+require_once 'Controllers/Backend/AdminContactsController.php';
 require_once 'Controllers/Backend/AdminCertificatesController.php';
 require_once 'Controllers/Backend/AdminWorksController.php';
 require_once 'Controllers/Backend/AdminWorkController.php';
@@ -24,7 +24,7 @@ class Rooter {
     private $_certificateCtrl;
     private $_contactCtrl;
     private $_privateFormsCtrl;
-    //private $_adminContactsCtrl;
+    private $_adminContactsCtrl;
     private $_adminCertificatesCtrl;
     private $_adminWorksCtrl;
     private $_adminWorkCtrl;
@@ -38,7 +38,7 @@ class Rooter {
         $this->_certificateCtrl = new CertificateController();
         $this->_contactCtrl = new ContactController();
         $this->_privateFormsCtrl = new PrivateFormsController();
-        //$this->_adminContactsCtrl = new AdminContactsController();
+        $this->_adminContactsCtrl = new AdminContactsController();
         $this->_adminCertificatesCtrl = new AdminCertificatesController();
         $this->_adminWorksCtrl = new AdminWorksController();
         $this->_adminWorkCtrl = new AdminWorkController();
@@ -56,16 +56,11 @@ class Rooter {
                if ($_GET['action'] == 'about') {
                    
                   $this->_userCtrl->aboutUser();
-                   
-                   
-                   
-                  
+                    
                 }
-                /*
-                elseif ($_GET['action'] == 'adminContacts') {
-                    $this->_adminContactsCtrl->showAdminAbout();
-                }
-                */
+                
+                
+                
                 elseif ($_GET['action'] == 'adminProfile') {
 
                      $userId = intval($this->getParameter($_GET, 'id'));
@@ -218,7 +213,7 @@ class Rooter {
                 
                 
                 
-                elseif ($_GET['action'] == 'certificates') {
+                else if ($_GET['action'] == 'certificates') {
                    $this->_certificateCtrl->aboutCertificates();
                }
                 elseif ($_GET['action'] == 'adminCertificates') {
@@ -241,13 +236,13 @@ class Rooter {
                     else
                             throw new Exception("Identifiant du certificat non valide");  
                 }
-                elseif ($_GET['action'] == 'works') {
+                else if ($_GET['action'] == 'works') {
                     $this->_workCtrl->aboutWorks();
                }
-                elseif ($_GET ['action'] == 'adminWorks') {
+                else if ($_GET ['action'] == 'adminWorks') {
                     $this->_adminWorksCtrl->showAdminWorks();
                 }
-                elseif ($_GET ['action'] == "adminWork") {
+                else if ($_GET ['action'] == "adminWork") {
                     $workId = intval($this->getParameter($_GET, 'id'));
                         if ($workId > 0) {
                             $this->_adminWorkCtrl->showAdminWork($workId);
@@ -256,10 +251,12 @@ class Rooter {
                             throw new Exception("Identifiant du projet non valide");
              
                 }
-                elseif ($_GET['action'] == 'uploadWorksImages') {
+                
+                
+                else if ($_GET['action'] == 'uploadWorksImages') {
                     $this->_adminWorksCtrl->uploadWorkImgs();
                 }
-                elseif ($_GET['action'] == 'sendWorkDetails') {
+                else if ($_GET['action'] == 'sendWorkDetails') {
                     $workName = $this->getParameter($_POST, 'workName');
                     $workTitle = $this->getParameter($_POST, 'workTitle');
                     $workDescription = $this->getParameter($_POST, 'workDescription');
@@ -273,10 +270,10 @@ class Rooter {
                     else
                             throw new Exception("Identifiant du projet non valide");
                 }
-                elseif ($_GET['action'] == 'uploadSlidesImages') {
+                else if ($_GET['action'] == 'uploadSlidesImages') {
                     $this->_adminWorkCtrl->uploadSlideImgs();
                 }
-                elseif ($_GET['action'] == 'sendSlideDetails') {
+                else if ($_GET['action'] == 'sendSlideDetails') {
                     
                     $work_id = $this->getParameter($_POST, 'work_id_slide');
                     $slideName = $this->getParameter($_POST, 'slideName');
@@ -289,7 +286,7 @@ class Rooter {
                             throw new Exception("Identifiant du diapositif non valide");
                 }
                 
-                elseif ($_GET['action'] == 'contact') {
+                else if ($_GET['action'] == 'contact') {
                     $this->_contactCtrl->Contact();
                 }
                 else if ($_GET['action'] == 'submitContactData') {
@@ -301,6 +298,16 @@ class Rooter {
                     $contactMsg = $this->getParameter($_POST, 'contactMsg1');
                     
                     $this->_contactCtrl-> newContactInDB($contactFirstName, $contactLastName, $contactEmail, $contactObject, $contactMsg);
+                }
+                
+                elseif ($_GET['action'] == 'adminContacts') {
+                    $this->_adminContactsCtrl->showAdminContact();
+                }
+                
+                else if ($_GET['action'] == 'deleteContact') {
+
+                    $this->_adminContactsCtrl->removeContact();
+             
                 }
                 
                 
