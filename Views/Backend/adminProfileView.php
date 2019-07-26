@@ -26,7 +26,7 @@ if (isset($_SESSION['id'])){
     <div class="row text-center">
         
           <div class="col-12">
-               <fieldset class="border p-2">
+               <fieldset class="border p-2 bgColor">
                        <legend  class="w-auto">Informations concertant <?= $user->username(); ?> BDD</legend>
                            <span>(seul le mot de passe n'est pas affiché, car crypté)</span><br />
                             id: <?= $user->id(); ?><br />
@@ -60,7 +60,7 @@ if (isset($_SESSION['id'])){
    
    <div class="row text-center">
 
-        <div class="col-12" id="username"><span class="username_profile"><b>Pseudo : <i><?= $user->username(); ?></i></b></span><br />
+        <div class="col-12 border bgColor p-2" id="username"><span class="username_profile"><b>Pseudo : <i><?= $user->username(); ?></i></b></span><br />
                 <button class="btn_update_username_profile btn btn-primary mx-auto mt-3" >Modifier votre pseudo <?= '\'' . $user->username() . '\'' ?> ici</button><br />
             <div class="popup_update_username_profile">
                 <p><span class="btn_closePopupUsername">&times;</span></p>
@@ -122,7 +122,7 @@ if (isset($_SESSION['id'])){
     
    <div class="row text-center">
     
-        <div class="col-12" id="avatar">
+        <div class="col-12 border bgColor p-2" id="avatar">
                 <label><b>Avatar: </b></label><br /><img class="avatar_profile" src="Content/img/users/avatars/no_avatar.jpg" alt="avatar" /><br />
 
                 <button class="btn_update_avatar_profile btn btn-primary mx-auto mt-5" >Ajouter un avatar à <?= '\'' . $user->username() . '\'' ?> ici</button><br /> 
@@ -189,7 +189,7 @@ if (isset($_SESSION['id'])){
    <div class="row text-center">
       
       
-        <div class="col-12" id="avatar">
+        <div class="col-12 border bgColor p-2" id="avatar">
            <label><b>Votre avatar: </b></label><br /><img class="avatar_profile"  src="Content/img/users/avatars/<?= $user->avatar() ?>" alt="avatar" /><br />
            
            <button class="btn_update_avatar_profile btn btn-primary mx-auto mt-5" >Modifier l'avatar de <?= '\'' . $user->username() . '\'' ?> ici</button><br />
@@ -290,7 +290,7 @@ if (isset($_SESSION['id'])){
     
    <div class="row text-center">
     
-        <div class="col-12" id="mini_avatar">
+        <div class="col-12 border bgColor p-2" id="mini_avatar">
                 <label><b>Mini-avatar: </b></label><br /><img class="mini_avatar_profile" src="Content/img/users/mini_avatars/no_mini_avatar.jpg" alt="avatar" /><br />
 
                 <button class="btn_update_mini_avatar_profile btn btn-primary mx-auto mt-5" >Ajouter un mini-avatar à <?= '\'' . $user->username() . '\'' ?> ici</button><br /> 
@@ -357,7 +357,7 @@ if (isset($_SESSION['id'])){
    <div class="row text-center">
       
       
-        <div class="col-12" id="mini_avatar">
+        <div class="col-12 border bgColor p-2" id="mini_avatar">
            <label><b>Votre mini-avatar: </b></label><br /><img class="mini_avatar_profile"  src="Content/img/users/mini_avatars/<?= $user->mini_avatar() ?>" alt="avatar" /><br />
            
            <button class="btn_update_mini_avatar_profile btn btn-primary mx-auto mt-5" >Modifier l'avatar de <?= '\'' . $user->username() . '\'' ?> ici</button><br />
@@ -450,7 +450,7 @@ if (isset($_SESSION['id'])){
    
    <div class="row text-center">
 
-        <div class="col-12" id="firstname"><span class="firstname_profile"><b>PRÉNOM : <i><?= $user->firstname(); ?></i></b></span><br />
+        <div class="col-12 border bgColor p-2" id="firstname"><span class="firstname_profile"><b>PRÉNOM : <i><?= $user->firstname(); ?></i></b></span><br />
                 <button class="btn_update_firstname_profile btn btn-primary mx-auto mt-3" >Modifier votre prénom <?= '\'' . $user->firstname() . '\'' ?> ici</button><br />
             <div class="popup_update_firstname_profile">
                 <p><span class="btn_closePopupFirstname">&times;</span></p>
@@ -499,7 +499,7 @@ if (isset($_SESSION['id'])){
    
    <div class="row text-center">
 
-        <div class="col-12" id="lastname"><span class="lastname_profile"><b>NOM : <i><?= $user->lastname(); ?></i></b></span><br />
+        <div class="col-12 border bgColor p-2" id="lastname"><span class="lastname_profile"><b>NOM : <i><?= $user->lastname(); ?></i></b></span><br />
                 <button class="btn_update_lastname_profile btn btn-primary mx-auto mt-3" >Modifier votre nom <?= '\'' . $user->lastname() . '\'' ?> ici</button><br />
             <div class="popup_update_lastname_profile">
                 <p><span class="btn_closePopupLastname">&times;</span></p>
@@ -560,7 +560,7 @@ if (isset($_SESSION['id'])){
    
    <div class="row text-center">
 
-        <div class="col-12" id="email"><span class="email_profile"><b>Vous n'avez pas inscrit votre e-mail</i></b></span><br /> 
+        <div class="col-12 border bgColor p-2" id="email"><span class="email_profile"><b>Vous n'avez pas inscrit votre e-mail</i></b></span><br /> 
                 <button class="btn_update_email_profile btn btn-primary mx-auto mt-3" >Ajouter l'email de <?= '\'' . $user->username() . '\'' ?> ici</button><br /> 
             <div class="popup_update_email_profile">
                 <p><span class="btn_closePopupEmail">&times;</span></p>
@@ -611,7 +611,7 @@ if (isset($_SESSION['id'])){
    
    <div class="row text-center">
 
-        <div class="col-12" id="email"><span class="email_profile"><b>Votre e-mail est : <i><?= $user->email() ?></i></b></span><br /> 
+        <div class="col-12 border bgColor p-2" id="email"><span class="email_profile"><b>Votre e-mail est : <i><?= $user->email() ?></i></b></span><br /> 
                 <button class="btn_update_email_profile btn btn-primary mx-auto mt-3" >Modifier l'email de <?= '\'' . $user->username() . '\'' ?> ici</button><br /> 
             <div class="popup_update_email_profile">
                 <p><span class="btn_closePopupEmail">&times;</span></p>
@@ -691,7 +691,7 @@ if (isset($_SESSION['id'])){
    
    <div class="row text-center">
 
-        <div class="col-12" id="pass"><span><b>Modifier le mot de passe est de <i><?= '\'' . $user->username() . '\'' ?></i></b></span><br />
+        <div class="col-12 border bgColor p-2" id="pass"><span><b>Modifier le mot de passe est de <i><?= '\'' . $user->username() . '\'' ?></i></b></span><br />
                 <button class="btn_update_pass_profile btn btn-primary mx-auto mt-3" >Modifier le mot de pass de <?= '\'' . $user->username() . '\'' ?> ici</button><br />
             <div class="popup_update_pass_profile">
                 <p><span class="btn_closePopupPass">&times;</span></p>
@@ -763,7 +763,7 @@ if (isset($_SESSION['id'])){
    
    <div class="row text-center">
 
-        <div class="col-12" id="profession"><span class="profession_profile"><b>PROFESSION : <i><?= $user->profession(); ?></i></b></span><br />
+        <div class="col-12 border bgColor p-2" id="profession"><span class="profession_profile"><b>PROFESSION : <i><?= $user->profession(); ?></i></b></span><br />
                 <button class="btn_update_profession_profile btn btn-primary mx-auto mt-3" >Modifier votre profession <?= '\'' . $user->profession() . '\'' ?> ici</button><br />
             <div class="popup_update_profession_profile">
                 <p><span class="btn_closePopupProfession">&times;</span></p>
@@ -810,7 +810,7 @@ if (isset($_SESSION['id'])){
    
     <div class="row text-center">
 
-        <div class="col-12" id="profession"><span class="profession_profile"><b>PROFESSION : <i><?= $user->profession(); ?></i></b></span><br />
+        <div class="col-12 border bgColor p-2" id="profession"><span class="profession_profile"><b>PROFESSION : <i><?= $user->profession(); ?></i></b></span><br />
                 <button class="btn_update_profession_profile btn btn-primary mx-auto mt-3" >Modifier votre profession <?= '\'' . $user->profession() . '\'' ?> ici</button><br />
             <div class="popup_update_profession_profile">
                 <p><span class="btn_closePopupProfession">&times;</span></p>
@@ -895,7 +895,7 @@ if (isset($_SESSION['id'])){
    
     <div class="row text-center">   
 
-        <div class="col-12" id="description"><span><b>Vous n'avez pas encore de description</b></span><br />
+        <div class="col-12 border bgColor p-2" id="description"><span><b>Vous n'avez pas encore de description</b></span><br />
                 <button class="btn_update_description_profile btn btn-primary mx-auto mt-3" >Ajouter une description au profil de <?= '\'' . $user->username() . '\'' ?> ici</button><br />
             <div class="popup_update_description_profile">
                 <p><span class="btn_closePopupDescription">&times;</span></p>
@@ -944,7 +944,7 @@ if (isset($_SESSION['id'])){
     <div class="row text-center">   
    
 
-        <div class="col-12" id="description"><span><b>Votre description est : <i><?= $user->description() ?></i></b></span><br />
+        <div class="col-12 border bgColor p-2" id="description"><span><b>Votre description est : <i><?= $user->description() ?></i></b></span><br />
 
                 <button class="btn_delete_description_profile btn btn-primary mx-auto mt-3" >Supprimer votre description sur le profil de <?= '\'' . $user->username() . '\'' ?> ici</button><br />
 

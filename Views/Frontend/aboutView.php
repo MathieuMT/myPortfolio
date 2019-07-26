@@ -26,7 +26,7 @@
 
 
                 
-                <fieldset>
+                <div class="border bgColor p-5">
                     <article>
 
                             
@@ -42,7 +42,7 @@
 
 
                     </article>
-                </fieldset>
+                </div>
                     <hr />
             <?php endforeach; ?>
                 

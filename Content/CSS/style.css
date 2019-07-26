@@ -158,12 +158,14 @@ body {
 
 .cv {
     text-decoration: none;
-    color: red;
+    font-weight: bolder;
+    color: white;
 }
 
 .cv:hover {
     text-decoration: none;
-    color: red;
+    font-weight: bolder;
+    color: white;
 }
 
 
