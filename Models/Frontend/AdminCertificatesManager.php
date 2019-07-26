@@ -68,16 +68,15 @@ class AdminCertificatesManager extends Model{
     
     
     // Update certificate in the database:
-    public function sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateCategory, $certificateId) {
+    public function sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateId) {
         
-        $sql = 'UPDATE certificates SET name = :name,  certificatTitle = :certificatTitle, certificatDescription = :certificatDescription, certificatCategory = :certificatCategory WHERE id = :id';
+        $sql = 'UPDATE certificates SET name = :name,  certificatTitle = :certificatTitle, certificatDescription = :certificatDescription WHERE id = :id';
         
         $result = $this->executeRequest($sql, array(
         
                                 ':name' => $certificateName,
                                 ':certificatTitle' => $certificateTitle,
                                 ':certificatDescription' => $certificateDescription,
-                                ':certificatCategory' => $certificateCategory,
                                 ':id' => $certificateId
                                 ));
         
@@ -89,7 +88,7 @@ class AdminCertificatesManager extends Model{
     // Returns information on a certificat:
     public function getCertificate($certificateId) {
         
-        $sql ='SELECT id, name, certificatImg, certificatTitle,  certificatDescription, certificatCategory FROM certificates WHERE id = ?';
+        $sql ='SELECT id, name, certificatImg, certificatTitle,  certificatDescription FROM certificates WHERE id = ?';
         
         $certificate = $this->executeRequest($sql, array($certificateId));
         

@@ -91,19 +91,18 @@ class AdminCertificatesController {
     
    /************* FORMULAIRE DES DETAILS DE CHAQUE CERTIFICAT ***************/ 
     
-   public function sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateCategory, $certificateId) {
+   public function sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateId) {
        
         
         $certificateName= htmlspecialchars($certificateName);
         $certificateTitle = htmlspecialchars($certificateTitle);
         $certificateDescription = htmlspecialchars($certificateDescription);
-        $certificateCategory = htmlspecialchars($certificateCategory);
         $certificateId = intval($certificateId);
        
        
-       if (isset($certificateName) && isset($certificateTitle) && isset($certificateDescription) && isset($certificateCategory) && !empty($certificateName) && !empty($certificateTitle) && !empty($certificateDescription) && !empty($certificateCategory)) {
+       if (isset($certificateName) && isset($certificateTitle) && isset($certificateDescription) && !empty($certificateName) && !empty($certificateTitle) && !empty($certificateDescription) ) {
 
-                $sendCertificateDetails = $this->_adminCertificates->sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateCategory, $certificateId);
+                $sendCertificateDetails = $this->_adminCertificates->sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateId);
         }
        
         /********** MESSAGES D'ALERTES***********/
@@ -127,7 +126,7 @@ class AdminCertificatesController {
         header('Location: index.php?action=adminCertificates');
        
         $view = new ViewBackEnd('adminCertificatesView');
-        $view->generate(array('certificate' => $certificate,'certificateName' => $certificateName, 'certificateTitle' => $certificateTitle, 'certificateDescription' => $certificateDescription, 'certificateCategory' => $certificateCategory));
+        $view->generate(array('certificate' => $certificate,'certificateName' => $certificateName, 'certificateTitle' => $certificateTitle, 'certificateDescription' => $certificateDescription));
             
        exit();
        

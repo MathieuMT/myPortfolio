@@ -13,7 +13,7 @@
 
 
 
-<div class="mx-auto col-sm-10 text-center border border-primary p-2">
+<div class="mx-auto col-sm-10 text-center border bgColor border-primary p-2">
     
     
        
@@ -159,7 +159,7 @@
 
 
 <!-- FORMULAIRE DE CONNEXION -->
-<div class="mx-auto col-sm-10 text-center border border-primary p-2 mt-5">
+<div class="mx-auto col-sm-10 text-center border bgColor border-primary p-2 mt-5">
    
    <div class="row">
 

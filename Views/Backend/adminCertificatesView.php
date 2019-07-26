@@ -38,7 +38,7 @@ if (isset($_SESSION['id'])){
           
          <center>
 			
-			<div id="dropZone">
+			<div id="dropZone" class="bgColor">
 			
 				<h1 class="dropzoneTitle">Drag & Drop Files...</h1>
 				
@@ -106,7 +106,7 @@ if (isset($_SESSION['id'])){
         
         
         
-        <div class="row rowGallery border mb-5 p-5">
+        <div class="row rowGallery border bgColor mb-5 p-5">
            
           
             <h3 class="text-center col-md-12">Ajouter ou Modifier les informations du certificat numéro <?= $eachCertificate->id(); ?></h3><br/>
@@ -125,7 +125,6 @@ if (isset($_SESSION['id'])){
                     <legend  class="w-auto">Informations BDD</legend>
                     <span><label>Nom: </label><b> <?= $eachCertificate->name(); ?></b></span><br />
                     <span><label>Titre: </label><b> <?= $eachCertificate->certificatTitle(); ?></b></span><br />
-                    <span><label>Categorie: </label><i> <?= $eachCertificate->certificatCategory(); ?></i></span><br />
                     <span><label>Description: </label><i> <?= $eachCertificate->certificatDescription(); ?></i></span><br />
                 </fieldset>
             </div>
@@ -151,16 +150,6 @@ if (isset($_SESSION['id'])){
                                 <label class="text-center col-md-3" for="certificateTitle"><u>Titre:</u></label>
                                 <div class="col-md-9 pr-0">
                                     <input type="text" class="form-control" id="certificateTitle" name="certificateTitle" placeholder="Titre du certificat" required autofocus />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="mx-auto form-inline mt-5 ">
-                            <div class="form-group mx-auto">
-                                <label class="text-center col-md-3" for="certificateCategory"><u>Cat:</u></label>
-                                <div class="col-md-9 pr-0">
-                                    <input type="text" class="form-control" id="certificateCategory" name="certificateCategory" placeholder="Catégorie du certificat" required autofocus />
                                 </div>
                             </div>
                         </div>

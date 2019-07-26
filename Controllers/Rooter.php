@@ -227,11 +227,10 @@ class Rooter {
                     $certificateName = $this->getParameter($_POST, 'certificateName');
                     $certificateTitle = $this->getParameter($_POST, 'certificateTitle');
                     $certificateDescription = $this->getParameter($_POST, 'certificateDescription');
-                    $certificateCategory = $this->getParameter($_POST, 'certificateCategory');
                     $certificateId = $this->getParameter($_POST, 'certificateId');
                     
                     if ($certificateId > 0) {
-                            $this->_adminCertificatesCtrl->sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateCategory, $certificateId);
+                            $this->_adminCertificatesCtrl->sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateId);
                         }
                     else
                             throw new Exception("Identifiant du certificat non valide");  
