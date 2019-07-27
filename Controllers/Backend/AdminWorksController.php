@@ -119,7 +119,7 @@ class AdminWorksController {
         
         $workName= htmlspecialchars($workName);
         $workTitle = htmlspecialchars($workTitle);
-        $workDescription = htmlspecialchars($workDescription);
+        $workDescription = nl2br(htmlspecialchars($workDescription));
         $workCategory = htmlspecialchars($workCategory);
         $workLink = htmlspecialchars($workLink);
         $workId = intval($workId);

@@ -492,7 +492,7 @@ class AdminProfileController {
     // Update profession of the registered user:
     public function editDescription($userId, $newDescription) {
         
-        $newDescription = htmlspecialchars($newDescription);
+        $newDescription =  nl2br(htmlspecialchars($newDescription));
         $user = $this->_adminProfile->getUser($userId);
         
         // To change the description according to the user's id:

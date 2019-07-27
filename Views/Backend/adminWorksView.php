@@ -31,7 +31,7 @@ if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
           
          <center>
 			
-			<div id="dropZone">
+			<div id="dropZone" class="bgColor">
 			
 				<h1 class="dropzoneTitle">Drag & Drop Files...</h1>
 				
@@ -98,7 +98,7 @@ if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
         
         <!-- PROJECTS -->
         
-        <div class="row rowGallery border mb-5 p-5">
+        <div class="row rowGallery border bgColor mb-5 p-5">
            
           
             <h3 class="text-center col-md-12">Ajouter ou Modifier les informations du projet numéro <?= $eachWork->id(); ?></h3><br/>

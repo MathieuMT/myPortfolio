@@ -1,14 +1,10 @@
 <?php $this->title = 'Portfolio'; ?>
 
+<h1 class="text-center titlePage
+ animated fadeInLeft"><?= $this->title = 'Portfolio - Mes réalisations' ?></h1><br /> 
 
-<h1 class="text-center titlePage"><?= $this->title = 'Portfolio' ?></h1>
-<br/>
-<br/>
-<br/>
 
-<h2 class="card-header text-center animated fadeInLeft">Mes réalisations</h2><br />
-
-<div class="container containerGallery" id="uploadedFiles">
+<div class="container containerGallery animated fadeInLeft" id="uploadedFiles">
   
 
   
@@ -40,7 +36,7 @@
                                     <img src="Content/img/works/<?= $eachWork->workImg(); ?>" />
                                     
                                     
-                                    <div class="card-img-overlay text-center d-flex flex-column justify-content-center"><?= $eachWork->name(); ?></div>
+                                    <div class="card-img-overlay text-center d-flex flex-column justify-content-center ftColor"><?= $eachWork->name(); ?></div>
 
                                 
                             
@@ -75,7 +71,7 @@
                                 
                                     <h2 class="stagger1 animated fadeInLeft"><?= $eachWork->name(); ?></h2>
                                     
-                                    <p class="stagger2 animated fadeInLeft text-muted"><em><?= $eachWork->workCategory(); ?></em></p>
+                                    <p class="stagger2 animated fadeInLeft catColor"><em><?= $eachWork->workCategory(); ?></em></p>
                                 
                                     
                                     <div class="row stagger3">
@@ -146,7 +142,7 @@
 
                                                                         <div class="carousel-caption d-md-block">
 
-                                                                        <h2><?= $eachSlide->name(); ?></h2>
+                                                                        <h2 class="colorSlideWriting"><?= $eachSlide->name(); ?></h2>
 
                                                                         <p class="lead"></p>
 
@@ -164,7 +160,7 @@
 
                                                                     <div class="carousel-caption d-md-block">
 
-                                                                    <h2><?= $eachSlide->name(); ?></h2>
+                                                                    <h2 class="colorSlideWriting"><?= $eachSlide->name(); ?></h2>
 
                                                                     <p class="lead"></p>
 
@@ -216,9 +212,6 @@
                                 </div><!-- .card-body -->
                                 
                             </div><!-- .row -->
-                            
-                            
-                           <hr class="hr"/>
                         
                         
                         </div><!-- .work_detail -->
@@ -247,17 +240,6 @@
 </div><!-- .container .containerGallery --> 
 
   
-    
-      
-        
-            
-<hr class="hr"/>
-
-      
-        
-   
-       
-
 
 
 

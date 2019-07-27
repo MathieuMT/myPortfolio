@@ -445,7 +445,12 @@ h2 {
 }
 
 .card {
-    background-color:rgb(0,255,255);
+    border: 2px solid rgb(0,0,255);
+    background-color:rgba(0,255,255,0.6);
+}
+
+p.catColor {
+    color:rgb(255,165,0)!important;
 }
 
 .bg {
@@ -465,7 +470,12 @@ p.stagger4 > a {
     margin: 20px;
 }
 
-
+.ftColor {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(255,35,255);
+}
 
 /* Carousel
 
@@ -534,6 +544,10 @@ p.stagger4 > a {
 
 }
 
+.colorSlideWriting {
+    text-shadow: 1px 1px 2px aqua;
+    color: rgb(255,35,255);
+}
 
 /*
 * Page adminContactView.php
@@ -556,7 +570,7 @@ p.stagger4 > a {
 
 /* AVATAR */
 .avatar_profile {
-    border: 3px solid rgb(0,0,255,0.6);
+    border: 3px solid rgba(0,0,255,0.6);
     border-radius: 50%;
 }
 
@@ -793,7 +807,7 @@ fieldset.border {
 
 
 .bgSlides, .rowGallery2 {
-    background-color: rgb(0,255,255);
+    background-color: rgba(255,255,255,0.6);
 }
 
 .containerGallery2, .rowGallery2, myImg2 {

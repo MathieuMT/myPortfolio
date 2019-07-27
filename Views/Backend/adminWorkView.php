@@ -8,11 +8,6 @@ if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
 ?>
 
 <h1 class="text-center titlePage"><?= $this->title = 'Gestion de chaque réalisation' ?></h1>
-<br />
-<br />
-<br />
-<hr class="hr"/>
-
 
            
 <!-- GALLERY OF DROPZONE -->                 
@@ -21,7 +16,7 @@ if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
         
         <!-- PROJECTS -->
         
-        <div class="row rowGallery border mb-5 p-5 justify-content-center">
+        <div class="row rowGallery border bgColor mb-5 p-5 justify-content-center">
            
             <h3 class="text-center col-md-12">Ajouter ou Modifier les informations du projet numéro <?= $work->id(); ?></h3><br/>
             <h6 class="text-center col-md-12"><i>(Pour supprimer un projet et ses informations de la base de données: cliquer sur son image!)</i></h6><br />
@@ -47,11 +42,11 @@ if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
         <!----- DROPZONE FOR SLIDES ----->
         
             
-            <fieldset class="border mt-3 p-2 col-12">
+            <fieldset class="border bgSlides mt-3 p-2 col-12">
                 
                 <legend  class="w-auto">Upload slides and send in BDD</legend>
                 
-                <div class="bgSlides">
+                <div>
                 
                     <div class="container">
 
@@ -61,7 +56,7 @@ if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
 
                              <center>
 
-                                <div id="dropZone2" class="dropZone2">
+                                <div id="dropZone2" class="dropZone2 bgColor">
 
                                     <h1 class="dropzoneTitle2">Drag & Drop Files...</h1>
 
