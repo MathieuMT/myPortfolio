@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Ven 26 Juillet 2019 à 21:50
+-- Généré le :  Sam 27 Juillet 2019 à 14:28
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.1
 
@@ -121,6 +121,49 @@ CREATE TABLE `slides` (
   `work_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Contenu de la table `slides`
+--
+
+INSERT INTO `slides` (`id`, `name`, `slideImg`, `work_id`) VALUES
+(1, 'Accueil', 'work1_1.jpg', 1),
+(2, 'Services_1', 'work1_2.jpg', 1),
+(3, 'Services_2', 'work1_3.jpg', 1),
+(4, 'Portfolio_1', 'work1_4.jpg', 1),
+(5, 'Portfolio_2', 'work1_5.jpg', 1),
+(6, 'Contact', 'work1_6.jpg', 1),
+(7, 'Accueil_1', 'work2_1.jpg', 2),
+(8, 'Accueil_2', 'work2_2.jpg', 2),
+(9, 'Actualités', 'work2_3.jpg', 2),
+(10, 'Plus d\'infos', 'work2_4.jpg', 2),
+(11, 'Activités du mois', 'work2_5.jpg', 2),
+(12, 'Contact', 'work2_6.jpg', 2),
+(13, 'Étape_1', 'work3_1.jpg', 3),
+(14, 'Étape_2', 'work3_2.jpg', 3),
+(15, 'Étape_3', 'work3_3.jpg', 3),
+(16, 'Étape_4', 'work3_4.jpg', 3),
+(17, 'Étape_5', 'work3_5.jpg', 3),
+(18, 'Étape_6', 'work3_6.jpg', 3),
+(19, 'Étape_7', 'work3_7.jpg', 3),
+(20, 'Accueil_1', 'work4_1.jpg', 4),
+(21, 'Accueil_2', 'work4_2.jpg', 4),
+(22, 'Chapitres_étape_1', 'work4_3.jpg', 4),
+(23, 'Chapitres_étape_2', 'work4_4.jpg', 4),
+(24, 'Chapitres_étape_3', 'work4_5.jpg', 4),
+(25, 'Chapitres_étape_4', 'work4_6.jpg', 4),
+(26, 'Chapitres_étape_5', 'work4_7.jpg', 4),
+(27, 'Inscription', 'work4_8.jpg', 4),
+(28, 'Connexion', 'work4_9.jpg', 4),
+(29, 'Gestion des chapitres_1', 'work4_10.jpg', 4),
+(30, 'Gestion des chapitres_2', 'work4_11.jpg', 4),
+(31, 'Gestion des chapitres_3 (TinyMCE)', 'work4_12.jpg', 4),
+(32, 'Gestion des chapitres_4', 'work4_13.jpg', 4),
+(33, 'Gestion des chapitres_5', 'work4_14.jpg', 4),
+(34, 'Gestion des commentaires', 'work4_15.jpg', 4),
+(35, 'Profil_1', 'work4_16.jpg', 4),
+(36, 'Profil_2', 'work4_17.jpg', 4),
+(37, 'Gestion des utilisateurs', 'work4_18.jpg', 4);
+
 -- --------------------------------------------------------
 
 --
@@ -145,7 +188,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `pass`, `profession`, `description`, `avatar`, `mini_avatar`) VALUES
-(1, 'MathieuMT', 'Mathieu', 'de Millo Terrazzani', '', '$2y$10$Sq6YcMQrfbNXsKEHHC8NtOgqWhGSgva0XI50E5ZUnVdSIn3Y34KiW', 'Développeur WEB', 'Passionné par le développement web, j\'ai suivi une formation professionnelle chez OpenClassRooms, qui est une école en ligne qui propose à ses membres des cours certifiants et des parcours débouchant sur un métier d\'avenir. Je porte autant d\'intérêt pour le développement front-end que back-end. Mon but est d\'associer design et technologie, afin de créer des sites internet attractifs ainsi que des applications web, afin de rendre l\'outil information plus humain. Je suis capable d\'utiliser différentes technologies comme HTML5 , CSS3 et son frameworks Bootstrap 4, Javascript et son frameworks jQuery, PHP avec une architecture MVC ou bien d\'utiliser des CMS comme WordPress. À travers la visite de mon Portfolio, vous découvrirez l’acquisition de mes certificats et vous pourrez aussi visualiser les projets réalisés chez OpenClassRooms.', '', '');
+(1, 'MathieuMT', 'Mathieu', 'de Millo Terrazzani', '', '$2y$10$Sq6YcMQrfbNXsKEHHC8NtOgqWhGSgva0XI50E5ZUnVdSIn3Y34KiW', 'Développeur WEB', 'passionné par le développement web, j\'ai suivi une formation professionnelle chez OpenClassRooms, qui est une école en ligne qui propose à ses membres des cours certifiants et des parcours débouchant sur un métier d\'avenir.<br />\r\n<br />\r\nJe porte autant d\'intérêt pour le développement front-end que back-end. Mon but est d\'associer design et technologie, afin de créer des sites internet attractifs ainsi que des applications web, afin de rendre l\'outil information plus humain.<br />\r\n<br />\r\nJe suis capable d\'utiliser différentes technologies comme HTML5, CSS3 et son frameworks Bootstrap 4, Javascript et son frameworks jQuery, PHP avec une architecture MVC ou bien d\'utiliser des CMS comme WordPress. À travers la visite de mon Portfolio, vous découvrirez l’acquisition de mes certificats et vous pourrez aussi visualiser les projets réalisés chez OpenClassRooms.<br />\r\n', '', '');
 
 -- --------------------------------------------------------
 
@@ -162,6 +205,16 @@ CREATE TABLE `works` (
   `workCategory` varchar(255) NOT NULL,
   `workLink` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `works`
+--
+
+INSERT INTO `works` (`id`, `name`, `workImg`, `workTitle`, `workDescription`, `workCategory`, `workLink`) VALUES
+(1, 'Projet 1', 'work1_1.jpg', '&quot;WebAgency&quot;', 'Je viens d\'être embauché par une agence Web, la WebAgency, qui réalise des sites web pour différents clients. La directrice technique de l’agence vous informe que le site actuel est vieillissant et que son équipe a peu de temps pour travailler dessus.<br />\r\n<br />\r\nElle vous propose donc, pour votre première mission, de vous occuper de la refonte du site de l\'agence.<br />\r\n<br />\r\n<br />\r\nCompétences évaluées:<br />\r\n<br />\r\n - Définir le contenu d\'une page web à partir d\'une maquette.<br />\r\n - Gérer la responsivité avec les Media Queries.<br />\r\n - Présenter une réalisation de manière professionnelle.<br />\r\n - Coder la présentation d\'une page web en CSS.<br />\r\n - Coder la structure d\'une page web en HTML.', 'HTML5 - CSS3', 'https://github.com/MathieuMT/WebAgency'),
+(2, 'Projet 2', 'work2_1.jpg', '&quot;Personnaliser un thème WordPress&quot;', 'Vous avez un client : l\'office du tourisme de la ville de Strasbourg en France ! Ils souhaitent un site web à l\'image de la ville pour attirer des touristes et informer sur les activités proposées.<br />\r\n<br />\r\nCompétences évaluées:<br />\r\n - Créer une animation avec CSS3.<br />\r\n - Définir la structure de navigation du site.<br />\r\n - Adapter l\'affichage en fonction de la taille de l\'écran.<br />\r\n - Assurer la cohérence graphique du site.<br />\r\n - Appliquer les principes de SEO dans le code HTML.<br />\r\n - Assurer l\'accessibilité du site aux différents types d\'utilisateurs.', 'HTML5 - CSS3 - SEO - Wordpress', 'https://github.com/MathieuMT/WordPress_theme'),
+(3, 'Projet 3', 'work3_1.jpg', '&quot;Carte interactive de location de vélo&quot;', 'Vous devez développer une page de type &quot;Single page Application&quot; simulant la réservation de vélos dans une ville. Ces vélos sont répartis dans de nombreuses stations dans la ville. L\'utilisateur doit pouvoir réserver un vélo depuis son navigateur (à condition qu\'il reste des vélos disponibles à la station !). La réservation est alors temporairement enregistrée sur le navigateur du visiteur.<br />\r\n<br />\r\nCette application doit notamment, en s\'appuyant sur JavaScript, afficher une carte avec la liste des stations de location de vélos disponibles dans la ville. <br />\r\n<br />\r\nCompétences évaluées:<br />\r\n - Ecrire un code source lisible.<br />\r\n - Récupérer des données de formulaires en utilisant le langage JavaScript.<br />\r\n - Faire des requêtes HTTP en langage JavaScript.<br />\r\n - Créer des objets simples en JavaScript, contenant des méthodes et des propriétés.', 'HTML5 - CSS3 - JavaScript', 'https://github.com/MathieuMT/Application_Velib_Lyon'),
+(4, 'Projet 4 ', 'work4_1.jpg', '&quot;Blog pour un écrivain&quot;', 'Vous venez de décrocher un contrat avec Jean Forteroche, acteur et écrivain. Il travaille actuellement sur son prochain roman, &quot;Billet simple pour l\'Alaska&quot;. Il souhaite innover et le publier par épisode en ligne sur son propre site.<br />\r\n<br />\r\nSeul problème : Jean n\'aime pas WordPress et souhaite avoir son propre outil de blog, offrant des fonctionnalités plus simples. Vous allez donc devoir développer un moteur de blog en PHP et MySQL.<br />\r\n<br />\r\nCompétences évaluées:<br />\r\n - Récupérer la saisie d’un formulaire utilisateur en langage PHP.<br />\r\n - Organiser le code en langage PHP.<br />\r\n - Construire une base de données.<br />\r\n - Analyser les données utilisées par le site ou l’application.<br />\r\n - Récupérer les données d’une base.<br />\r\n - Créer un site Internet, de sa conception à sa livraison.<br />\r\n - Soutenir et argumenter ses propositions.<br />\r\n - Insérer ou modifier les données d’une base.', 'HTML5 - CSS3 - JavaScript - PHP - MySQL', 'https://github.com/MathieuMT/simpleBlog');
 
 --
 -- Index pour les tables exportées
@@ -216,7 +269,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT pour la table `slides`
 --
 ALTER TABLE `slides`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
@@ -226,7 +279,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `works`
 --
 ALTER TABLE `works`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Contraintes pour les tables exportées
 --
@@ -235,7 +288,7 @@ ALTER TABLE `works`
 -- Contraintes pour la table `slides`
 --
 ALTER TABLE `slides`
-  ADD CONSTRAINT `work_slides` FOREIGN KEY (`work_id`) REFERENCES `works` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `slide_work` FOREIGN KEY (`work_id`) REFERENCES `works` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
