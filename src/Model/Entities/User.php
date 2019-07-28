@@ -1,7 +1,7 @@
 <?php
 
 
-namespace MathieuMT\myPortfolio\Model;
+namespace MathieuMT\myPortfolio\Model\Entities;
 
 use MathieuMT\myPortfolio\Model\UserDAO;
 use MathieuMT\myPortfolio\Engine\ViewFrontEnd;

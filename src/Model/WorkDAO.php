@@ -4,7 +4,7 @@
 namespace MathieuMT\myPortfolio\Model;
 
 
-use MathieuMT\myPortfolio\Model\Work;
+use MathieuMT\myPortfolio\Model\Entities\Work;
 use MathieuMT\myPortfolio\Model\Model;
 
 class WorkDAO extends Model{

@@ -2,7 +2,7 @@
 
 namespace MathieuMT\myPortfolio\Model;
 
-use MathieuMT\myPortfolio\Model\Contact;
+use MathieuMT\myPortfolio\Model\Entities\Contact;
 use MathieuMT\myPortfolio\Model\Model;
 
 

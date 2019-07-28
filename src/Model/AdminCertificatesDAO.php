@@ -5,7 +5,7 @@ namespace MathieuMT\myPortfolio\Model;
 
 use MathieuMT\myPortfolio\Model\Model;
 
-
+use MathieuMT\myPortfolio\Model\Entities\Certificate;
 
 class AdminCertificatesDAO extends Model{
     

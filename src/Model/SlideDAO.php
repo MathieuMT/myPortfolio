@@ -3,7 +3,7 @@
 namespace MathieuMT\myPortfolio\Model;
 
 
-use MathieuMT\myPortfolio\Model\Slide;
+use MathieuMT\myPortfolio\Model\Entities\Slide;
 use MathieuMT\myPortfolio\Model\Model;
 
 

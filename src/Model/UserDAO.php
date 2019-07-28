@@ -3,7 +3,7 @@
 
 namespace MathieuMT\myPortfolio\Model;
 
-use MathieuMT\myPortfolio\Model\User;
+use MathieuMT\myPortfolio\Model\Entities\User;
 use MathieuMT\myPortfolio\Model\Model;
 
 

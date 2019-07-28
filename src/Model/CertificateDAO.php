@@ -2,7 +2,7 @@
 
 namespace MathieuMT\myPortfolio\Model;
 
-use MathieuMT\myPortfolio\Model\Certificate;
+use MathieuMT\myPortfolio\Model\Entities\Certificate;
 use MathieuMT\myPortfolio\Model\Model;
 
 

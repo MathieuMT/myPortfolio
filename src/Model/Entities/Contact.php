@@ -1,6 +1,6 @@
 <?php
 
-namespace MathieuMT\myPortfolio\Model;
+namespace MathieuMT\myPortfolio\Model\Entities;
 
 use MathieuMT\myPortfolio\Engine\ViewBackEnd;
 
