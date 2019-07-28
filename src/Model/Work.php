@@ -4,8 +4,10 @@
 namespace MathieuMT\myPortfolio\Model;
 
 
-use MathieuMT\myPortfolio\Model\/WorkDAO;
+use MathieuMT\myPortfolio\Model\WorkDAO;
 use MathieuMT\myPortfolio\Engine\ViewFrontEnd;
+
+
 
 class Work {
     private $_id,$_name,$_workImg,$_workTitle,$_workDescription,$_workCategory, $_workLink;
