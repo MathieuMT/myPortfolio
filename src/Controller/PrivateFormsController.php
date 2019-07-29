@@ -2,15 +2,10 @@
 
 namespace MathieuMT\myPortfolio\Controller;
 
-
 use MathieuMT\myPortfolio\Model\PrivateFormsDAO;
 use MathieuMT\myPortfolio\Engine\ViewBackEnd;
 
-
-
-
 class PrivateFormsController {
-    
     
     private $manager;
     private $success1;
@@ -32,14 +27,10 @@ class PrivateFormsController {
         $view->generate([]);
     }
     
-  
     
     /* FORMULAIRE D'INSCRIPTION */
-    
     // Ajouter un nouvel utilisateur:
     public function newUserRegistration($usernameRegistered, $passRegistered, $checkPassRegistered) {
-        
-        
         
         /* Avoid injecting user code into the fields of the form (against the XSS flaw): */
         $usernameRegistered = htmlspecialchars($usernameRegistered);
@@ -72,7 +63,6 @@ class PrivateFormsController {
         
         $usernameRegistered = $this->verifyUsernameRegistered($usernameRegistered);
         $checkPassRegistered = $this->verifyPassRegistered($passRegistered, $checkPassRegistered);
-        
         
         if ($usernameRegistered && $checkPassRegistered) {
             return true;
@@ -121,7 +111,6 @@ class PrivateFormsController {
     }
     
     
-    
     /* FORMULAIRE DE CONNEXION */
     
     public function loginUser($usernameConnected, $passConnected) {
@@ -130,33 +119,22 @@ class PrivateFormsController {
         $usernameConnected = htmlspecialchars($usernameConnected);
         $passConnected = htmlspecialchars($passConnected);
         
-        
-        
+
         $userRegistered = $this->manager->connectedUser($usernameConnected);
         $isPasswordCorrect =  password_verify($passConnected, $userRegistered['pass']);
         
-        
-        
-        
+
         if (!empty($usernameConnected) || !empty($passConnected)) {
             if ($userRegistered) {
                 if ($isPasswordCorrect) {
-
-                        
-                            
+  
                         $_SESSION['id'] = $userRegistered['id'];
                                
                         $_SESSION['username'] = $userRegistered['username'];
                                
-                            
                         $this->success2['connexion'] = 'Vous êtes bien connecté !';
-                            
-                            
-                                
+     
                         header('Location: index.php?action=about');
-
-                            
-                                           
 
                }else {
                    //Le return la aussi
@@ -175,6 +153,5 @@ class PrivateFormsController {
         exit();
         
     }
-         
-    
+
 } 

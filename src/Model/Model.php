@@ -1,10 +1,8 @@
 <?php
 
-
 namespace MathieuMT\myPortfolio\Model;
 
 use PDO;
-
 
 class Model {
     

@@ -1,17 +1,13 @@
 <?php
 
-
 namespace MathieuMT\myPortfolio\Model\Entities;
-
 
 use MathieuMT\myPortfolio\Model\WorkDAO;
 use MathieuMT\myPortfolio\Engine\ViewFrontEnd;
 
-
-
 class Work {
-    private $_id,$_name,$_workImg,$_workTitle,$_workDescription,$_workCategory, $_workLink;
     
+    private $_id,$_name,$_workImg,$_workTitle,$_workDescription,$_workCategory, $_workLink;
     
     public function __construct(array $data){
         $this->hydrate($data);

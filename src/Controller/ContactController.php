@@ -1,24 +1,16 @@
 <?php
 
-
 namespace MathieuMT\myPortfolio\Controller;
-
 
 use MathieuMT\myPortfolio\Model\ContactDAO;
 use MathieuMT\myPortfolio\Engine\ViewFrontEnd;
 
-
-
 class ContactController {
     
-    
-    
-    
+
     public function __construct() {
         $this->manager = new ContactDAO();
     }
-    
-    
     
     public function Contact() {
         
@@ -36,8 +28,6 @@ class ContactController {
         $contactObject = htmlspecialchars($contactObject);
         $contactMsg = htmlspecialchars($contactMsg);
         
-        
-        
         /* SANITIZE ALL POST VARS */
         $contactFirstNameClean = filter_var($contactFirstName, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         $contactLastNameClean = filter_var($contactLastName, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
@@ -45,44 +35,26 @@ class ContactController {
         $contactObjectClean = filter_var($contactObject, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         $contactMsgClean = filter_var($contactMsg, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         
-        
-        
-        
-        
-        
-        
-        
-        
-       $this->manager->newContact($contactFirstNameClean, $contactLastNameClean, $contactEmailClean, $contactObjectClean, $contactMsgClean);
-        
+        $this->manager->newContact($contactFirstNameClean, $contactLastNameClean, $contactEmailClean, $contactObjectClean, $contactMsgClean);
         
         $this->toBeContactedByEmail($contactFirstNameClean, $contactLastNameClean, $contactEmailClean, $contactObjectClean, $contactMsgClean);
-        
 
-        
         exit();
         
     }
-    
-    
-    
-    
+
     /* Email : the form to myself: */
     
     private function toBeContactedByEmail($contactFirstName, $contactLastName, $contactEmail, $contactObject, $contactMsg) {
         
-        
-        
-        
+
         /* Avoid injecting user code into the fields of the form (against the XSS flaw): */
         $contactFirstName = htmlspecialchars($contactFirstName);
         $contactLastName = htmlspecialchars($contactLastName);
         $contactEmail = htmlspecialchars($contactEmail);
         $contactObject = htmlspecialchars($contactObject);
         $contactMsg = htmlspecialchars($contactMsg);
-        
-        
-        
+
         /* SANITIZE ALL POST VARS */
         $contactFirstNameClean = filter_var($contactFirstName, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         $contactLastNameClean = filter_var($contactLastName, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
@@ -108,13 +80,6 @@ class ContactController {
         /* Send message back to AJAX */
         echo '<div class="alert alert-success mt-2">Merci de me contacter, je vous répondrai au plus vite dans un jour ouvrable.</div>';
         
-        
     }
-    
-    
-    
-    
-    
-    
-    
+        
 }

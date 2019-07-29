@@ -6,8 +6,6 @@ use MathieuMT\myPortfolio\Model\AdminWorksDAO;
 use MathieuMT\myPortfolio\Engine\ViewBackEnd;
 
 
-
-
 class AdminWorksController {
     
     
@@ -74,9 +72,6 @@ class AdminWorksController {
             unlink($linkWorkImg);
             
             /* DELETE IMAGE PROJECT FROM DATABASE */
-            //$this->_adminWorks->delImageSlideBDD($id);
-            
-            /* DELETE IMAGE PROJECT FROM DATABASE */
             $this->_adminWorks->delImageBDD($id);
             
             exit('success');
@@ -114,9 +109,7 @@ class AdminWorksController {
         
     }
     
-    
-    
-    
+
    /************* FORMULAIRE DES DETAILS DE CHAQUE PROJET ***************/ 
     
    public function sendWorkDetails($workName, $workTitle, $workDescription, $workCategory, $workLink, $workId) {
@@ -148,9 +141,7 @@ class AdminWorksController {
        
         /****************************************/
        
-       
-       
-       
+
         $work = $this->_adminWorks->getWork($workId);
        
         header('Location: index.php?action=adminWorks');

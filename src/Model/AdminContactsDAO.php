@@ -5,11 +5,8 @@ namespace MathieuMT\myPortfolio\Model;
 use MathieuMT\myPortfolio\Model\Entities\Contact;
 use MathieuMT\myPortfolio\Model\Model;
 
-
 class AdminContactsDAO extends Model{
-    
-    
-    
+
      public function getContactDescription() { // Obtenir la liste des données descriptives pour chaque "contact" sous forme de tableau d'objets.
         
         $contacts = [];
@@ -18,20 +15,12 @@ class AdminContactsDAO extends Model{
         $aboutContact = $this->executeRequest($sql); // tableau des données concernant le contact
         foreach ($aboutContact as $oneContact) { // On parcours les tableaux des données pour chaque contact
             $contact = new Contact($oneContact); // On instancie le contact (entité) et son tableau de données en objet (pour 1 contact)
-            $contacts[] = $contact; /* S'il y a plusieurs travaux ou s'il y a un seul travail , on les regroupe en objets dans un tableau de plusieurs travaux */
+            $contacts[] = $contact; /* S'il y a plusieurs contacts ou s'il y a un seul contact , on les regroupe en objets dans un tableau de plusieurs contacts */
         }
         
         return $contacts; // On renvoie un tableau de plusieurs objets 
     }
-    
 
-    
-
-
-    
-    
-    
-    
     // Delete a post in the database:
     public function deleteContact($contactId) {
         
@@ -40,14 +29,9 @@ class AdminContactsDAO extends Model{
         $result = $this->executeRequest($sql, array(
                                 'id' => $contactId
                                  ));
-        
         return $result;
     }
-    
-    
-    
-    
-    
+   
 }
 
 

@@ -2,11 +2,9 @@
 
 namespace MathieuMT\myPortfolio\Model;
 
-
 use MathieuMT\myPortfolio\Model\Entities\Work;
 use MathieuMT\myPortfolio\Model\Entities\Slide;
 use MathieuMT\myPortfolio\Model\Model;
-
 
 class AdminWorksDAO extends Model{
     
@@ -21,43 +19,35 @@ class AdminWorksDAO extends Model{
         $response = $this->executeRequest($sql, array(
                                 'id' => $id
                                  ));
-
         return $response;
       
     } 
     
-    
-     public function getWorkDescription() { // Obtenir la liste des données descriptives pour chaque "User" sous forme de tableau d'objets.
+     public function getWorkDescription() { // Obtenir la liste des données descriptives pour chaque "projet" sous forme de tableau d'objets.
         
         $works = [];
         $sql = "SELECT * FROM works";
         
-        $aboutWork = $this->executeRequest($sql); // tableau des données concernant le travail
-        foreach ($aboutWork as $oneWork) { // On parcours les tableaux des données pour chaque utilisateur
-            $work = new Work($oneWork); // On instancie l'utisateur (entité) et son tableau de données en objet (pour 1 travail)
-            $works[] = $work; /* S'il y a plusieurs travaux ou s'il y a un seul travail , on les regroupe en objets dans un tableau de plusieurs travaux */
+        $aboutWork = $this->executeRequest($sql); // tableau des données concernant le projet
+        foreach ($aboutWork as $oneWork) { // On parcours les tableaux des données pour chaque projet
+            $work = new Work($oneWork); // On instancie le projet (entité) et son tableau de données en objet (pour 1 projet)
+            $works[] = $work; /* S'il y a plusieurs projets ou s'il y a un seul projet , on les regroupe en objets dans un tableau de plusieurs projets */
         }
-        
-        //var_dump($aboutWork);
-        //var_dump($works);
         return $works; // On renvoie un tableau de plusieurs objets 
     }
     
-
     // Add new images in the database:
     public function insertImages($targetFile) {
         
         $sql="INSERT INTO works (workImg) VALUES ('$targetFile')";
         
         $result=$this->executeRequest($sql);
- 
     }
     
     // Si le champ certificatImg existe déjà dans la table certificates:
     function existeWorkImg($targetFile)
     {   
-   
-     
+
         $sql = "SELECT *
                 FROM works
                 WHERE workImg = '$targetFile'";
@@ -68,8 +58,6 @@ class AdminWorksDAO extends Model{
         return !empty($row);
     }
     
-
-
     /************* FORMULAIRE DES INFORMATIONS DE CHAQUE PROJET ***************/
     
     
@@ -86,13 +74,10 @@ class AdminWorksDAO extends Model{
                                 ':workCategory' => $workCategory,
                                 ':workLink' => $workLink,
                                 ':id' => $workId
-                                ));
-        
+                                ));  
        return $result;  
     }
     
-    
-   
     // Returns information on a work:
     public function getWork($workId) {
         
@@ -108,7 +93,6 @@ class AdminWorksDAO extends Model{
    
     /*************************************************************************/
     
-    
     // Returns information on a slide:
     public function getSlide($slideId) {
         
@@ -121,17 +105,6 @@ class AdminWorksDAO extends Model{
         else
             throw new Exception("Aucun diapositif ne correspond à l'identifiant '$slideId'");
     }
-    
-    /*
-    public function getWorkId ($slideId) {
-        $sql ="SELECT work_id FROM slides WHERE id = :id";
-        $slide = $this->executeRequest($sql, array('id' => $slideId));
-        
-        return $slide->fetch();
-        
-    }
-    */
-    
     
     public function getSlidesByWorkId ($workId) {
         

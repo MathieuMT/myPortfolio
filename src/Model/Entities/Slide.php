@@ -1,17 +1,13 @@
 <?php
 
-
 namespace MathieuMT\myPortfolio\Model\Entities;
-
 
 use MathieuMT\myPortfolio\Model\SlideDAO;
 use MathieuMT\myPortfolio\Engine\ViewFrontEnd;
 
-
-
 class Slide {
-    private $_id,$_name,$_slideImg,$_work_id;
     
+    private $_id,$_name,$_slideImg,$_work_id;
     
     public function __construct(array $data){
         $this->hydrate($data);
@@ -36,7 +32,6 @@ class Slide {
     public function work_id() { return $this->_work_id;}
     
 
-    
     // Setters:
     public function setId($id) {
         $id = (int) $id;

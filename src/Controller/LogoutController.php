@@ -1,11 +1,8 @@
 <?php
 
-
 namespace MathieuMT\myPortfolio\Controller;
 
 use MathieuMT\myPortfolio\Engine\ViewBackEnd;
-
-
 
 class LogoutController {
     

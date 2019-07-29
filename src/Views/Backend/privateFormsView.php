@@ -1,22 +1,9 @@
 <?php $this->title = 'Privé'; ?>
 
-
-
-
 <h1 class="text-center titlePage"><?= $this->title = 'Formulaires privés' ?></h1>
 
-
-
-
-<!-- Faire les formulaires d'inscription et de connexion' ... -->
-
-
-
-
 <div class="mx-auto col-sm-10 text-center border bgColor border-primary p-2">
-    
-    
-       
+              
         <div class="row">
 
             <div class="col-md-12">
@@ -68,93 +55,42 @@
     
 <!-- FORMULAIRE D'INSCRIPTION -->    
     <form action="index.php?action=registration" method="post">  
-
-        <div class="row">
-                    
+        <div class="row">                  
             <div class="mx-auto form-inline mt-5 col-md-7">
-               
                 <div class="form-group mx-auto">
-                   
                     <label class="col-sm-5" for="usernameRegistered"><u>Nom d'utilisateur:</u></label>
-            
                     <div class="col-sm-6">
-
                         <input type="text" class="form-control" id="usernameRegistered" name="usernameRegistered" placeholder="Nom d'utilisateur" required autofocus />
-
                     </div>
-                    
                 </div>
-                
             </div>
-              
         </div>
-       
-           
-        
-        <div class="row">
-                     
+        <div class="row">       
             <div class="mx-auto form-inline mt-2 col-md-7">
-                
                 <div class="form-group mx-auto">
-
                     <label class="col-sm-5" for="passRegistered"><u>Mot de passe:</u></label>
-
                     <div class="col-sm-6">
-
                         <input type="password" class="form-control" id="passRegistered" name="passRegistered" placeholder="Mot de passe" required />
-
                     </div>
-                    
                 </div>
-                
             </div>  
-
         </div>
-           
-       
-         <div class="row">
-                      
+         <div class="row">        
             <div class="mx-auto form-inline mt-2 col-md-7">
-                
                 <div class="form-group mx-auto">
-
                     <label class="col-sm-5" for="checkPassRegistered"><u>Confirmation:</u></label>
-
                     <div class="col-sm-6">
-
                         <input type="password" class="form-control" id="checkPassRegistered" name="checkPassRegistered" placeholder="Confirmation" required />
-
                     </div>
-                
                 </div>
-                
             </div>  
-
         </div>
-            
-        <div class="row">
-                      
-            
-
-                <!--<input type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3"  name="btnRegistration" value="S'inscrire" />-->
-                <button type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3"  name="btnRegistration" />S'inscrire</button>
-                
-              
-
-        </div>
-        
-        
-        
+        <div class="row">          
+            <button type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3"  name="btnRegistration" />S'inscrire</button>
+        </div> 
     </form>
     
 </div>
-
-
-
-
-
-
-
 
 
 
@@ -200,71 +136,32 @@
             } 
         ?> 
    
-   
-   
-   
     
-        <form action="index.php?action=connexion" method="post">  
-
+    <form action="index.php?action=connexion" method="post">  
         <div class="row">
-                    
             <div class="mx-auto form-inline mt-5 col-md-7">
-               
                 <div class="form-group mx-auto">
-                   
                     <label class="col-sm-5" for="usernameConnected"><u>Nom d'utilisateur:</u></label>
-            
                     <div class="col-sm-6">
-
                         <input type="text" class="form-control" id="usernameConnected" name="usernameConnected" placeholder="Nom d'utilisateur" required autofocus />
-
                     </div>
-                    
                 </div>
-                
             </div>
-              
         </div>
-       
-           
-        
-        <div class="row">
-                     
+        <div class="row">       
             <div class="mx-auto form-inline mt-2 col-md-7">
-                
                 <div class="form-group mx-auto">
-
                     <label class="col-sm-5" for="passConnected"><u>Mot de passe:</u></label>
-
                     <div class="col-sm-6">
-
                         <input type="password" class="form-control" id="passConnected" name="passConnected" placeholder="Mot de passe" required />
-
                     </div>
-                    
                 </div>
-                
             </div>  
-
         </div>
-           
-       
-         
-            
         <div class="row">
-                      
-            
-
-                <!--<input type="submit" id="btnConnexion" class="btn btn-primary mx-auto mt-3"  name="btnConnexion" value="Se connecté" />-->
-                <button type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3"  name="btnRegistration" />Se connecté</button>
-              
-
+            <button type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3"  name="btnRegistration" />Se connecté</button>
         </div>
-        
-        
-        
-    </form>
-    
+    </form> 
 </div>
 
 <!-- on inclut la bibliothèque depuis les serveurs de Google -->

@@ -1,15 +1,13 @@
 <?php
 
-
 namespace MathieuMT\myPortfolio\Model\Entities;
 
 use MathieuMT\myPortfolio\Model\UserDAO;
 use MathieuMT\myPortfolio\Engine\ViewFrontEnd;
 
-
 class User {
-    private $_id,$_username,$_firstname,$_lastname,$_email,$_pass,$_profession,$_description,$_avatar,$_mini_avatar;
     
+    private $_id,$_username,$_firstname,$_lastname,$_email,$_pass,$_profession,$_description,$_avatar,$_mini_avatar;
     
     public function __construct(array $data){
         $this->hydrate($data);

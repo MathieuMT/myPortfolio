@@ -4,11 +4,9 @@ namespace MathieuMT\myPortfolio\Model\Entities;
 
 use MathieuMT\myPortfolio\Engine\ViewBackEnd;
 
-
 class Contact{
     
     private $_id,$_firstname,$_lastname,$_email,$_subject,$_comments,$_comment_date;
-    
     
     public function __construct(array $data){
         $this->hydrate($data);
@@ -34,11 +32,12 @@ class Contact{
     public function subject() { return $this->_subject;}
     public function comments() { return $this->_comments;}
     public function comment_date() { return $this->_comment_date;}
+    
     public function comment_date_fr() { 
+        
         setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
 
         return date('d M Y', strtotime($this->_comment_date)); 
-
     }
 
     
@@ -94,6 +93,5 @@ class Contact{
             $this->_comment_date = $comment_date;
         }
     }
-    
-    
+      
 }

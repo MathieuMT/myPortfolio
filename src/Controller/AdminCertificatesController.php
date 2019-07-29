@@ -5,7 +5,6 @@ namespace MathieuMT\myPortfolio\Controller;
 use MathieuMT\myPortfolio\Model\AdminCertificatesDAO;
 use MathieuMT\myPortfolio\Engine\ViewBackEnd;
 
-
 class AdminCertificatesController {
     
    
@@ -88,9 +87,7 @@ class AdminCertificatesController {
         
     }
     
-    
-    
-    
+   
    /************* FORMULAIRE DES DETAILS DE CHAQUE CERTIFICAT ***************/ 
     
    public function sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateId) {
@@ -121,8 +118,6 @@ class AdminCertificatesController {
         /****************************************/
        
        
-       
-       
         $certificate = $this->_adminCertificates->getCertificate($certificateId);
        
         header('Location: index.php?action=adminCertificates');
@@ -133,74 +128,5 @@ class AdminCertificatesController {
        exit();
        
    }
-    
-    
-    
-  
-    
-    /*************************************************************************/
-    
-
-        /*-------------
-        UPLOAD ONE FILE
-        --------------*/
-    /*
-    public function getCertificatImg() {
-        
-        
-        if(isset($_POST["subCertImg"])){
-            
-            
-            $getCertImg =  basename($_FILES["certificatImg"][0]["name"]);
-            if($getCertImg==""){
-                $this->_error1['getCertificatImg'] = "Please choose";
-            }
-            else
-            {
-                $target="Content/img/certificats/";
-                $ran=time();
-                $target=$target.$ran.$getCertImg;
-                $certificatImgName=$ran.$getCertImg;
-                
-                //var_dump($certificatImgName);
-               //echo "<img src='Content/img/certificats/$certificatImgName'/>";
-                
-                if($_FILES["certificatImg"][0]["type"]=="image/jpg"||$_FILES["certificatImg"][0]["type"]=="image/jpeg"){
-                    
-                    
-                    
-                    $certImgLocal = move_uploaded_file($_FILES["certificatImg"][0]["tmp_name"], $target);
-                    if($certImgLocal){
-                        include_once 'Models/Frontend/AdminCertificatesManager.php';
-                        $this->_adminCertificates->uploadCertificatImg($certificatImgName);
-                        $this->_success1['getCertificatImg'] = 'Votre image est bien téléchargée !';
-                    }
-                    else
-                    {
-                        $this->_error2['getCertificatImg'] = 'File is not uploaded';
-                    }
-                }
-                else
-                {
-                    $this->_error3['getCertificatImg'] = 'Please choose Image';
-                }
-            }
-        }
-        
-        
-       
-       
-        $view = new ViewBackEnd('adminCertificatesView');
-        $view->generate(['_success1' => $this->_success1, '_error1' => $this->_error1, '_error2' => $this->_error2, '_error3' => $this->_error3]);
-        
-        
-        exit();
-    }
-    */
-    
-    /*************************************************************************/
-    
-   
-    
     
 }

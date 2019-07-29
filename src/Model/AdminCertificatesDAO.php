@@ -1,6 +1,5 @@
 <?php
 
-
 namespace MathieuMT\myPortfolio\Model;
 
 use MathieuMT\myPortfolio\Model\Model;
@@ -8,9 +7,6 @@ use MathieuMT\myPortfolio\Model\Model;
 use MathieuMT\myPortfolio\Model\Entities\Certificate;
 
 class AdminCertificatesDAO extends Model{
-    
-  
-
     
    // Delete a image of certificate in the database:
     public function delImageBDD($id) {
@@ -20,25 +16,19 @@ class AdminCertificatesDAO extends Model{
         $response = $this->executeRequest($sql, array(
                                 'id' => $id
                                  ));
-
         return $response;
-      
     } 
     
-    
-     public function getCertificateDescription() { // Obtenir la liste des données descriptives pour chaque "User" sous forme de tableau d'objets.
+     public function getCertificateDescription() { // Obtenir la liste des données descriptives pour chaque "Certificat" sous forme de tableau d'objets.
         
         $certificates = [];
         $sql = "SELECT * FROM certificates";
         
-        $aboutCertificate = $this->executeRequest($sql); // tableau des données concernant le travail
-        foreach ($aboutCertificate as $oneCertificate) { // On parcours les tableaux des données pour chaque utilisateur
-            $certificate = new Certificate($oneCertificate); // On instancie l'utisateur (entité) et son tableau de données en objet (pour 1 travail)
-            $certificates[] = $certificate; /* S'il y a plusieurs travaux ou s'il y a un seul travail , on les regroupe en objets dans un tableau de plusieurs travaux */
+        $aboutCertificate = $this->executeRequest($sql); // tableau des données concernant le certificat
+        foreach ($aboutCertificate as $oneCertificate) { // On parcours les tableaux des données pour chaque certificat
+            $certificate = new Certificate($oneCertificate); // On instancie le certificat (entité) et son tableau de données en objet (pour 1 certificat)
+            $certificates[] = $certificate; /* S'il y a plusieurs certificats ou s'il y a un seul certficat, on les regroupe en objets dans un tableau de plusieurs certficats */
         }
-        
-        //var_dump($aboutWork);
-        //var_dump($works);
         return $certificates; // On renvoie un tableau de plusieurs objets 
     }
     
@@ -49,14 +39,12 @@ class AdminCertificatesDAO extends Model{
         $sql="INSERT INTO certificates (certificatImg) VALUES ('$targetFile')";
         
         $result=$this->executeRequest($sql);
- 
     }
     
     // Si le champ certificatImg existe déjà dans la table certificates:
     function existeCertificatImg($targetFile)
     {   
    
-     
         $sql = "SELECT *
                 FROM certificates
                 WHERE certificatImg = '$targetFile'";
@@ -67,10 +55,8 @@ class AdminCertificatesDAO extends Model{
         return !empty($row);
     }
     
-
-
-    /************* FORMULAIRE DES INFORMATIONS DE CHAQUE CERTIFICAT ***************/
     
+    /************* FORMULAIRE DES INFORMATIONS DE CHAQUE CERTIFICAT ***************/
     
     // Update certificate in the database:
     public function sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateId) {
@@ -83,13 +69,10 @@ class AdminCertificatesDAO extends Model{
                                 ':certificatTitle' => $certificateTitle,
                                 ':certificatDescription' => $certificateDescription,
                                 ':id' => $certificateId
-                                ));
-        
+                                )); 
        return $result;  
     }
     
-    
-   
     // Returns information on a certificat:
     public function getCertificate($certificateId) {
         
@@ -104,9 +87,7 @@ class AdminCertificatesDAO extends Model{
     }
    
     /*************************************************************************/
-    
-
-    
+ 
 }
 
 

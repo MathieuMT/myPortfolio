@@ -1,6 +1,5 @@
 <?php
 
-
 namespace MathieuMT\myPortfolio\Engine;
 
 use MathieuMT\myPortfolio\Controller\UserController;
@@ -58,10 +57,7 @@ class Rooter {
                   $this->_userCtrl->aboutUser();
                     
                 }
-                
-                
-                
-                elseif ($_GET['action'] == 'adminProfile') {
+                else if ($_GET['action'] == 'adminProfile') {
 
                      $userId = intval($this->getParameter($_GET, 'id'));
                         if ($userId > 0) {
@@ -209,14 +205,10 @@ class Rooter {
                         $this->_adminProfileCtrl->deleteDescription($userId);
                     }
                 }
-                
-                
-                
-                
                 else if ($_GET['action'] == 'certificates') {
                    $this->_certificateCtrl->aboutCertificates();
                }
-                elseif ($_GET['action'] == 'adminCertificates') {
+                else if ($_GET['action'] == 'adminCertificates') {
                     $this->_adminCertificatesCtrl->showAdminCertificates();
                 }
                 else if ($_GET['action'] == 'uploadCertificatesImages') {
@@ -248,10 +240,7 @@ class Rooter {
                         }
                         else
                             throw new Exception("Identifiant du projet non valide");
-             
-                }
-                
-                
+                }              
                 else if ($_GET['action'] == 'uploadWorksImages') {
                     $this->_adminWorksCtrl->uploadWorkImgs();
                 }
@@ -284,7 +273,6 @@ class Rooter {
                     else
                             throw new Exception("Identifiant du diapositif non valide");
                 }
-                
                 else if ($_GET['action'] == 'contact') {
                     $this->_contactCtrl->Contact();
                 }
@@ -298,40 +286,28 @@ class Rooter {
                     
                     $this->_contactCtrl-> newContactInDB($contactFirstName, $contactLastName, $contactEmail, $contactObject, $contactMsg);
                 }
-                
-                elseif ($_GET['action'] == 'adminContacts') {
+                else if ($_GET['action'] == 'adminContacts') {
                     $this->_adminContactsCtrl->showAdminContact();
                 }
-                
                 else if ($_GET['action'] == 'deleteContact') {
 
                     $this->_adminContactsCtrl->removeContact();
-             
                 }
-                
-                
-                
                 else if ($_GET['action'] == 'showPrivateForms') {
                     $this->_privateFormsCtrl->showPrivateForms();
                 }
                 else if ($_GET['action'] == 'registration') {
                     
-                    
                     $usernameRegistered = $this->getParameter($_POST, 'usernameRegistered');
                     $passRegistered = $this->getParameter($_POST, 'passRegistered');
                     $checkPassRegistered = $this->getParameter($_POST, 'checkPassRegistered');
                     
-                    
                     $this->_privateFormsCtrl->newUserRegistration($usernameRegistered, $passRegistered, $checkPassRegistered); 
-                    
-                    
                 }
                 else if ($_GET['action'] == 'connexion') {
-                    
-                    
+
                     $usernameConnected = $this->getParameter($_POST, 'usernameConnected');
                     $passConnected = $this->getParameter($_POST, 'passConnected');
-                    
                     
                     $this->_privateFormsCtrl->loginUser($usernameConnected, $passConnected); 
                     
@@ -346,12 +322,10 @@ class Rooter {
             } else {
                 $this->_userCtrl->aboutUser();
             }
-           
         }
         catch (Exception $e) {
             $this->error($e->getMessage());
-        }
-        
+        } 
     }
     
     // Affiche une erreur:

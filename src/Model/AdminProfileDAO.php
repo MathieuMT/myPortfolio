@@ -5,7 +5,6 @@ namespace MathieuMT\myPortfolio\Model;
 use MathieuMT\myPortfolio\Model\Entities\User;
 use MathieuMT\myPortfolio\Model\Model;
 
-
 class AdminProfileDAO extends Model{
      /************* INFORMATIONS DE CHAQUE UTILISATEUR ***************/
 
@@ -26,7 +25,6 @@ class AdminProfileDAO extends Model{
     
     
     /******** AVATAR ********/
-    
     // Add a new avatar for the profil of the registered user:
     public function addNewAvatar($avatar, $userId) {
         
@@ -38,7 +36,6 @@ class AdminProfileDAO extends Model{
                                     ));
         
         return $result;
- 
     }
     
     // Delete avatar of the registered user in the database:
@@ -48,17 +45,11 @@ class AdminProfileDAO extends Model{
                 'id' => $_SESSION['id']
                                     ));
         
-        return $result;
-        
+        return $result;   
     }
     
-    
-    
-    
-    
     /******** MINI-AVATAR ********/
-    
-     // Add a new avatar for the profil of the registered user:
+    // Add a new avatar for the profil of the registered user:
     public function addNewMiniAvatar($miniAvatar, $userId) {
         
         // Create an "avatar" entry in the database:
@@ -67,9 +58,7 @@ class AdminProfileDAO extends Model{
                 'mini_avatar' => $miniAvatar,
                 'id' => $_SESSION['id']
                                     ));
-        
         return $result;
- 
     }
     
     // Delete avatar of the registered user in the database:
@@ -78,17 +67,13 @@ class AdminProfileDAO extends Model{
         $result = $this->executeRequest($sql, array(
                 'id' => $_SESSION['id']
                                     ));
-        
-        return $result;
-        
+        return $result;  
     }
     
     
     /********* USERNAME *********/
-    
     // Update username of the registered user in the database:
     public function updateUsername($userId, $newUsername) {
-        
         
         $sql = 'UPDATE users SET username = :username WHERE id = :id ';
         
@@ -96,17 +81,12 @@ class AdminProfileDAO extends Model{
                 'username' => $newUsername,
                 'id' => $_SESSION['id']
                                     ));
-        
-        return $result;
-        
+        return $result; 
     }
     
-    
     /********* FIRSTNAME *********/
-    
     // Update firstname of the registered user in the database:
     public function updateFirstname($userId, $newFirstname) {
-        
         
         $sql = 'UPDATE users SET firstname = :firstname WHERE id = :id ';
         
@@ -114,19 +94,12 @@ class AdminProfileDAO extends Model{
                 'firstname' => $newFirstname,
                 'id' => $_SESSION['id']
                                     ));
-        
-        return $result;
-        
+        return $result; 
     }
-    
-    
-    
-    
+
     /********* LASTNAME *********/
-    
     // Update lastname of the registered user in the database:
     public function updateLastname($userId, $newLastname) {
-        
         
         $sql = 'UPDATE users SET lastname = :lastname WHERE id = :id ';
         
@@ -134,17 +107,10 @@ class AdminProfileDAO extends Model{
                 'lastname' => $newLastname,
                 'id' => $_SESSION['id']
                                     ));
-        
         return $result;
-        
     }
-    
-    
-    
-    
-    
+
     /********* EMAIL *********/
-    
     // Update the e-mail of the registered user in the database:
     public function updateEmail($userId, $newEmail) {
         
@@ -170,13 +136,10 @@ class AdminProfileDAO extends Model{
         $result = $this->executeRequest($sql, array(
                 'id' => $_SESSION['id']
                                     ));
-        
-        return $result;
-        
+        return $result;  
     }
     
     /********* PASS *********/
-    
     // Update the password of the registered user in the database:
     public function updatePass($userId, $newPass1_hache) {
         
@@ -186,18 +149,12 @@ class AdminProfileDAO extends Model{
                 'pass' => $newPass1_hache,
                 'id' => $_SESSION['id']
                                     ));
-        
-        return $result;
-        
+        return $result; 
     }
-    
-    
-    
+
     /********* PROFESSION *********/
-    
     // Update profession of the registered user in the database:
     public function updateProfession($userId, $newProfession) {
-        
         
         $sql = 'UPDATE users SET profession = :profession WHERE id = :id ';
         
@@ -205,9 +162,7 @@ class AdminProfileDAO extends Model{
                 'profession' => $newProfession,
                 'id' => $_SESSION['id']
                                     ));
-        
-        return $result;
-        
+        return $result;  
     }
     
     // Delete profession of the registered user in the database:
@@ -216,30 +171,20 @@ class AdminProfileDAO extends Model{
         $result = $this->executeRequest($sql, array(
                 'id' => $_SESSION['id']
                                     ));
-        
-        return $result;
-        
+        return $result; 
     }
-    
-    
-    
-    
-    
+
     /********* DESCRIPTION   *********/
-    
     // Update description of the registered user in the database:
     public function updateDescription($userId, $newDescription) {
-        
-        
+
         $sql = 'UPDATE users SET description = :description WHERE id = :id ';
         
         $result = $this->executeRequest($sql, array(
                 'description' => $newDescription,
                 'id' => $_SESSION['id']
                                     ));
-        
-        return $result;
-        
+        return $result; 
     }
     
     // Delete description of the registered user in the database:
@@ -248,15 +193,9 @@ class AdminProfileDAO extends Model{
         $result = $this->executeRequest($sql, array(
                 'id' => $_SESSION['id']
                                     ));
-        
-        return $result;
-        
+        return $result;  
     }
-    
-    
-    
-    
-    
+ 
 }
 
 

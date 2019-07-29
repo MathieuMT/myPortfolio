@@ -5,10 +5,9 @@ namespace MathieuMT\myPortfolio\Model\Entities;
 use MathieuMT\myPortfolio\Model\CertificateDAO;
 use MathieuMT\myPortfolio\Engine\ViewFrontEnd;
 
-
 class Certificate {
-    private $_id,$_name,$_certificatImg,$_certificatTitle,$_certificatDescription,$_certificatCategory;
     
+    private $_id,$_name,$_certificatImg,$_certificatTitle,$_certificatDescription;
     
     public function __construct(array $data){
         $this->hydrate($data);
@@ -33,9 +32,7 @@ class Certificate {
     public function certificatImg() { return $this->_certificatImg;}
     public function certificatTitle() { return $this->_certificatTitle;}
     public function certificatDescription() { return $this->_certificatDescription;}
-    public function certificatCategory() { return $this->_certificatCategory;}
 
-    
     // Setters:
     public function setId($id) {
         $id = (int) $id;
@@ -72,14 +69,5 @@ class Certificate {
             $this->_certificatDescription = $certificatDescription;
         }
     }
-    
-    
-    public function setCertificatCategory($certificatCategory) {
-        
-        if(is_string($certificatCategory)) {
-            $this->_certificatCategory = $certificatCategory;
-        }
-    }
-    
     
 }

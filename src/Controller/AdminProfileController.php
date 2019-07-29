@@ -129,12 +129,7 @@ class AdminProfileController {
     
     /********** END AVATAR ***********/
     
-    
-    
-    
-    
-    
-    
+     
     /******** MINI-AVATAR ********/
     
     // Add a new avatar of the registered user:
@@ -228,11 +223,6 @@ class AdminProfileController {
     
     
     
-    
-    
-    
-    
-    
     /************** USERNAME ********************/
     
     
@@ -264,12 +254,6 @@ class AdminProfileController {
     
     
     /************** END USERNAME ********************/
-    
-    
-    
-    
-    
-    
     
     
     /************** FIRSTNAME ********************/
@@ -304,12 +288,7 @@ class AdminProfileController {
     
     /************** END FIRSTNAME ********************/
     
-    
-    
-    
-    
-    
-    
+   
     /************** LASTNAME ********************/
     
     
@@ -341,10 +320,6 @@ class AdminProfileController {
     
     
     /************** END LASTNAME ********************/
-    
-     
-    
-    
     
     
     /************** EMAIL ********************/
@@ -393,10 +368,6 @@ class AdminProfileController {
     /************** END EMAIL ********************/
     
     
-    
-    
-    
-    
     /************** PASS ********************/
     
     // Update the password of the registered user:
@@ -432,13 +403,7 @@ class AdminProfileController {
     
     /************** END PASS ********************/
     
-    
-    
-    
-    
-    
-    
-    
+     
     /************** PROFESSION ********************/
     
     
@@ -485,11 +450,7 @@ class AdminProfileController {
     
     /************** END PROFESSION ********************/
     
-    
-    
-    
-    
-    
+   
     /************** DESCRIPTION ********************/
     
     
@@ -536,11 +497,5 @@ class AdminProfileController {
     
     /************** END DESCRIPTION ********************/
     
-    
-    
-    
-    
-    
-    
-    
+   
 }

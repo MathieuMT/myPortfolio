@@ -2,18 +2,13 @@
 
 namespace MathieuMT\myPortfolio\Model;
 
-
 use MathieuMT\myPortfolio\Model\Entities\Work;
 use MathieuMT\myPortfolio\Model\Entities\Slide;
 use MathieuMT\myPortfolio\Model\Model;
 
-
 class AdminWorkDAO extends Model{
     
-
     /*********** PROJECT MANAGER *********/
-
- 
    // Delete a image of certificate in the database:
     public function delImageBDD($id) {
        
@@ -22,25 +17,20 @@ class AdminWorkDAO extends Model{
         $response = $this->executeRequest($sql, array(
                                 'id' => $id
                                  ));
-
-        return $response;
-      
+        return $response;  
     } 
-
+    
     // Add new images in the database:
     public function insertImages($targetFile) {
         
         $sql="INSERT INTO works (workImg) VALUES ('$targetFile')";
         
         $result=$this->executeRequest($sql);
- 
     }
     
     // Si le champ certificatImg existe déjà dans la table certificates:
-    function existeWorkImg($targetFile)
-    {   
+    function existeWorkImg($targetFile) {   
    
-     
         $sql = "SELECT *
                 FROM works
                 WHERE workImg = '$targetFile'";
@@ -51,8 +41,6 @@ class AdminWorkDAO extends Model{
         return !empty($row);
     }
     
-
-
     /************* INFORMATIONS DE CHAQUE PROJET ***************/
 
      // Returns information on a work:
@@ -71,11 +59,8 @@ class AdminWorkDAO extends Model{
     /*************************************************************************/
     
 
-    
-    
     /*********** SLIDE MANAGER *********/
-    
-    
+
     // Delete a image of slide in the database:
     public function delImageSlideBDD($id) {
        
@@ -84,44 +69,31 @@ class AdminWorkDAO extends Model{
         $response = $this->executeRequest($sql, array(
                                 'id' => $id
                                  ));
-
         return $response;
-      
     } 
     
-    
+    // Obtenir les slides en fonction de l'id de chaque projet réalié:
     public function getS($work_id) { // Obtenir la liste des données descriptives pour chaque "Slide" sous forme de tableau d'objets.
         
         $slides = [];
         
         $sql = "SELECT * FROM slides WHERE id = $work_id";
         
-        
-        /*
-        $sql = "SELECT s.id, s.name, s.slideImg, s.work_id FROM slides s LEFT JOIN works w ON s.work_id = w.id";
-        */
-        
-        $aboutSlide = $this->executeRequest($sql); // tableau des données concernant le travail
-        foreach ($aboutSlide as $oneSlide) { // On parcours les tableaux des données pour chaque utilisateur
-            $slide = new Slide($oneSlide); // On instancie l'utisateur (entité) et son tableau de données en objet (pour 1 travail)
-            $slides[] = $slide; /* S'il y a plusieurs travaux ou s'il y a un seul travail , on les regroupe en objets dans un tableau de plusieurs travaux */
+        $aboutSlide = $this->executeRequest($sql); // tableau des données concernant le diapositif
+        foreach ($aboutSlide as $oneSlide) { // On parcours les tableaux des données pour chaque diapositif
+            $slide = new Slide($oneSlide); // On instancie le diapositif (entité) et son tableau de données en objet (pour 1 diapositif)
+            $slides[] = $slide; /* S'il y a plusieurs diapositifs ou s'il y a un seul diapositif , on les regroupe en objets dans un tableau de plusieurs diapositifs */
         }
-        
         
         return $slides; // On renvoie un tableau de plusieurs objets 
     }
 
-    
+    /* Obtenir la description des champs de la bdd pour chaque slide  */
     public function getSlideDescription() { // Obtenir la liste des données descriptives pour chaque "Slide" sous forme de tableau d'objets.
         
         $slides = [];
-        /*
-        $sql = "SELECT * FROM slides";
-        */
-        
         
         $sql = "SELECT s.id, s.name, s.slideImg, s.work_id FROM slides s LEFT JOIN works w ON s.work_id = w.id";
-        
         
         $aboutSlide = $this->executeRequest($sql); // tableau des données concernant le travail
         foreach ($aboutSlide as $oneSlide) { // On parcours les tableaux des données pour chaque utilisateur
@@ -132,8 +104,7 @@ class AdminWorkDAO extends Model{
         return $slides; // On renvoie un tableau de plusieurs objets 
     }
     
-    
-    
+
     // Add new images in the database:
     public function insertImagesSlides($targetFile, $work_id) {
         
@@ -144,22 +115,10 @@ class AdminWorkDAO extends Model{
  
     }
     
-    /*
-    // Add new images in the database:
-    public function insertImagesSlides($targetFile) {
-        
-        $sql="INSERT INTO slides (slideImg) VALUES ('$targetFile')";
-        
-        $result=$this->executeRequest($sql);
- 
-    }
-    */
-    
     // Si le champ certificatImg existe déjà dans la table certificates:
     function existeSlideImg($targetFile)
     {   
-   
-     
+
         $sql = "SELECT *
                 FROM slides
                 WHERE slideImg = '$targetFile'";
@@ -169,11 +128,9 @@ class AdminWorkDAO extends Model{
 
         return !empty($row);
     }
+
     
-    
-    
-     /************* FORMULAIRE DES INFORMATIONS DE CHAQUE DIAPOSITIF ***************/
-    
+    /************* FORMULAIRE DES INFORMATIONS DE CHAQUE DIAPOSITIF ***************/
     
     // Update slide in the database:
     public function sendSlideDetails($slideName, $slideId, $work_id) {
@@ -185,13 +142,10 @@ class AdminWorkDAO extends Model{
                                 ':name' => $slideName,
                                 'work_id' => $work_id,
                                 ':id' => $slideId
-                                ));
-        
+                                )); 
        return $result;  
     }
-    
-    
-   
+
     // Returns information on a slide:
     public function getSlide($slideId) {
         
@@ -206,7 +160,6 @@ class AdminWorkDAO extends Model{
     }
     
     /*************************************************************************/
-    
     
 }
 
