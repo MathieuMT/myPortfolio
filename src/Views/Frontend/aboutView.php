@@ -11,9 +11,9 @@
         
         <div class="row text-justify">
             
-            <div class="col-sm-2"></div>
+            <div class="col-sm-1"></div>
             
-            <div class="col-sm-8">
+            <div class="col-sm-10">
                 
             <?php   foreach ($aboutUser as $eachUser): ?>
 
@@ -22,7 +22,7 @@
      
                        <h2 class="text-center">Bienvenue  sur mon portfolio</h2><br />
                         <p class="text-center"><b class="portfolioName"> - <?= $eachUser->username(); ?> - </b><br /></p> 
-                        <p>je m'appelle <?= $eachUser->firstname(); ?>,<br/>
+                        <p class="fontAbout">Je m'appelle <?= $eachUser->firstname(); ?>,<br/>
                             <?= $eachUser->description(); ?><br /><br />
                             En tant que <?= $eachUser->profession(); ?>, je reste à votre entière disposition pour pouvoir exercer et vivre de mon métier.<br /><br />
                          </p>
@@ -46,7 +46,7 @@
                 
             </div>
             
-            <div class="col-sm-2"></div>
+            <div class="col-sm-1"></div>
 
         </div>
         

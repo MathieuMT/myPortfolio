@@ -1,4 +1,7 @@
+
+
 html, body {
+    font-family: sans-serif;
     height: 100%;
 }
 html
@@ -69,7 +72,7 @@ body {
 .navbar-brand img{
     border: 3px solid rgba(0,255,255,0.6);
     border-radius: 50%;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .navbar-brand img:hover {
@@ -147,6 +150,13 @@ body {
 /*
 * PAGE ABOUT
 **/
+
+.fontAbout {
+    font-size: 30px;
+    /*font-family: 'Clicker Script';*/
+    /*font-family: 'Niconne';*/
+    font-family: 'Monotype corsiva';
+}
 
 .titlePage {
     color: rgb(0,0,255);
@@ -651,12 +661,7 @@ p.stagger4 > a {
     
 }
 
-/*
-.map-container {
-    height: 800px;
-    background: white;
-}
-*/
+
 
 /*
 *page PrivateFormsView.php
