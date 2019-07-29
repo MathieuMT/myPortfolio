@@ -52,13 +52,14 @@
     
     <body>
 
-        <?php 
+        
+       
+        <div id="content">
+           <?php 
 
             include 'Frontend/navbarView.php'; 
 
-        ?>
-       
-        <div id="content">
+            ?>
             <?= $content ?> <!-- Specific element -->
             <br />
         </div><!-- #content -->

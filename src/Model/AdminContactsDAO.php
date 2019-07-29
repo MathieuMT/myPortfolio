@@ -27,7 +27,6 @@ class AdminContactsDAO extends Model{
 
     
 
-/* id, firstname, lastname, email, subject, comments, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr */
 
     
     

@@ -34,6 +34,12 @@ class Contact{
     public function subject() { return $this->_subject;}
     public function comments() { return $this->_comments;}
     public function comment_date() { return $this->_comment_date;}
+    public function comment_date_fr() { 
+        setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
+
+        return date('d M Y', strtotime($this->_comment_date)); 
+
+    }
 
     
     // Setters:

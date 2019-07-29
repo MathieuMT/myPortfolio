@@ -37,7 +37,7 @@ if (isset($_SESSION['id']) /* && $_SESSION['username'] === $user->username() */)
 
                                    <b class="contactSubject">sujet de l'email: <i><?= $eachContact->subject() ?></i></b><br />            
 
-                                  <p><b>Envoyé le : <i><time><?= $eachContact->comment_date() ?></time></i></b></p>
+                                  <p><b>Envoyé le : <i><time><?= $eachContact->comment_date_fr() ?></time></i></b></p>
 
                                 <article>
                                     <p><b>Contenu du message:<br />
