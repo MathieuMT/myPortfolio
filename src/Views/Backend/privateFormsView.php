@@ -159,7 +159,7 @@
             </div>  
         </div>
         <div class="row">
-            <button type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3"  name="btnRegistration" />Se connecté</button>
+            <button type="submit" id="btnRegistration" class="btn btn-primary mx-auto mt-3"  name="btnRegistration" />Se connecter</button>
         </div>
     </form> 
 </div>

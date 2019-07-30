@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Sam 27 Juillet 2019 à 14:28
+-- Généré le :  Mar 30 Juillet 2019 à 19:43
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.1
 
@@ -106,7 +106,9 @@ INSERT INTO `contact` (`id`, `firstname`, `lastname`, `email`, `subject`, `comme
 (33, 'mi', 'mo', 'mmtmc@hotmail.com', 'test d&#39;envoi', 'msdjvmjhsmdv', '0000-00-00 00:00:00'),
 (34, 'la', 'la', 'mmtmc@hotmail.com', 'test d&#39;envoi', 'lkshdvmh', '0000-00-00 00:00:00'),
 (35, 'ti', 'to', 'mmtmc@hotmail.com', 'test d&#39;envoi', 'mjsdmlhsmdf', '0000-00-00 00:00:00'),
-(36, 'Mathieu', 'de Millo', 'mmtmc@hotmail.com', 'test envoie 2', 'bdd et email !!!', '0000-00-00 00:00:00');
+(36, 'Mathieu', 'de Millo', 'mmtmc@hotmail.com', 'test envoie 2', 'bdd et email !!!', '0000-00-00 00:00:00'),
+(37, 'Mathieu', 'de Millo', '2mmtmc@gmail.com', 'test', 'bdd', '2019-07-28 18:01:02'),
+(38, 'Mathieu', 'de Millo', '2mmtmc@gmail.com', 'TEST 2', 'BDD !!!', '2019-07-28 23:10:04');
 
 -- --------------------------------------------------------
 
@@ -162,7 +164,40 @@ INSERT INTO `slides` (`id`, `name`, `slideImg`, `work_id`) VALUES
 (34, 'Gestion des commentaires', 'work4_15.jpg', 4),
 (35, 'Profil_1', 'work4_16.jpg', 4),
 (36, 'Profil_2', 'work4_17.jpg', 4),
-(37, 'Gestion des utilisateurs', 'work4_18.jpg', 4);
+(37, 'Gestion des utilisateurs', 'work4_18.jpg', 4),
+(38, 'À Mon Propos_1', 'work5_1.jpg', 5),
+(39, 'À Mon Propos_2', 'work5_2.jpg', 5),
+(40, 'À Mon Propos_3', 'work5_3.jpg', 5),
+(41, 'À Mon Propos_4', 'work5_4.jpg', 5),
+(42, 'Portfolio - Mes certificats_1', 'work5_5.jpg', 5),
+(43, 'Portfolio - Mes certificats_2', 'work5_6.jpg', 5),
+(44, 'Portfolio - Mes certificats_3 - gallerie', 'work5_7.jpg', 5),
+(45, 'Portfolio - Mes réalisations_1', 'work5_8.jpg', 5),
+(46, 'Portfolio - Mes réalisations_2', 'work5_9.jpg', 5),
+(47, 'Portfolio - Mes réalisations_3', 'work5_10.jpg', 5),
+(48, 'Contact_1', 'work5_11.jpg', 5),
+(49, 'Contact_2', 'work5_12.jpg', 5),
+(50, 'Contact_3 - ma situation géographique', 'work5_13.jpg', 5),
+(51, 'Formulaires privés_1 - Inscription', 'work5_14.jpg', 5),
+(52, 'Formulaires privés_2 - Connexion', 'work5_15.jpg', 5),
+(53, 'Gestion du profil_1', 'work5_16.jpg', 5),
+(54, 'Gestion du profil_2', 'work5_17.jpg', 5),
+(55, 'Gestion du profil_3', 'work5_18.jpg', 5),
+(56, 'Gestion du profil_4', 'work5_19.jpg', 5),
+(57, 'Gestion du profil_5', 'work5_20.jpg', 5),
+(58, 'Gestion du profil_6', 'work5_21.jpg', 5),
+(59, 'Gestion des certificats_1', 'work5_22.jpg', 5),
+(60, 'Gestion des certificats_2', 'work5_23.jpg', 5),
+(61, 'Gestion des réalisations_1', 'work5_24.jpg', 5),
+(62, 'Gestion des réalisations_2', 'work5_25.jpg', 5),
+(63, 'Gestion des réalisations_3', 'work5_26.jpg', 5),
+(64, 'Gestion des réalisations_4', 'work5_27.jpg', 5),
+(65, 'Gestion des diapositifs_1 par réalisation', 'work5_28.jpg', 5),
+(66, 'Gestion des diapositifs_2 par réalisation', 'work5_29.jpg', 5),
+(67, 'Gestion des diapositifs_3 par réalisation', 'work5_30.jpg', 5),
+(68, 'Gestion des diapositifs_4 par réalisation', 'work5_31.jpg', 5),
+(69, 'Gestion des diapositifs_5 par réalisation', 'work5_32.jpg', 5),
+(70, 'Gestion des contacts', 'work5_33.jpg', 5);
 
 -- --------------------------------------------------------
 
@@ -188,7 +223,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `pass`, `profession`, `description`, `avatar`, `mini_avatar`) VALUES
-(1, 'MathieuMT', 'Mathieu', 'de Millo Terrazzani', '', '$2y$10$Sq6YcMQrfbNXsKEHHC8NtOgqWhGSgva0XI50E5ZUnVdSIn3Y34KiW', 'Développeur WEB', 'passionné par le développement web, j\'ai suivi une formation professionnelle chez OpenClassRooms, qui est une école en ligne qui propose à ses membres des cours certifiants et des parcours débouchant sur un métier d\'avenir.<br />\r\n<br />\r\nJe porte autant d\'intérêt pour le développement front-end que back-end. Mon but est d\'associer design et technologie, afin de créer des sites internet attractifs ainsi que des applications web, afin de rendre l\'outil information plus humain.<br />\r\n<br />\r\nJe suis capable d\'utiliser différentes technologies comme HTML5, CSS3 et son frameworks Bootstrap 4, Javascript et son frameworks jQuery, PHP avec une architecture MVC ou bien d\'utiliser des CMS comme WordPress. À travers la visite de mon Portfolio, vous découvrirez l’acquisition de mes certificats et vous pourrez aussi visualiser les projets réalisés chez OpenClassRooms.<br />\r\n', '', '');
+(1, 'MathieuMT', 'Mathieu', 'de Millo Terrazzani', '2mmtmc@gmail.com', '$2y$10$Sq6YcMQrfbNXsKEHHC8NtOgqWhGSgva0XI50E5ZUnVdSIn3Y34KiW', 'Développeur WEB', ' passionné par le développement web, j\'ai suivi une formation professionnelle chez OpenClassRooms, qui est une école en ligne qui propose à ses membres des cours certifiant et des parcours débouchant sur un métier d\'avenir.<br />\r\n<br />\r\nJe porte autant d\'intérêt pour le développement front-end que back-end. Mon but est d\'associer design et technologie, afin de créer des sites internet attractifs ainsi que des applications web, afin de rendre l\'outil information plus humain.<br />\r\n<br />\r\nJe suis capable d\'utiliser différentes technologies comme HTML5, CSS3 et son frameworks Bootstrap 4, Javascript et sa librairie jQuery, PHP avec une architecture MVC, MySQL et les opérations CRUD en base de données ou bien d\'utiliser des CMS comme WordPress. À travers la visite de mon Portfolio, vous découvrirez l’acquisition de mes certificats et vous pourrez aussi visualiser les projets réalisés chez OpenClassRooms.', '', '');
 
 -- --------------------------------------------------------
 
@@ -214,7 +249,8 @@ INSERT INTO `works` (`id`, `name`, `workImg`, `workTitle`, `workDescription`, `w
 (1, 'Projet 1', 'work1_1.jpg', '&quot;WebAgency&quot;', 'Je viens d\'être embauché par une agence Web, la WebAgency, qui réalise des sites web pour différents clients. La directrice technique de l’agence vous informe que le site actuel est vieillissant et que son équipe a peu de temps pour travailler dessus.<br />\r\n<br />\r\nElle vous propose donc, pour votre première mission, de vous occuper de la refonte du site de l\'agence.<br />\r\n<br />\r\n<br />\r\nCompétences évaluées:<br />\r\n<br />\r\n - Définir le contenu d\'une page web à partir d\'une maquette.<br />\r\n - Gérer la responsivité avec les Media Queries.<br />\r\n - Présenter une réalisation de manière professionnelle.<br />\r\n - Coder la présentation d\'une page web en CSS.<br />\r\n - Coder la structure d\'une page web en HTML.', 'HTML5 - CSS3', 'https://github.com/MathieuMT/WebAgency'),
 (2, 'Projet 2', 'work2_1.jpg', '&quot;Personnaliser un thème WordPress&quot;', 'Vous avez un client : l\'office du tourisme de la ville de Strasbourg en France ! Ils souhaitent un site web à l\'image de la ville pour attirer des touristes et informer sur les activités proposées.<br />\r\n<br />\r\nCompétences évaluées:<br />\r\n - Créer une animation avec CSS3.<br />\r\n - Définir la structure de navigation du site.<br />\r\n - Adapter l\'affichage en fonction de la taille de l\'écran.<br />\r\n - Assurer la cohérence graphique du site.<br />\r\n - Appliquer les principes de SEO dans le code HTML.<br />\r\n - Assurer l\'accessibilité du site aux différents types d\'utilisateurs.', 'HTML5 - CSS3 - SEO - Wordpress', 'https://github.com/MathieuMT/WordPress_theme'),
 (3, 'Projet 3', 'work3_1.jpg', '&quot;Carte interactive de location de vélo&quot;', 'Vous devez développer une page de type &quot;Single page Application&quot; simulant la réservation de vélos dans une ville. Ces vélos sont répartis dans de nombreuses stations dans la ville. L\'utilisateur doit pouvoir réserver un vélo depuis son navigateur (à condition qu\'il reste des vélos disponibles à la station !). La réservation est alors temporairement enregistrée sur le navigateur du visiteur.<br />\r\n<br />\r\nCette application doit notamment, en s\'appuyant sur JavaScript, afficher une carte avec la liste des stations de location de vélos disponibles dans la ville. <br />\r\n<br />\r\nCompétences évaluées:<br />\r\n - Ecrire un code source lisible.<br />\r\n - Récupérer des données de formulaires en utilisant le langage JavaScript.<br />\r\n - Faire des requêtes HTTP en langage JavaScript.<br />\r\n - Créer des objets simples en JavaScript, contenant des méthodes et des propriétés.', 'HTML5 - CSS3 - JavaScript', 'https://github.com/MathieuMT/Application_Velib_Lyon'),
-(4, 'Projet 4 ', 'work4_1.jpg', '&quot;Blog pour un écrivain&quot;', 'Vous venez de décrocher un contrat avec Jean Forteroche, acteur et écrivain. Il travaille actuellement sur son prochain roman, &quot;Billet simple pour l\'Alaska&quot;. Il souhaite innover et le publier par épisode en ligne sur son propre site.<br />\r\n<br />\r\nSeul problème : Jean n\'aime pas WordPress et souhaite avoir son propre outil de blog, offrant des fonctionnalités plus simples. Vous allez donc devoir développer un moteur de blog en PHP et MySQL.<br />\r\n<br />\r\nCompétences évaluées:<br />\r\n - Récupérer la saisie d’un formulaire utilisateur en langage PHP.<br />\r\n - Organiser le code en langage PHP.<br />\r\n - Construire une base de données.<br />\r\n - Analyser les données utilisées par le site ou l’application.<br />\r\n - Récupérer les données d’une base.<br />\r\n - Créer un site Internet, de sa conception à sa livraison.<br />\r\n - Soutenir et argumenter ses propositions.<br />\r\n - Insérer ou modifier les données d’une base.', 'HTML5 - CSS3 - JavaScript - PHP - MySQL', 'https://github.com/MathieuMT/simpleBlog');
+(4, 'Projet 4 ', 'work4_1.jpg', '&quot;Blog pour un écrivain&quot;', 'Vous venez de décrocher un contrat avec Jean Forteroche, acteur et écrivain. Il travaille actuellement sur son prochain roman, &quot;Billet simple pour l\'Alaska&quot;. Il souhaite innover et le publier par épisode en ligne sur son propre site.<br />\r\n<br />\r\nSeul problème : Jean n\'aime pas WordPress et souhaite avoir son propre outil de blog, offrant des fonctionnalités plus simples. Vous allez donc devoir développer un moteur de blog en PHP et MySQL.<br />\r\n<br />\r\nCompétences évaluées:<br />\r\n - Récupérer la saisie d’un formulaire utilisateur en langage PHP.<br />\r\n - Organiser le code en langage PHP.<br />\r\n - Construire une base de données.<br />\r\n - Analyser les données utilisées par le site ou l’application.<br />\r\n - Récupérer les données d’une base.<br />\r\n - Créer un site Internet, de sa conception à sa livraison.<br />\r\n - Soutenir et argumenter ses propositions.<br />\r\n - Insérer ou modifier les données d’une base.', 'HTML5 - CSS3 - JavaScript - PHP - MySQL', 'https://github.com/MathieuMT/simpleBlog'),
+(5, 'Projet 5', 'work5_1.jpg', '&quot;Projet personnel - mon portfolio&quot;', 'Pour ce projet, vous développerez l\'application de votre choix en utilisant les 5 langages que vous avez appris : HTML, CSS, JS, PHP et SQL. L\'approche visuelle et le thème sont entièrement libres.<br />\r\n<br />\r\nC\'est donc le moment de faire preuve de créativité ! Démontrez votre savoir-faire et dédiez-y un effort substantiel, car ce projet rejoindra votre portfolio. Ce sera, plus que les autres projets, la touche personnelle de votre CV.<br />\r\n<br />\r\nCompétences évaluées:<br />\r\n - Découper, assembler et programmer les pages<br />\r\n - Intégrer les contenus et les effets graphiques<br />\r\n - Organiser et manipuler les données<br />\r\n - Organiser le code en langage PHP<br />\r\n - Sécuriser l\'application<br />\r\n - Stocker et récupérer les informations dans la base de données en langage SQL<br />\r\n - Utiliser les langages de développement web dans un projet personnel<br />\r\n - Assurer la conformité de votre application avec les langages PHP, JavaScript, HTML5 et CSS', 'HTML5 - CSS3 - Bootstrap 4 - JavaScript - jQuery - PHP - MVC - POO - SQL', 'https://github.com/MathieuMT/myPortfolio');
 
 --
 -- Index pour les tables exportées
@@ -264,12 +300,12 @@ ALTER TABLE `certificates`
 -- AUTO_INCREMENT pour la table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT pour la table `slides`
 --
 ALTER TABLE `slides`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
@@ -279,7 +315,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `works`
 --
 ALTER TABLE `works`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Contraintes pour les tables exportées
 --
