@@ -1,8 +1,4 @@
-
-    
-   
-
-
+/* CAROUSEL */
 jQuery(document).ready(function($) {
        
         /* accélère le chargement des images des diaporamas */
@@ -20,7 +16,7 @@ if (window.addEventListener) { window.addEventListener("load", loadImages, false
 else if (window.attachEvent) { window.attachEvent("onload", loadImages); }
     
         $('.carousel').carousel({
-         interval: 2000,
+         interval: 3000,
          cycle: true
       });
 
