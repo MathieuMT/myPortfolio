@@ -47,25 +47,6 @@ class ContactController {
     
     private function toBeContactedByEmail($contactFirstNameClean, $contactLastNameClean, $contactEmailClean, $contactObjectClean, $contactMsgClean) {
         
-
-        /* Avoid injecting user code into the fields of the form (against the XSS flaw): */
-        /*
-        $contactFirstName = htmlspecialchars($contactFirstName);
-        $contactLastName = htmlspecialchars($contactLastName);
-        $contactEmail = htmlspecialchars($contactEmail);
-        $contactObject = htmlspecialchars($contactObject);
-        $contactMsg = htmlspecialchars($contactMsg);
-        */
-        
-        /* SANITIZE ALL POST VARS */
-        /*
-        $contactFirstNameClean = filter_var($contactFirstName, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-        $contactLastNameClean = filter_var($contactLastName, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-        $contactEmailClean = filter_var($contactEmail, FILTER_SANITIZE_EMAIL, FILTER_FLAG_STRIP_HIGH);
-        $contactObjectClean = filter_var($contactObject, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-        $contactMsgClean = filter_var($contactMsg, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-        */
-        
         $to = '2mmtmc@gmail.com';
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
