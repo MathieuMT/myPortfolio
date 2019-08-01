@@ -25,7 +25,7 @@ class Model {
     private function dbConnect() {
         if ($this->db == null) {
             // Creating the connection:
-            $this->db = new PDO('mysql:host='.DBHOST.'; dbname='.DBNAME.';charset=utf8', NAME, PASS, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+             $this->db = new PDO('mysql:host='.DBHOST.'; dbname='.DBNAME.';charset=utf8', NAME, PASS, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         }
         return $this->db;
     }
