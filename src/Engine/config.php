@@ -5,5 +5,3 @@ define ('DBNAME', '');
 define ('NAME', '');
 define ('PASS', '');
 
-
-

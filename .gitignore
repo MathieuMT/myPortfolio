@@ -122,4 +122,4 @@ fabric.properties
 # End of https://www.gitignore.io/api/macos,composer,phpstorm
 
 
-src/Engine/config.php
+/src/Engine/config.php
