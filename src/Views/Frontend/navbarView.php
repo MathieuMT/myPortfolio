@@ -30,18 +30,18 @@
         <div class="row ml-auto">
             <ul class="navbar-nav col-md-12">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=about">À Mon Propos</a>
+                    <a class="nav-link" href="https://mmtmc.alwaysdata.net/index.php?action=about">À Mon Propos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">Portfolio<span class="caret"></span></a>
                     <div class="dropdown-menu" aria-labelledby="dropdown_target">
-                        <a class="dropdown-item text-center" href="index.php?action=certificates">Mes certificats</a>
+                        <a class="dropdown-item text-center" href="https://mmtmc.alwaysdata.net/index.php?action=certificates">Mes certificats</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-center" href="index.php?action=works">Mes réalisations</a>
+                        <a class="dropdown-item text-center" href="https://mmtmc.alwaysdata.net/index.php?action=works">Mes réalisations</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=contact">Contact</a>
+                    <a class="nav-link" href="https://mmtmc.alwaysdata.net/index.php?action=contact">Contact</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
@@ -49,17 +49,17 @@
                                     <span class="caret"></span>
                                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdown_target">
-                        <a class="dropdown-item text-center" href="index.php?action=adminProfile&amp;id=<?= $_SESSION['id']; ?>">Gestion du profil</a>
+                        <a class="dropdown-item text-center" href="https://mmtmc.alwaysdata.net/index.php?action=adminProfile&amp;id=<?= $_SESSION['id']; ?>">Gestion du profil</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-center" href="index.php?action=adminCertificates">Gestion des certificats</a>
+                        <a class="dropdown-item text-center" href="https://mmtmc.alwaysdata.net/index.php?action=adminCertificates">Gestion des certificats</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-center" href="index.php?action=adminWorks">Gestion des réalisations</a>
+                        <a class="dropdown-item text-center" href="https://mmtmc.alwaysdata.net/index.php?action=adminWorks">Gestion des réalisations</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-center" href="index.php?action=adminContacts">Gestion des contacts</a>
+                        <a class="dropdown-item text-center" href="https://mmtmc.alwaysdata.net/index.php?action=adminContacts">Gestion des contacts</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=logout">Déconnexion</a>
+                    <a class="nav-link" href="https://mmtmc.alwaysdata.net/index.php?action=logout">Déconnexion</a>
                 </li>
             </ul>
         </div>
@@ -87,18 +87,18 @@
         <div class="row ml-auto">
             <ul class="navbar-nav col-md-12">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=about">À Mon Propos</a>
+                    <a class="nav-link" href="https://mmtmc.alwaysdata.net/index.php?action=about">À Mon Propos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">Portfolio<span class="caret"></span></a>
                     <div class="dropdown-menu" aria-labelledby="dropdown_target">
-                        <a class="dropdown-item text-center" href="index.php?action=certificates">Mes certificats</a>
+                        <a class="dropdown-item text-center" href="https://mmtmc.alwaysdata.net/index.php?action=certificates">Mes certificats</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-center" href="index.php?action=works">Mes réalisations</a>
+                        <a class="dropdown-item text-center" href="https://mmtmc.alwaysdata.net/index.php?action=works">Mes réalisations</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=contact">Contact</a>
+                    <a class="nav-link" href="https://mmtmc.alwaysdata.net/index.php?action=contact">Contact</a>
                 </li>
             </ul>
         </div>

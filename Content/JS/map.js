@@ -58,7 +58,7 @@ $(document).ready(function() {
                 type: "POST",
                 async: true,
                 dataType: 'text',
-                url: 'index.php?action=submitContactData',
+                url: 'https://mmtmc.alwaysdata.net/index.php?action=submitContactData',
                 data: dataString,
                 success: function (result) {
                     $("#display").html(result);

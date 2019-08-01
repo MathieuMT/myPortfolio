@@ -40,7 +40,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_username_profile">
                 <p><span class="btn_closePopupUsername">&times;</span></p>
                 <h4><u>MODIFIFICATION DU PSEUDO <?= '\'' . $user->username() . '\'' ?></u></h4>
-                <form method="POST" action="index.php?action=profileUsername&id=<?= $user->id() ?>">
+                <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=profileUsername&id=<?= $user->id() ?>">
                     <tr>
                         <td>
                             <label class="label_update_username" for="newUsername">Modifier votre pseudo <?= '\'' . $user->username() . '\'' ?> : </label>
@@ -79,7 +79,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_avatar_profile mt-5">
                 <p><span class="btn_closePopupAvatar">&times;</span></p>
                 <h4><u>AJOUTER UN AVATAR À <?= '\'' . strtoupper($user->username()) . '\'' ?></u></h4>
-                <form method="post" action="index.php?action=profileAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
+                <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=profileAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
                     <tr>
                         <td align="right">
                             <label class="label" for="avatar_field">Sélectionnez votre avatar (ou photo de votre profil) au format jpg, jpeg, png ou gif (taille Max = 2Mo) : </label>
@@ -115,7 +115,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_avatar_profile">
                 <p><span class="btn_closePopupAvatar">&times;</span></p>
                 <h4><u>MODIFIER L'AVATAR DE <?= '\'' . strtoupper($user->username()) . '\'' ?></u></h4>
-                <form method="post" action="index.php?action=profileAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
+                <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=profileAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
                     <tr>
                         <td align="right">
                             <label class="label" for="avatar_field">Sélectionnez votre avatar (ou photo de votre profil) au format jpg, jpeg, png ou gif (taille Max = 2Mo) : </label>
@@ -134,7 +134,7 @@ if (isset($_SESSION['id'])){
                 </form>
             </div>
             <div class="popup_delete_avatar_profil">
-                <form method="post" action="index.php?action=profileDeleteAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
+                <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=profileDeleteAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
                     <tr>
                         <td colspan="2">
                             <br />
@@ -170,7 +170,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_mini_avatar_profile mt-5">
                 <p><span class="btn_closePopupMiniAvatar">&times;</span></p>
                 <h4><u>AJOUTER UN MINI-AVATAR À <?= '\'' . strtoupper($user->username()) . '\'' ?></u></h4>
-                <form method="post" action="index.php?action=profileMiniAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
+                <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=profileMiniAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
                     <tr>
                         <td align="right">
                             <label class="label" for="mini_avatar_field">Sélectionnez votre avatar (ou photo de votre profil) au format jpg, jpeg, png ou gif (taille Max = 2Mo) : </label>
@@ -206,7 +206,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_mini_avatar_profile">
                 <p><span class="btn_closePopupMiniAvatar">&times;</span></p>
                 <h4><u>MODIFIER LE MINI-AVATAR DE <?= '\'' . strtoupper($user->username()) . '\'' ?></u></h4>
-                <form method="post" action="index.php?action=profileMiniAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
+                <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=profileMiniAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
                     <tr>
                         <td align="right">
                             <label class="label" for="mini_avatar_field">Sélectionnez votre avatar (ou photo de votre profil) au format jpg, jpeg, png ou gif (taille Max = 2Mo) : </label>
@@ -225,7 +225,7 @@ if (isset($_SESSION['id'])){
                 </form>
             </div>
             <div class="popup_delete_mini_avatar_profil">
-                <form method="post" action="index.php?action=profileDeleteMiniAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
+                <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=profileDeleteMiniAvatar&id=<?= $user->id() ?>" enctype="multipart/form-data">
                     <tr>
                         <td colspan="2">
                             <br />
@@ -255,7 +255,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_firstname_profile">
                 <p><span class="btn_closePopupFirstname">&times;</span></p>
                 <h4><u>MODIFIFICATION DU PRÉNOM <?= '\'' . $user->firstname() . '\'' ?></u></h4>
-                <form method="POST" action="index.php?action=profileFirstname&id=<?= $user->id() ?>">
+                <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=profileFirstname&id=<?= $user->id() ?>">
                     <tr>
                         <td>
                             <label class="label_update_firstname" for="newfirstname">Modifier votre prénom <?= '\'' . $user->firstname() . '\'' ?> : </label>
@@ -288,7 +288,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_lastname_profile">
                 <p><span class="btn_closePopupLastname">&times;</span></p>
                 <h4><u>MODIFIFICATION DU NOM <?= '\'' . $user->lastname() . '\'' ?></u></h4>
-                <form method="POST" action="index.php?action=profileLastname&id=<?= $user->id() ?>">
+                <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=profileLastname&id=<?= $user->id() ?>">
                     <tr>
                         <td>
                             <label class="label_update_lastname" for="newlastname">Modifier votre nom <?= '\'' . $user->lastname() . '\'' ?> : </label>
@@ -326,7 +326,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_email_profile">
                 <p><span class="btn_closePopupEmail">&times;</span></p>
                 <h4><u>AJOUTER UN E-MAIL À <?= '\'' . $user->username() . '\'' ?></u></h4>
-                <form method="POST" action="index.php?action=profileEmail&id=<?= $user->id() ?>">
+                <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=profileEmail&id=<?= $user->id() ?>">
                     <tr>
                         <td>
                             <label class="label_update_email" for="newemail">Ajouter votre adresse e-mail : </label>
@@ -360,7 +360,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_email_profile">
                 <p><span class="btn_closePopupEmail">&times;</span></p>
                 <h4><u>MODIFIFICATION DE L'E-MAIL DE <?= '\'' . $user->username() . '\'' ?></u></h4>
-                <form method="POST" action="index.php?action=profileEmail&id=<?= $user->id() ?>">
+                <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=profileEmail&id=<?= $user->id() ?>">
                     <tr>
                         <td>
                             <label class="label_update_email" for="newemail">Modifier votre adresse e-mail : </label>
@@ -379,7 +379,7 @@ if (isset($_SESSION['id'])){
                 </form>
             </div>
             <div class="popup_delete_email_profil">
-                <form method="post" action="index.php?action=profileDeleteEmail&id=<?= $user->id() ?>" enctype="multipart/form-data">
+                <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=profileDeleteEmail&id=<?= $user->id() ?>" enctype="multipart/form-data">
                     <tr>
                         <td colspan="2">
                             <br />
@@ -409,7 +409,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_pass_profile">
                 <p><span class="btn_closePopupPass">&times;</span></p>
                 <h4><u>MODIFIFICATION DU MOT DE PASSE DE <?= '\'' . $user->username() . '\'' ?></u></h4>
-                <form method="POST" action="index.php?action=profilePass&id=<?= $user->id() ?>">
+                <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=profilePass&id=<?= $user->id() ?>">
                     <tr>
                         <td>
                             <label class="label_update_pass" for="newemail">Modifier votre mot de passe : </label>
@@ -457,7 +457,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_profession_profile">
                 <p><span class="btn_closePopupProfession">&times;</span></p>
                 <h4><u>AJOUTER VOTRE PROFESSION <?= '\'' . $user->profession() . '\'' ?></u></h4>
-                <form method="POST" action="index.php?action=profileProfession&id=<?= $user->id() ?>">
+                <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=profileProfession&id=<?= $user->id() ?>">
                     <tr>
                         <td>
                             <label class="label_update_profession" for="newlastname">Ajouter votre profession <?= '\'' . $user->profession() . '\'' ?> : </label>
@@ -490,7 +490,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_profession_profile">
                 <p><span class="btn_closePopupProfession">&times;</span></p>
                 <h4><u>MODIFIFICATION DE LA PROFESSION <?= '\'' . $user->profession() . '\'' ?></u></h4>
-                <form method="POST" action="index.php?action=profileProfession&id=<?= $user->id() ?>">
+                <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=profileProfession&id=<?= $user->id() ?>">
                     <tr>
                         <td>
                             <label class="label_update_profession" for="newlastname">Modifier votre profession <?= '\'' . $user->profession() . '\'' ?> : </label>
@@ -509,7 +509,7 @@ if (isset($_SESSION['id'])){
                 </form>
             </div>
             <div class="popup_delete_profession_profil">
-                <form method="post" action="index.php?action=profileDeleteProfession&id=<?= $user->id() ?>" enctype="multipart/form-data">
+                <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=profileDeleteProfession&id=<?= $user->id() ?>" enctype="multipart/form-data">
                     <tr>
                         <td colspan="2">
                             <br />
@@ -542,7 +542,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_update_description_profile">
                 <p><span class="btn_closePopupDescription">&times;</span></p>
                 <h4><u>AJOUT D'UNE DESCRIPTION À <?= '\'' . $user->username() . '\'' ?></u></h4>
-                <form method="POST" action="index.php?action=profileDescription&id=<?= $user->id() ?>">
+                <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=profileDescription&id=<?= $user->id() ?>">
                     <tr>
                         <td>
                             <label class="label_update_description" for="newDescription">Ajouter votre description : </label>
@@ -575,7 +575,7 @@ if (isset($_SESSION['id'])){
             <div class="popup_delete_description_profile">
                 <p><span class="btn_closePopupDeletetDescription">&times;</span></p>
                 <h4><u>SUPPRESSION DE LA DESCRIPTION DE <?= '\'' . $user->username() . '\'' ?></u></h4>
-                <form method="POST" action="index.php?action=profileDeleteDescription&id=<?= $user->id() ?>">
+                <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=profileDeleteDescription&id=<?= $user->id() ?>">
                     <tr>
                         <td>
                             <label class="label_delete_description" for="deleteDescription">Supprimer votre description : <?= $user->description() ?></label>
@@ -629,7 +629,7 @@ if (isset($_SESSION['id'])){
 
 else{
  
-    header('Location: index.php?action=about');
+    header('Location: https://mmtmc.alwaysdata.net/index.php?action=about');
 }
 ?> 
 

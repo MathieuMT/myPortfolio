@@ -5,6 +5,8 @@ session_start();
 //require 'src/Engine/Rooter.php';
 require './vendor/autoload.php';
 
+require './src/Engine/config.php';
+
 use MathieuMT\myPortfolio\Engine\Rooter; 
 
 

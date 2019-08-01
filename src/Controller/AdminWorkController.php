@@ -133,7 +133,7 @@ class AdminWorkController {
        
         $slide = $this->_adminWork->getSlide($slideId);
        
-        header('Location: index.php?action=adminWork&id='.$work_id);
+        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminWork&id='.$work_id);
        
         $view = new ViewBackEnd('adminWorkView');
         $view->generate(array('slide' => $slide,'slideName' => $slideName, 'work_id' => $work_id));

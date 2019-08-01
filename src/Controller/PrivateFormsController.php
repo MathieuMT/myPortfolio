@@ -54,7 +54,7 @@ class PrivateFormsController {
         $view = new ViewBackEnd('privateFormsView');
         $view->generate(['error1' => $this->error1, 'error2' => $this->error2, 'error3' => $this->error3, 'success1' => $this->success1]); 
        
-       /* header('Location: index.php');*/
+       /* header('Location: https://mmtmc.alwaysdata.net/index.php');*/
     }
     
     
@@ -134,7 +134,7 @@ class PrivateFormsController {
                                
                         $this->success2['connexion'] = 'Vous êtes bien connecté !';
      
-                        header('Location: index.php?action=about');
+                        header('Location: https://mmtmc.alwaysdata.net/index.php?action=about');
 
                }else {
                    //Le return la aussi
@@ -143,7 +143,7 @@ class PrivateFormsController {
            }else {
                $this->error5['connexion'] = 'Vous n\'êtes pas inscrit !';
 
-               header('Location:index.php?action=showPrivateForms');
+               header('Location: https://mmtmc.alwaysdata.net/index.php?action=showPrivateForms');
            } 
        }
         

@@ -17,7 +17,7 @@ if (isset($_SESSION['id'])){
                 <center>
                     <div id="dropZone" class="bgColor">
                         <h1 class="dropzoneTitle">Drag & Drop Files...</h1>
-                        <form method="post" action="index.php?action=uploadCertificatesImages" id="formCert" enctype="multipart/form-data">
+                        <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=uploadCertificatesImages" id="formCert" enctype="multipart/form-data">
                             <input type="file" id="fileupload" name="certificatImg[]" multiple />
                         </form>
                     </div>
@@ -72,7 +72,7 @@ if (isset($_SESSION['id'])){
                         </fieldset>
                     </div>                   
                     <div class="col-md-7">
-                        <form method="POST" action="index.php?action=sendCertificateDetails">
+                        <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=sendCertificateDetails">
                             <div class="row justify-content-center">
                                 <div class="mx-auto form-inline mt-5 ">
                                     <div class="form-group mx-auto">
@@ -134,6 +134,6 @@ if (isset($_SESSION['id'])){
 
 else{
  
-    header('Location: index.php?action=about');
+    header('Location: https://mmtmc.alwaysdata.net/index.php?action=about');
 }
 ?>

@@ -70,7 +70,7 @@ class AdminProfileController {
                         
                         //$this->success['profileAvatar'] = 'Vous avez bien modifié votre avatar à votre profil'; 
                         
-                        header('Location: index.php?action=adminProfile&id=' . $userId);
+                        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
                         
                     }else {
                         
@@ -80,7 +80,7 @@ class AdminProfileController {
                         
                         //$this->success['profileAvatar'] = 'Vous avez bien modifié votre avatar à votre profil'; 
                         
-                        header('Location: index.php?action=adminProfile&id=' . $userId);
+                        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
                         
                     }
                     
@@ -119,7 +119,7 @@ class AdminProfileController {
         /* DELETE AVATAR IN BDD */
         $this->_adminProfile->deleteAvatar($userId);
         
-        header('Location: index.php?action=adminProfile&id=' . $userId);
+        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
 
         
         $view = new ViewBackEnd('adminProfileView');
@@ -161,7 +161,7 @@ class AdminProfileController {
                         
                         //$this->success['profileAvatar'] = 'Vous avez bien modifié votre avatar à votre profil'; 
                         
-                        header('Location: index.php?action=adminProfile&id=' . $userId);
+                        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
                         
                     }else {
                         
@@ -171,7 +171,7 @@ class AdminProfileController {
                         
                         //$this->success['profileAvatar'] = 'Vous avez bien modifié votre avatar à votre profil'; 
                         
-                        header('Location: index.php?action=adminProfile&id=' . $userId);
+                        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
                         
                     }
                     
@@ -210,7 +210,7 @@ class AdminProfileController {
         /* DELETE AVATAR IN BDD */
         $this->_adminProfile->deleteMiniAvatar($userId);
         
-        header('Location: index.php?action=adminProfile&id=' . $userId);
+        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
 
         
         $view = new ViewBackEnd('adminProfileView');
@@ -242,7 +242,7 @@ class AdminProfileController {
             
             $_SESSION['username'] = $newUsername;
             
-            header('Location: index.php?action=adminProfile&id=' . $userId);
+            header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
                 
         }
         
@@ -275,7 +275,7 @@ class AdminProfileController {
             
             $_SESSION['firstname'] = $newFirstname;
             
-            header('Location: index.php?action=adminProfile&id=' . $userId);
+            header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
                 
         }
         
@@ -308,7 +308,7 @@ class AdminProfileController {
             
             $_SESSION['lastname'] = $newLastname;
             
-            header('Location: index.php?action=adminProfile&id=' . $userId);
+            header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
                 
         }
         
@@ -341,7 +341,7 @@ class AdminProfileController {
             
                 //$this->error['profileEmail'] = 'L\'adresse e-mail suivante: "' . $newEmail . '" est déjà prise !';
             }*/
-            header('Location: index.php?action=adminProfile&id=' . $userId);
+            header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
         } 
 
         
@@ -357,7 +357,7 @@ class AdminProfileController {
         $user = $this->_adminProfile->getUser($userId);
         $this->_adminProfile->deleteEmail($userId);
         
-        header('Location: index.php?action=adminProfile&id=' . $userId);
+        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
 
         
         $view = new ViewBackEnd('adminProfileView');
@@ -387,12 +387,12 @@ class AdminProfileController {
 
                 $this->_adminProfile->updatePass($userId, $newPass1_hache);
                 
-                 header('Location: index.php?action=adminProfile&id=' . $userId);
+                 header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
 
             } /*else {
                 //$this->error['profilePass'] =  'Vos deux mots de passes ne correspondent pas !';
                 
-                header('Location: index.php?action=showProfile&id=' . $profileId);
+                header('Location: https://mmtmc.alwaysdata.net/index.php?action=showProfile&id=' . $profileId);
             }*/
 
                 $view = new ViewBackEnd('adminProfileView');
@@ -423,7 +423,7 @@ class AdminProfileController {
             
             $_SESSION['profession'] = $newProfession;
             
-            header('Location: index.php?action=adminProfile&id=' . $userId);
+            header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
                 
         }
         
@@ -439,7 +439,7 @@ class AdminProfileController {
         $user = $this->_adminProfile->getUser($userId);
         $this->_adminProfile->deleteProfession($userId);
         
-        header('Location: index.php?action=adminProfile&id=' . $userId);
+        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
 
         
         $view = new ViewBackEnd('adminProfileView');
@@ -470,7 +470,7 @@ class AdminProfileController {
             
             $_SESSION['description'] = $newDescription;
             
-            header('Location: index.php?action=adminProfile&id=' . $userId);
+            header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
                 
         }
         
@@ -486,7 +486,7 @@ class AdminProfileController {
         $user = $this->_adminProfile->getUser($userId);
         $this->_adminProfile->deleteDescription($userId);
         
-        header('Location: index.php?action=adminProfile&id=' . $userId);
+        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminProfile&id=' . $userId);
 
         
         $view = new ViewBackEnd('adminProfileView');

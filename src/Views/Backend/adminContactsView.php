@@ -13,7 +13,7 @@ if (isset($_SESSION['id']) /* && $_SESSION['username'] === $user->username() */)
         <div class="row text-center">
             <div class="col-12">
                 <?php foreach ($aboutContact as $eachContact): ?>
-                <form method="post" action="index.php?action=deleteContact" id="form_adminContact" class="form_adminContact">
+                <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=deleteContact" id="form_adminContact" class="form_adminContact">
                     <div class="border bgColor">
                         <b class="contactFirstname">prénom de l'expéditeur: <i><?= $eachContact->firstname() ?></i></b><br />
                         <b class="contactLastname">nom de l'expéditeur: <i><?= $eachContact->lastname() ?></i></b><br />
@@ -43,6 +43,6 @@ if (isset($_SESSION['id']) /* && $_SESSION['username'] === $user->username() */)
 
 else{
  
-    header('Location: index.php?action=about');
+    header('Location: https://mmtmc.alwaysdata.net/index.php?action=about');
 }
 ?>

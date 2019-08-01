@@ -15,7 +15,7 @@ class LogoutController {
             
             session_destroy();
             
-            header('Location:index.php?action=about');
+            header('Location: https://mmtmc.alwaysdata.net/index.php?action=about');
         }
         
     }

@@ -8,7 +8,7 @@ function delImgSlide(id) {
     else if (confirm('Are you sure that you want to delete this image?')) {
         
         $.ajax({
-            url: 'index.php?action=uploadSlidesImages',
+            url: 'https://mmtmc.alwaysdata.net/index.php?action=uploadSlidesImages',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -38,7 +38,7 @@ $(function () {
     //var files = $("#files");
 
     $("#fileupload2").fileupload({
-        url: 'index.php?action=uploadSlidesImages',
+        url: 'https://mmtmc.alwaysdata.net/index.php?action=uploadSlidesImages',
         dropZone: '#dropZone2',
         dataType: 'json',
         autoUpload: false
@@ -88,7 +88,7 @@ function addImageSlide(path, id) {
    if ($('#uploadedFiles2').find('.rowGallery2:last').find('.myImg2').length === 2)
        $('#uploadedFiles2').append('<div class="row rowGallery2"></div>');
     
-    $('#uploadedFiles2').find('.rowGallery2:last').append('<h3 class="text-center col-md-12">Ajouter ou Modifier les informations du diapositif numéro <?= $eachSlide->id(); ?></h3><br/><h6 class="text-center col-md-12"><i>(Pour supprimer un diapositif et ses informations de la base de données: cliquer sur son image!)</i></h6><br /><div id="'+id+'" class="col-md-5 myImg2" onclick="delImgSlide('+id+')"><img src="'+path+'" /><br /><br /><fieldset class="border p-2"><legend  class="w-auto">Informations BDD</legend><span><label>Nom: </label><b> <?= $eachSlide->name(); ?></b></span><br /></fieldset></div><div class="col-md-7"><form method="POST" action="index.php?action=sendSlideDetails"><div class="row justify-content-center"><div class="mx-auto form-inline mt-5 "><div class="form-group mx-auto"><label class="text-center col-md-3" for="slideName"><u>Nom:</u></label><div class="col-md-9 pr-0"><input type="text" class="form-control" id="slideName" name="slideName" placeholder="Nom du diapositif" required autofocus /></div></div></div></div><div class="row mt-3"><div class="form-group col-md-12"><div class="col-md-12"><input type="hidden" name="slideId" value="<?= $eachSlide->id(); ?>" /></div></div></div><div class="row justify-content-center"><button type="submit" id="btnSlideDetails" class="btn btn-primary mx-auto mt-3"  name="btnSlideDetails" />Envoyer à la BDD</button></div></form></div>');
+    $('#uploadedFiles2').find('.rowGallery2:last').append('<h3 class="text-center col-md-12">Ajouter ou Modifier les informations du diapositif numéro <?= $eachSlide->id(); ?></h3><br/><h6 class="text-center col-md-12"><i>(Pour supprimer un diapositif et ses informations de la base de données: cliquer sur son image!)</i></h6><br /><div id="'+id+'" class="col-md-5 myImg2" onclick="delImgSlide('+id+')"><img src="'+path+'" /><br /><br /><fieldset class="border p-2"><legend  class="w-auto">Informations BDD</legend><span><label>Nom: </label><b> <?= $eachSlide->name(); ?></b></span><br /></fieldset></div><div class="col-md-7"><form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=sendSlideDetails"><div class="row justify-content-center"><div class="mx-auto form-inline mt-5 "><div class="form-group mx-auto"><label class="text-center col-md-3" for="slideName"><u>Nom:</u></label><div class="col-md-9 pr-0"><input type="text" class="form-control" id="slideName" name="slideName" placeholder="Nom du diapositif" required autofocus /></div></div></div></div><div class="row mt-3"><div class="form-group col-md-12"><div class="col-md-12"><input type="hidden" name="slideId" value="<?= $eachSlide->id(); ?>" /></div></div></div><div class="row justify-content-center"><button type="submit" id="btnSlideDetails" class="btn btn-primary mx-auto mt-3"  name="btnSlideDetails" />Envoyer à la BDD</button></div></form></div>');
     
 }
 

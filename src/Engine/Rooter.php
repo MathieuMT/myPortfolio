@@ -285,6 +285,7 @@ class Rooter {
                     $contactMsg = $this->getParameter($_POST, 'contactMsg1');
                     
                     $this->_contactCtrl-> newContactInDB($contactFirstName, $contactLastName, $contactEmail, $contactObject, $contactMsg);
+                    
                 }
                 else if ($_GET['action'] == 'adminContacts') {
                     $this->_adminContactsCtrl->showAdminContact();

@@ -22,7 +22,7 @@ if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
 
                     <h1 class="dropzoneTitle">Drag & Drop Files...</h1>
 
-                    <form method="post" action="index.php?action=uploadWorksImages" id="formWork" enctype="multipart/form-data">
+                    <form method="post" action="https://mmtmc.alwaysdata.net/index.php?action=uploadWorksImages" id="formWork" enctype="multipart/form-data">
 
                         <input type="file" id="fileupload" name="workImg[]" multiple />
 
@@ -108,7 +108,7 @@ if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
 
                     <!-- FORM PROJECT -->
 
-                    <form method="POST" action="index.php?action=sendWorkDetails">
+                    <form method="POST" action="https://mmtmc.alwaysdata.net/index.php?action=sendWorkDetails">
 
 
                         <div class="row justify-content-center">
@@ -175,7 +175,7 @@ if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
                     </form>
 
                     <div>
-                        <a href="<?=" index.php?action=adminWork&amp;id=".$eachWork->id(); ?>"><button class="btn btn-primary mx-auto mt-3" id="linkEachWork">Ajouter des slides pour chaque projet</button></a>
+                        <a href="<?="https://mmtmc.alwaysdata.net/index.php?action=adminWork&amp;id=".$eachWork->id(); ?>"><button class="btn btn-primary mx-auto mt-3" id="linkEachWork">Ajouter des slides pour chaque projet</button></a>
 
                     </div>
 
@@ -205,7 +205,7 @@ if (isset($_SESSION['id']) /*&& $_SESSION['username'] === $user->username()*/){
 
 else{
  
-    header('Location: index.php?action=about');
+    header('Location: https://mmtmc.alwaysdata.net/index.php?action=about');
 }
 ?> 
 

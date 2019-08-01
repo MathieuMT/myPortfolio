@@ -54,7 +54,7 @@
 
     
 <!-- FORMULAIRE D'INSCRIPTION -->    
-    <form action="index.php?action=registration" method="post">  
+    <form action="https://mmtmc.alwaysdata.net/index.php?action=registration" method="post">  
         <div class="row">                  
             <div class="mx-auto form-inline mt-5 col-md-7">
                 <div class="form-group mx-auto">
@@ -137,7 +137,7 @@
         ?> 
    
     
-    <form action="index.php?action=connexion" method="post">  
+    <form action="https://mmtmc.alwaysdata.net/index.php?action=connexion" method="post">  
         <div class="row">
             <div class="mx-auto form-inline mt-5 col-md-7">
                 <div class="form-group mx-auto">

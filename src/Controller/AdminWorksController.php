@@ -144,7 +144,7 @@ class AdminWorksController {
 
         $work = $this->_adminWorks->getWork($workId);
        
-        header('Location: index.php?action=adminWorks');
+        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminWorks');
        
         $view = new ViewBackEnd('adminWorksView');
         $view->generate(array('work' => $work,'workName' => $workName, 'workTitle' => $workTitle, 'workDescription' => $workDescription, 'workCategory' => $workCategory, 'workLink' == $workLink));

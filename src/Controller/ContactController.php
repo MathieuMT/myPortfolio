@@ -45,32 +45,37 @@ class ContactController {
 
     /* Email : the form to myself: */
     
-    private function toBeContactedByEmail($contactFirstName, $contactLastName, $contactEmail, $contactObject, $contactMsg) {
+    private function toBeContactedByEmail($contactFirstNameClean, $contactLastNameClean, $contactEmailClean, $contactObjectClean, $contactMsgClean) {
         
 
         /* Avoid injecting user code into the fields of the form (against the XSS flaw): */
+        /*
         $contactFirstName = htmlspecialchars($contactFirstName);
         $contactLastName = htmlspecialchars($contactLastName);
         $contactEmail = htmlspecialchars($contactEmail);
         $contactObject = htmlspecialchars($contactObject);
         $contactMsg = htmlspecialchars($contactMsg);
-
+        */
+        
         /* SANITIZE ALL POST VARS */
+        /*
         $contactFirstNameClean = filter_var($contactFirstName, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         $contactLastNameClean = filter_var($contactLastName, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         $contactEmailClean = filter_var($contactEmail, FILTER_SANITIZE_EMAIL, FILTER_FLAG_STRIP_HIGH);
         $contactObjectClean = filter_var($contactObject, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         $contactMsgClean = filter_var($contactMsg, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-        
+        */
         
         $to = '2mmtmc@gmail.com';
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= 'From:<'.$contactEmailClean.'>' . "\r\n";
+        //$headers .= 'From:<'.$contactEmailClean.'>' . "\r\n";
+        $headers .= 'From:<noreply@mmtmc.alwaysdata.net>' . "\r\n";
         $message = '<table width="100%" border="1" cellspacing="1" cellpadding="2">
         <tr><td colspan="2">Quelqu\'un vous a contacté sur votre portfolio MathieuMT</td></tr>
         <tr><td>Prénom</td><td>'.$contactFirstNameClean.'</td></tr>
         <tr><td>Nom de famille</td><td>'.$contactLastNameClean.'</td></tr>
+        <tr><td>email</td><td>'.$contactEmailClean.'</td></tr>
         <tr><td>Objet</td><td>'.$contactObjectClean.'</td></tr>
         <tr><td>Message</td><td>'.$contactMsgClean.'</td></tr>
         </table>';

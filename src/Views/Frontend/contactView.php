@@ -24,7 +24,7 @@
                             <!-- FORMULAIRE DE CONTACT -->
                             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 mt-5">
 
-                                <form action="index.php?action=submitContactData" method="post" enctype="multipart/form-data">
+                                <form action="https://mmtmc.alwaysdata.net/index.php?action=submitContactData" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label for="contactFirstName"><h3>Votre prénom *</h3></label>
                                         <input type="text" class="form-control" id="contactFirstName" name="contactFirstName" placeholder="Votre prénom" />

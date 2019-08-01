@@ -120,7 +120,7 @@ class AdminCertificatesController {
        
         $certificate = $this->_adminCertificates->getCertificate($certificateId);
        
-        header('Location: index.php?action=adminCertificates');
+        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminCertificates');
        
         $view = new ViewBackEnd('adminCertificatesView');
         $view->generate(array('certificate' => $certificate,'certificateName' => $certificateName, 'certificateTitle' => $certificateTitle, 'certificateDescription' => $certificateDescription));

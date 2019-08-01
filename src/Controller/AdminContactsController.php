@@ -37,7 +37,7 @@ class AdminContactsController {
 
         }
         
-        header('Location: index.php?action=adminContacts');
+        header('Location: https://mmtmc.alwaysdata.net/index.php?action=adminContacts');
         
         
         
