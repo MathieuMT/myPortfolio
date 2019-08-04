@@ -46,7 +46,7 @@ class AdminWorkController {
         if (isset($_POST['delImageSlide'])) {
             
             
-            $id = htmlspecialchars($_POST['id']);
+            $id = intval(addslashes(htmlspecialchars($_POST['id'])));
             
             
             /* DELETE FILE IMAGE CERTIFICATE */
@@ -105,9 +105,9 @@ class AdminWorkController {
     public function sendSlideDetails($slideName, $slideId, $work_id) {
         
         
-        $work_id = htmlspecialchars($work_id);
-        $slideName = htmlspecialchars($slideName);
-        $slideId = intval($slideId);
+        $work_id = intval(addslashes(htmlspecialchars($work_id)));
+        $slideName = addslashes(htmlspecialchars($slideName));
+        $slideId = intval(addslashes($slideId));
        
        
        if (isset($slideName) && !empty($slideName)) {

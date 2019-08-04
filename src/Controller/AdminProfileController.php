@@ -230,7 +230,7 @@ class AdminProfileController {
     // Update username of the registered user:
     public function editUsername($userId, $newUsername) {
         
-        $newUsername = htmlspecialchars($newUsername);
+        $newUsername = addslashes(htmlspecialchars($newUsername));
         $user = $this->_adminProfile->getUser($userId);
         
         // To change the username according to the user's id:
@@ -263,7 +263,7 @@ class AdminProfileController {
     // Update firstname of the registered user:
     public function editFirstname($userId, $newFirstname) {
         
-        $newFirstname = htmlspecialchars($newFirstname);
+        $newFirstname = addslashes(htmlspecialchars($newFirstname));
         $user = $this->_adminProfile->getUser($userId);
         
         // To change the firstname according to the user's id:
@@ -296,7 +296,7 @@ class AdminProfileController {
     // Update lastname of the registered user:
     public function editLastname($userId, $newLastname) {
         
-        $newLastname = htmlspecialchars($newLastname);
+        $newLastname = addslashes(htmlspecialchars($newLastname));
         $user = $this->_adminProfile->getUser($userId);
         
         // To change the lastname according to the user's id:
@@ -327,7 +327,7 @@ class AdminProfileController {
     // Update the e-mail of the registered user:
     public function editEmail($userId, $newEmail) {
         
-        $newEmail = htmlspecialchars($newEmail);
+        $newEmail = addslashes(htmlspecialchars($newEmail));
         $user = $this->_adminProfile->getUser($userId);
         
             // To change the e-mail according to the user's id:
@@ -411,7 +411,7 @@ class AdminProfileController {
     // Update profession of the registered user:
     public function editProfession($userId, $newProfession) {
         
-        $newProfession = htmlspecialchars($newProfession);
+        $newProfession = addslashes(htmlspecialchars($newProfession));
         $user = $this->_adminProfile->getUser($userId);
         
         // To change the profession according to the user's id:
@@ -458,7 +458,7 @@ class AdminProfileController {
     // Update profession of the registered user:
     public function editDescription($userId, $newDescription) {
         
-        $newDescription =  nl2br(htmlspecialchars($newDescription));
+        $newDescription =  nl2br(addslashes(htmlspecialchars($newDescription)));
         $user = $this->_adminProfile->getUser($userId);
         
         // To change the description according to the user's id:

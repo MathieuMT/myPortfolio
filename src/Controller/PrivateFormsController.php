@@ -33,7 +33,7 @@ class PrivateFormsController {
     public function newUserRegistration($usernameRegistered, $passRegistered, $checkPassRegistered) {
         
         /* Avoid injecting user code into the fields of the form (against the XSS flaw): */
-        $usernameRegistered = htmlspecialchars($usernameRegistered);
+        $usernameRegistered = addslashes(htmlspecialchars($usernameRegistered));
         $passRegistered = htmlspecialchars($passRegistered);
         $checkPassRegistered = htmlspecialchars($checkPassRegistered);
         
@@ -116,7 +116,7 @@ class PrivateFormsController {
     public function loginUser($usernameConnected, $passConnected) {
         
         /* Avoid injecting user code into the fields of the form (against the XSS flaw): */        
-        $usernameConnected = htmlspecialchars($usernameConnected);
+        $usernameConnected = addslashes(htmlspecialchars($usernameConnected));
         $passConnected = htmlspecialchars($passConnected);
         
 

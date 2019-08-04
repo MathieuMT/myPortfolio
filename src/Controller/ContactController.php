@@ -22,11 +22,11 @@ class ContactController {
         
         
         /* Avoid injecting user code into the fields of the form (against the XSS flaw): */
-        $contactFirstName = htmlspecialchars($contactFirstName);
-        $contactLastName = htmlspecialchars($contactLastName);
-        $contactEmail = htmlspecialchars($contactEmail);
-        $contactObject = htmlspecialchars($contactObject);
-        $contactMsg = htmlspecialchars($contactMsg);
+        $contactFirstName = addslashes(htmlspecialchars($contactFirstName));
+        $contactLastName = addslashes(htmlspecialchars($contactLastName));
+        $contactEmail = addslashes(htmlspecialchars($contactEmail));
+        $contactObject = addslashes(htmlspecialchars($contactObject));
+        $contactMsg = addslashes(htmlspecialchars($contactMsg));
         
         /* SANITIZE ALL POST VARS */
         $contactFirstNameClean = filter_var($contactFirstName, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);

@@ -93,9 +93,9 @@ class AdminCertificatesController {
    public function sendCertificateDetails($certificateName, $certificateTitle, $certificateDescription, $certificateId) {
        
         
-        $certificateName= htmlspecialchars($certificateName);
-        $certificateTitle = htmlspecialchars($certificateTitle);
-        $certificateDescription = htmlspecialchars($certificateDescription);
+        $certificateName= addslashes(htmlspecialchars($certificateName));
+        $certificateTitle = addslashes(htmlspecialchars($certificateTitle));
+        $certificateDescription = addslashes(htmlspecialchars($certificateDescription));
         $certificateId = intval($certificateId);
        
        

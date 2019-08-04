@@ -53,7 +53,7 @@ class AdminWorksController {
         if (isset($_POST['delImage'])) {
             
             
-            $id = htmlspecialchars($_POST['id']);
+            $id = intval(addslashes(htmlspecialchars($_POST['id'])));
             
             
             /*****************************************************/
@@ -115,12 +115,12 @@ class AdminWorksController {
    public function sendWorkDetails($workName, $workTitle, $workDescription, $workCategory, $workLink, $workId) {
        
         
-        $workName= htmlspecialchars($workName);
-        $workTitle = htmlspecialchars($workTitle);
-        $workDescription = nl2br(htmlspecialchars($workDescription));
-        $workCategory = htmlspecialchars($workCategory);
-        $workLink = htmlspecialchars($workLink);
-        $workId = intval($workId);
+        $workName= addslashes(htmlspecialchars($workName));
+        $workTitle = addslashes(htmlspecialchars($workTitle));
+        $workDescription = nl2br(addslashes(htmlspecialchars($workDescription)));
+        $workCategory = addslashes(htmlspecialchars($workCategory));
+        $workLink = addslashes(htmlspecialchars($workLink));
+        $workId = intval(addslashes($workId));
        
        
        if (isset($workName) && isset($workTitle) && isset($workDescription) && isset($workCategory) && isset($workLink) && !empty($workName) && !empty($workTitle) && !empty($workDescription) && !empty($workCategory) && !empty($workLink)) {
