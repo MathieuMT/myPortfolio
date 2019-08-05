@@ -21,7 +21,7 @@
 
                     <?php foreach ($aboutCertificate as $eachCertificate): ?>
 
-                    <div id="<?= $eachCertificate->id(); ?>" class="col-md-6 col-lg-4 animated fadeInLeft" onclick="delImg('<?= $eachCertificate->id(); ?>')">
+                    <div id="<?= $eachCertificate->id(); ?>" class="col-md-6 col-lg-4 animated fadeInLeft">
 
                         <div class="card border-0 transform-on-hover">
 
@@ -62,7 +62,7 @@
 
                     <?php foreach ($aboutCertificate as $eachCertificate): ?>
 
-                    <div id="<?= $eachCertificate->id(); ?>'" class="col-md-6 col-lg-4 animated fadeInLeft" onclick="delImg('<?= $eachCertificate->id(); ?>')">
+                    <div id="<?= $eachCertificate->id(); ?>'" class="col-md-6 col-lg-4 animated fadeInLeft">
 
                         <div class="card border-0 transform-on-hover">
 
