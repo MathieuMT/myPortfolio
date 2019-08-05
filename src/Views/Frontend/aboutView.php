@@ -1,20 +1,25 @@
 <?php $this->title = 'À Mon Propos'; ?>
 
-<h1 class="text-center titlePage animated fadeInLeft">
-    <?= $this->title = 'À Mon Propos' ?>
-</h1>
+<header>
+    <h1 class="text-center titlePage animated fadeInLeft">
+        <?= $this->title = 'À Mon Propos' ?>
+    </h1>
+</header>
 
-<!--- PAGE À PROPOS --->
-<section class="cover animated fadeInLeft">
-    <div class="container">
+<section>
+    <div class="container cover animated fadeInLeft">
         <div class="row text-justify">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <?php   foreach ($aboutUser as $eachUser): ?>
                 <div class="bgColor p-5">
-                    <article>
+                    <header>
                         <h2 class="text-center">Bienvenue sur mon portfolio</h2><br />
-                        <p class="text-center"><b class="portfolioName"> - <?= $eachUser->username(); ?> - </b><br /></p>
+                    </header>
+                    <article>
+                        <header>
+                            <h2 class="text-center"><b class="portfolioName"> - <?= $eachUser->username(); ?> - </b><br /></h2>
+                        </header>
                         <p class="fontAbout">Je m'appelle
                             <?= $eachUser->firstname(); ?>,<br/>
                             <?= $eachUser->description(); ?><br /><br /> 
@@ -22,7 +27,7 @@
                         </p>
                         <div class="row text-center">
                             <div class="col-sm-12">
-                                <button type="button" class="btn btn-primary mx-auto mt-3 btn_cv"><a class="cv" href="Content/img/users/CV/CV.pdf" download><img scr="Content/img/users/CV/CV.pdf" />Téléchager mon CV</a></button>
+                                <a class="cv" href="Content/img/users/CV/CV.pdf" download="Content/img/users/CV/CV.pdf">Téléchager mon CV</a>
                             </div>
                         </div>
                     </article>
@@ -33,4 +38,7 @@
         </div>
     </div>
 </section>
-<!---END PAGE À PROPOS --->
+<br />
+<footer>
+    <h3 class="text-center">Copyright © MathieuMT 2019</h3>
+</footer>
